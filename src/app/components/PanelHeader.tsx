@@ -1,14 +1,11 @@
-import * as React from "react";
+import { ReactComponent as FastForwardIcon } from '../assets/forward-arrow.svg';
 
 function PanelHeader(props) {
   return (
     <div className="panel-header">
       <div className="panel-header__action">
         <button className="button--icon" onClick={props.handleHide}>
-          <img
-            className="panel-collapse-icon"
-            src={require("../assets/forward-arrow.svg")}
-          />
+          <FastForwardIcon className="panel-collapse-icon" />
         </button>
       </div>
       <div className="panel-header__title">{props.title}</div>

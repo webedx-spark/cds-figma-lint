@@ -1,5 +1,7 @@
-import * as React from "react";
-import { useState, useRef, useEffect } from "react";
+import * as React from 'react';
+import { useState, useRef, useEffect } from 'react';
+
+import { ReactComponent as ContextIcon } from '../assets/context.svg';
 
 function Menu(props) {
   const ref = useRef();
@@ -18,12 +20,12 @@ function Menu(props) {
   return (
     <div className="menu" ref={ref}>
       <div className="menu-trigger" onClick={showMenu}>
-        <img src={require("../assets/context.svg")} />
+        <ContextIcon />
       </div>
       <ul
         className={
-          "menu-items select-menu__list " +
-          (menuState ? "select-menu__list--active" : "")
+          'menu-items select-menu__list ' +
+          (menuState ? 'select-menu__list--active' : '')
         }
       >
         {props.menuItems.map((item, i) => {
@@ -31,7 +33,7 @@ function Menu(props) {
             <li
               className="select-menu__list-item"
               key={i}
-              onClick={event => {
+              onClick={(event) => {
                 event.stopPropagation();
                 item.event(props.error);
                 hideMenu();
@@ -49,19 +51,19 @@ function Menu(props) {
 // React hook click outside the component
 function useOnClickOutside(ref, handler) {
   useEffect(() => {
-    const listener = event => {
+    const listener = (event) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
       handler(event);
     };
 
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
+    document.addEventListener('mousedown', listener);
+    document.addEventListener('touchstart', listener);
 
     return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
+      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('touchstart', listener);
     };
   }, [ref, handler]);
 }

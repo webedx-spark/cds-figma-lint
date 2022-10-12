@@ -1,15 +1,15 @@
-import * as React from "react";
-import { motion } from "framer-motion/dist/framer-motion";
-import PanelHeader from "./PanelHeader";
-import SettingsForm from "./SettingsForm";
-import "../styles/panel.css";
+import * as React from 'react';
+import { motion } from 'framer-motion';
+import PanelHeader from './PanelHeader';
+import SettingsForm from './SettingsForm';
+import '../styles/panel.css';
 
 function SettingsPanel(props) {
   const isVisible = props.panelVisible;
 
   const variants = {
     open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "100%" }
+    closed: { opacity: 0, x: '100%' },
   };
 
   function handleHide() {
@@ -28,11 +28,11 @@ function SettingsPanel(props) {
     parent.postMessage(
       {
         pluginMessage: {
-          type: "update-storage-from-settings",
-          storageArray: []
-        }
+          type: 'update-storage-from-settings',
+          storageArray: [],
+        },
       },
-      "*"
+      '*'
     );
     props.onHandlePanelVisible(false);
   }
@@ -41,13 +41,13 @@ function SettingsPanel(props) {
     <React.Fragment>
       <motion.div
         className={`panel`}
-        initial={{ opacity: 0, x: "100%" }}
-        animate={isVisible ? "open" : "closed"}
-        transition={{ duration: 0.3, type: "tween" }}
+        initial={{ opacity: 0, x: '100%' }}
+        animate={isVisible ? 'open' : 'closed'}
+        transition={{ duration: 0.3, type: 'tween' }}
         variants={variants}
         key="settings-panel"
       >
-        <PanelHeader title={"Settings"} handleHide={handleHide}></PanelHeader>
+        <PanelHeader title={'Settings'} handleHide={handleHide}></PanelHeader>
 
         <div className="settings-wrapper">
           <div className="settings-row">

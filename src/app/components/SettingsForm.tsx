@@ -1,21 +1,21 @@
-import * as React from "react";
-import { useState } from "react";
+import { useState } from 'react';
 
 function SettingsForm(props) {
-  const [radiusValue, setRadiusValue] = useState("");
+  const [radiusValue, setRadiusValue] = useState('');
+  const [cdsLintStyles, setCdsLintStyles] = useState(true);
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     if (radiusValue.length) {
       parent.postMessage(
         {
           pluginMessage: {
-            type: "update-border-radius",
-            radiusValues: radiusValue
-          }
+            type: 'update-border-radius',
+            radiusValues: radiusValue,
+          },
         },
-        "*"
+        '*'
       );
     }
   };
@@ -24,10 +24,10 @@ function SettingsForm(props) {
     parent.postMessage(
       {
         pluginMessage: {
-          type: "reset-border-radius"
-        }
+          type: 'reset-border-radius',
+        },
       },
-      "*"
+      '*'
     );
   }
 
@@ -48,9 +48,19 @@ function SettingsForm(props) {
             type="input"
             className="input-icon__input"
             value={radiusValue}
-            onChange={e => setRadiusValue(e.target.value)}
+            onChange={(e) => setRadiusValue(e.target.value)}
             placeholder={props.borderRadiusValues}
           />
+        </div>
+
+        <div className="settings-checkbox-group">
+          <input
+            name="vectorsCheckbox"
+            type="checkbox"
+            onChange={(e) => setCdsLintStyles(e.target.checked)}
+            checked={cdsLintStyles}
+          />
+          <label>Lint CDS Styles</label>
         </div>
       </div>
       <div className="form-button-group">

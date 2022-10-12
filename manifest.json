@@ -1,8 +1,8 @@
 {
-  "name": "Design Lint",
-  "id": "801195587640428208",
+  "name": "CDS Style Lint",
+  "id": "1161664692525496446",
   "api": "1.0.0",
-  "main": "dist/code.js",
-  "ui": "dist/ui.html",
+  "main": "dist/plugin/controller.mjs",
+  "ui": "dist/app/index.html",
   "editorType": ["figma"]
 }

@@ -1,11 +1,13 @@
-import * as React from "react";
-import { motion } from "framer-motion/dist/framer-motion";
+import * as React from 'react';
+import { motion } from 'framer-motion';
 
-import ErrorList from "./ErrorList";
-import PanelHeader from "./PanelHeader";
-import Preloader from "./Preloader";
+import ErrorList from './ErrorList';
+import PanelHeader from './PanelHeader';
+import Preloader from './Preloader';
 
-import "../styles/panel.css";
+import '../styles/panel.css';
+
+import { ReactComponent as SmileIcon } from '../assets/smile.svg';
 
 function Panel(props) {
   const isVisible = props.visibility;
@@ -14,15 +16,15 @@ function Panel(props) {
   // Reduce the size of our array of errors by removing
   // nodes with no errors on them.
   let filteredErrorArray = props.errorArray.filter(
-    item => item.errors.length >= 1
+    (item) => item.errors.length >= 1
   );
 
-  filteredErrorArray.forEach(item => {
+  filteredErrorArray.forEach((item) => {
     // Check each layer/node to see if an error that matches it's layer id
-    if (props.ignoredErrors.some(x => x.node.id === item.id)) {
+    if (props.ignoredErrors.some((x) => x.node.id === item.id)) {
       // When we know a matching error exists loop over all the ignored
       // errors until we find it.
-      props.ignoredErrors.forEach(ignoredError => {
+      props.ignoredErrors.forEach((ignoredError) => {
         if (ignoredError.node.id === item.id) {
           // Loop over every error this layer/node until we find the
           // error that should be ignored, then remove it.
@@ -37,7 +39,7 @@ function Panel(props) {
     }
   });
 
-  let activeId = props.errorArray.find(e => e.id === node.id);
+  let activeId = props.errorArray.find((e) => e.id === node.id);
   let errors = [];
   if (activeId !== undefined) {
     errors = activeId.errors;
@@ -45,12 +47,12 @@ function Panel(props) {
 
   const variants = {
     open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "100%" }
+    closed: { opacity: 0, x: '100%' },
   };
 
   function handlePrevNavigation() {
     let currentIndex = filteredErrorArray.findIndex(
-      item => item.id === activeId.id
+      (item) => item.id === activeId.id
     );
     if (filteredErrorArray[currentIndex + 1] !== undefined) {
       activeId = filteredErrorArray[currentIndex + 1];
@@ -63,14 +65,14 @@ function Panel(props) {
     props.onSelectedListUpdate(activeId.id);
 
     parent.postMessage(
-      { pluginMessage: { type: "fetch-layer-data", id: activeId.id } },
-      "*"
+      { pluginMessage: { type: 'fetch-layer-data', id: activeId.id } },
+      '*'
     );
   }
 
   function handleNextNavigation() {
     let currentIndex = filteredErrorArray.findIndex(
-      item => item.id === activeId.id
+      (item) => item.id === activeId.id
     );
     let lastItem = currentIndex + filteredErrorArray.length - 1;
 
@@ -85,8 +87,8 @@ function Panel(props) {
     props.onSelectedListUpdate(activeId.id);
 
     parent.postMessage(
-      { pluginMessage: { type: "fetch-layer-data", id: activeId.id } },
-      "*"
+      { pluginMessage: { type: 'fetch-layer-data', id: activeId.id } },
+      '*'
     );
   }
 
@@ -103,8 +105,8 @@ function Panel(props) {
   function handleSelectAll(error) {
     let nodesToBeSelected = [];
 
-    filteredErrorArray.forEach(node => {
-      node.errors.forEach(item => {
+    filteredErrorArray.forEach((node) => {
+      node.errors.forEach((item) => {
         if (item.value === error.value) {
           if (item.type === error.type) {
             nodesToBeSelected.push(item.node.id);
@@ -117,11 +119,11 @@ function Panel(props) {
       parent.postMessage(
         {
           pluginMessage: {
-            type: "select-multiple-layers",
-            nodeArray: nodesToBeSelected
-          }
+            type: 'select-multiple-layers',
+            nodeArray: nodesToBeSelected,
+          },
         },
-        "*"
+        '*'
       );
     }
   }
@@ -129,8 +131,8 @@ function Panel(props) {
   function handleIgnoreAll(error) {
     let errorsToBeIgnored = [];
 
-    filteredErrorArray.forEach(node => {
-      node.errors.forEach(item => {
+    filteredErrorArray.forEach((node) => {
+      node.errors.forEach((item) => {
         if (item.value === error.value) {
           if (item.type === error.type) {
             errorsToBeIgnored.push(item);
@@ -150,8 +152,8 @@ function Panel(props) {
       {activeId !== undefined ? (
         <motion.div
           className={`panel`}
-          animate={isVisible ? "open" : "closed"}
-          transition={{ duration: 0.3, type: "tween" }}
+          animate={isVisible ? 'open' : 'closed'}
+          transition={{ duration: 0.3, type: 'tween' }}
           variants={variants}
         >
           <PanelHeader
@@ -179,10 +181,7 @@ function Panel(props) {
                 className="success-message"
               >
                 <div className="success-shape">
-                  <img
-                    className="success-icon"
-                    src={require("../assets/smile.svg")}
-                  />
+                  <SmileIcon className="success-icon" />
                 </div>
                 All errors fixed in the selection
               </motion.div>
@@ -210,8 +209,8 @@ function Panel(props) {
       ) : (
         <motion.div
           className={`panel`}
-          animate={isVisible ? "open" : "closed"}
-          transition={{ duration: 0.3, type: "tween" }}
+          animate={isVisible ? 'open' : 'closed'}
+          transition={{ duration: 0.3, type: 'tween' }}
           variants={variants}
         >
           <div className="name-wrapper">

@@ -1,35 +1,29 @@
-import * as React from "react";
-import { useState } from "react";
+import * as React from 'react';
+import { useState } from 'react';
 
-import Navigation from "./Navigation";
-import NodeList from "./NodeList";
-import Preloader from "./Preloader";
-import EmptyState from "./EmptyState";
-import Panel from "./Panel";
-import BulkErrorList from "./BulkErrorList";
+import Navigation from './Navigation';
+import NodeList from './NodeList';
+import Preloader from './Preloader';
+import EmptyState from './EmptyState';
+import Panel from './Panel';
+import BulkErrorList from './BulkErrorList';
 
-import "../styles/figma.ds.css";
-import "../styles/ui.css";
-import "../styles/empty-state.css";
+import '../styles/figma.ds.css';
+import '../styles/ui.css';
+import '../styles/empty-state.css';
 
 const App = ({}) => {
   const [errorArray, setErrorArray] = useState([]);
-  const [activePage, setActivePage] = useState("page");
+  const [activePage, setActivePage] = useState('page');
   const [ignoredErrorArray, setIgnoreErrorArray] = useState([]);
   const [activeError, setActiveError] = React.useState({});
   const [selectedNode, setSelectedNode] = React.useState({});
   const [isVisible, setIsVisible] = React.useState(false);
-  const [nodeArray, setNodeArray] = useState([]);
+  const [nodeArray, setNodeArray] = useState<SceneNode[]>([]);
   const [selectedListItems, setSelectedListItem] = React.useState([]);
   const [activeNodeIds, setActiveNodeIds] = React.useState([]);
   const [borderRadiusValues, setBorderRadiusValues] = useState([
-    0,
-    2,
-    4,
-    8,
-    16,
-    24,
-    32
+    0, 2, 4, 8, 16, 24, 32,
   ]);
   const [lintVectors, setLintVectors] = useState(false);
   const [initialLoad, setInitialLoad] = React.useState(false);
@@ -38,25 +32,25 @@ const App = ({}) => {
   let newWindowFocus = false;
   let counter = 0;
 
-  window.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") {
+  window.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
       // Close plugin when pressing Escape
-      window.parent.postMessage({ pluginMessage: { type: "close" } }, "*");
+      window.parent.postMessage({ pluginMessage: { type: 'close' } }, '*');
     }
   });
 
-  const updateSelectedList = id => {
-    setSelectedListItem(selectedListItems => {
+  const updateSelectedList = (id) => {
+    setSelectedListItem((selectedListItems) => {
       selectedListItems.splice(0, selectedListItems.length);
       return selectedListItems.concat(id);
     });
 
-    setActiveNodeIds(activeNodeIds => {
+    setActiveNodeIds((activeNodeIds) => {
       if (activeNodeIds.includes(id)) {
         // Remove this node if it exists in the array already from intial run.
         // Don't ignore it if there's only one layer total.
         if (activeNodeIds.length !== 1) {
-          return activeNodeIds.filter(activeNodeId => activeNodeId !== id);
+          return activeNodeIds.filter((activeNodeId) => activeNodeId !== id);
         } else {
           return activeNodeIds;
         }
@@ -66,31 +60,34 @@ const App = ({}) => {
     });
   };
 
-  const updateNavigation = page => {
+  const updateNavigation = (page) => {
     setActivePage(page);
 
     parent.postMessage(
       {
         pluginMessage: {
-          type: "update-active-page-in-settings",
-          page: page
-        }
+          type: 'update-active-page-in-settings',
+          page: page,
+        },
       },
-      "*"
+      '*'
     );
   };
 
-  const updateActiveError = error => {
+  const updateActiveError = (error) => {
     setActiveError(error);
   };
 
-  const ignoreAll = errors => {
-    setIgnoreErrorArray(ignoredErrorArray => [...ignoredErrorArray, ...errors]);
+  const ignoreAll = (errors) => {
+    setIgnoreErrorArray((ignoredErrorArray) => [
+      ...ignoredErrorArray,
+      ...errors,
+    ]);
   };
 
-  const updateIgnoredErrors = error => {
-    if (ignoredErrorArray.some(e => e.node.id === error.node.id)) {
-      if (ignoredErrorArray.some(e => e.value === error.value)) {
+  const updateIgnoredErrors = (error) => {
+    if (ignoredErrorArray.some((e) => e.node.id === error.node.id)) {
+      if (ignoredErrorArray.some((e) => e.value === error.value)) {
         return;
       } else {
         setIgnoreErrorArray([error].concat(ignoredErrorArray));
@@ -100,25 +97,25 @@ const App = ({}) => {
     }
   };
 
-  const updateErrorArray = errors => {
+  const updateErrorArray = (errors) => {
     setErrorArray(errors);
   };
 
-  const updateVisible = val => {
+  const updateVisible = (val) => {
     setIsVisible(val);
   };
 
-  const updateLintRules = boolean => {
+  const updateLintRules = (boolean) => {
     setLintVectors(boolean);
 
     parent.postMessage(
       {
         pluginMessage: {
-          type: "update-lint-rules-from-settings",
-          boolean: boolean
-        }
+          type: 'update-lint-rules-from-settings',
+          boolean: boolean,
+        },
       },
-      "*"
+      '*'
     );
   };
 
@@ -134,8 +131,8 @@ const App = ({}) => {
 
   const onRunApp = React.useCallback(() => {
     parent.postMessage(
-      { pluginMessage: { type: "run-app", lintVectors: lintVectors } },
-      "*"
+      { pluginMessage: { type: 'run-app', lintVectors: lintVectors } },
+      '*'
     );
   }, []);
 
@@ -146,7 +143,7 @@ const App = ({}) => {
       // How often we poll for new changes.
       let timer = 1500;
 
-      parent.postMessage({ pluginMessage: { type: "update-errors" } }, "*");
+      parent.postMessage({ pluginMessage: { type: 'update-errors' } }, '*');
       counter++;
 
       setTimeout(() => {
@@ -164,7 +161,7 @@ const App = ({}) => {
   }
 
   // If no layer is selected after 3 seconds, show the empty state.
-  setTimeout(function() {
+  setTimeout(function () {
     setTimeLoad(true);
   }, 3000);
 
@@ -175,11 +172,11 @@ const App = ({}) => {
       parent.postMessage(
         {
           pluginMessage: {
-            type: "update-storage",
-            storageArray: ignoredErrorArray
-          }
+            type: 'update-storage',
+            storageArray: ignoredErrorArray,
+          },
         },
-        "*"
+        '*'
       );
     }
   }, [ignoredErrorArray]);
@@ -187,15 +184,15 @@ const App = ({}) => {
   React.useEffect(() => {
     onRunApp();
 
-    window.addEventListener("focus", onFocus);
-    window.addEventListener("blur", onBlur);
+    window.addEventListener('focus', onFocus);
+    window.addEventListener('blur', onBlur);
 
-    window.onmessage = event => {
+    window.onmessage = (event) => {
       const { type, message, errors, storage } = event.data.pluginMessage;
 
       // Plugin code returns this message after we return the first node
       // for performance, then we lint the remaining layers.
-      if (type === "complete") {
+      if (type === 'complete') {
         let nodeObject = JSON.parse(message);
 
         // setNodeArray(nodeObject);
@@ -204,28 +201,28 @@ const App = ({}) => {
         parent.postMessage(
           {
             pluginMessage: {
-              type: "fetch-layer-data",
+              type: 'fetch-layer-data',
               id: nodeObject[0].id,
-              nodeArray: nodeObject
-            }
+              nodeArray: nodeObject,
+            },
           },
-          "*"
+          '*'
         );
 
         setInitialLoad(true);
-      } else if (type === "first node") {
+      } else if (type === 'first node') {
         let nodeObject = JSON.parse(message);
 
         setNodeArray(nodeObject);
         updateErrorArray(errors);
 
         // Set this node as selected in the side menu
-        setSelectedListItem(selectedListItems => {
+        setSelectedListItem((selectedListItems) => {
           selectedListItems.splice(0, selectedListItems.length);
           return selectedListItems.concat(nodeObject[0].id);
         });
 
-        setActiveNodeIds(activeNodeIds => {
+        setActiveNodeIds((activeNodeIds) => {
           return activeNodeIds.concat(nodeObject[0].id);
         });
 
@@ -234,48 +231,48 @@ const App = ({}) => {
         parent.postMessage(
           {
             pluginMessage: {
-              type: "lint-all",
-              nodes: nodeObject
-            }
+              type: 'lint-all',
+              nodes: nodeObject,
+            },
           },
-          "*"
+          '*'
         );
 
         parent.postMessage(
           {
             pluginMessage: {
-              type: "fetch-layer-data",
+              type: 'fetch-layer-data',
               id: nodeObject[0].id,
-              nodeArray: nodeObject
-            }
+              nodeArray: nodeObject,
+            },
           },
-          "*"
+          '*'
         );
-      } else if (type === "fetched storage") {
+      } else if (type === 'fetched storage') {
         let clientStorage = JSON.parse(storage);
 
-        setIgnoreErrorArray(ignoredErrorArray => [
+        setIgnoreErrorArray((ignoredErrorArray) => [
           ...ignoredErrorArray,
-          ...clientStorage
+          ...clientStorage,
         ]);
-      } else if (type === "fetched active page") {
+      } else if (type === 'fetched active page') {
         let clientStorage = JSON.parse(storage);
         setActivePage(clientStorage);
-      } else if (type === "fetched border radius") {
+      } else if (type === 'fetched border radius') {
         // Update border radius values from storage
         let clientStorage = JSON.parse(storage);
         setBorderRadiusValues([...clientStorage]);
-      } else if (type === "reset storage") {
+      } else if (type === 'reset storage') {
         let clientStorage = JSON.parse(storage);
         setIgnoreErrorArray([...clientStorage]);
-        parent.postMessage({ pluginMessage: { type: "update-errors" } }, "*");
-      } else if (type === "fetched layer") {
+        parent.postMessage({ pluginMessage: { type: 'update-errors' } }, '*');
+      } else if (type === 'fetched layer') {
         // Grabs the properties of the first layer.
         setSelectedNode(() => JSON.parse(message));
 
         // Ask the controller to lint the layers for errors.
-        parent.postMessage({ pluginMessage: { type: "update-errors" } }, "*");
-      } else if (type === "updated errors") {
+        parent.postMessage({ pluginMessage: { type: 'update-errors' } }, '*');
+      } else if (type === 'updated errors') {
         // Once the errors are returned, update the error array.
         updateErrorArray(errors);
       }
@@ -295,7 +292,7 @@ const App = ({}) => {
       />
       {activeNodeIds.length !== 0 ? (
         <div>
-          {activePage === "layers" ? (
+          {activePage === 'layers' ? (
             <NodeList
               onErrorUpdate={updateActiveError}
               onVisibleUpdate={updateVisible}

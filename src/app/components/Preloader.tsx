@@ -1,5 +1,5 @@
-import * as React from "react";
-import { motion } from "framer-motion/dist/framer-motion";
+import * as React from 'react';
+import { motion } from 'framer-motion';
 
 function Preloader() {
   const loading = (
@@ -10,9 +10,9 @@ function Preloader() {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -24 }}
         transition={{
-          type: "spring",
+          type: 'spring',
           stiffness: 260,
-          damping: 20
+          damping: 20,
         }}
       >
         <motion.div
@@ -21,10 +21,10 @@ function Preloader() {
           animate={{ scale: 1, y: -4, opacity: 0.8 }}
           transition={{
             yoyo: Infinity,
-            type: "tween",
+            type: 'tween',
             duration: 0.3,
             delay: 0,
-            repeatDelay: 0.3
+            repeatDelay: 0.3,
           }}
         ></motion.div>
         <motion.div
@@ -33,10 +33,10 @@ function Preloader() {
           animate={{ scale: 1, y: -4, opacity: 0.8 }}
           transition={{
             yoyo: Infinity,
-            type: "tween",
+            type: 'tween',
             duration: 0.3,
             delay: 0.15,
-            repeatDelay: 0.3
+            repeatDelay: 0.3,
           }}
         ></motion.div>
         <motion.div
@@ -45,10 +45,10 @@ function Preloader() {
           animate={{ scale: 1, y: -4, opacity: 0.8 }}
           transition={{
             yoyo: Infinity,
-            type: "tween",
+            type: 'tween',
             duration: 0.3,
             delay: 0.3,
-            repeatDelay: 0.3
+            repeatDelay: 0.3,
           }}
         ></motion.div>
       </motion.div>

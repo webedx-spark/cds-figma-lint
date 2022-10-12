@@ -1,0 +1,1874 @@
+{
+  "styles": [
+    {
+      "key": "546203a44ff0287d1f5e8595b70600e7d434ecde",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "658:54",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/cFT/h5A/TscOB09vhAxVSn00/style_thumbnail_34.png?Expires=1666569600&Signature=MadedDauhZCkIh-EauwpRIiGDIs1th2AYSrWsSXL3FjJnvHOALwBS7pmeBUQBbPIMak~ktI5QHXjHw3-CQnDRaRHgNzzvXaSiWXB7XJbc29pNuCcjFRBshlB5WFKH9cUUNTCycixbb5Wfas5j2zToegDfwlm-TDJNKT2PQ~VNTgDOqomGUIvIGHw6swzJhylMtHo3MZMkFi88XsT8Y-~t7xdoogKqKp31AsMFIjNVa-JZvvBV0~Kndocc3UElbT-gjVW~mxQqRQq0CYBtgrCI9Mvvx6qLTR8tiVT4vwl4JH-K0WISJabN-oJ7l-SL9NJ6rPTsR9TDjihiv879rUZfA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H4 - Heading4/Bold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.910Z",
+      "updated_at": "2022-08-08T23:52:03.712Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iMu"
+    },
+    {
+      "key": "0d14117caf433082294c562e1014ad1eda0c5c51",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2424",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/d3d/QpC/UkLyIcgDwp4aoOVX/style_thumbnail_17.png?Expires=1666569600&Signature=JYOJMKOTRSh33ayC1sCRoVXluDnhPDE~KZ5aJuoH8h1dKzdMfi601b2NIxHEGVM7zoQfiuK4usBSTE27oVK~P8zRkSOOu0VTX2~mnkxB5yCvT-LnlFnw6Qm5ZBGWGDYNs-nGY6LQ1RVzb3M-zWCZ8RuXzIzkXDAoviOLUlEYiWSDZfnSi5yEBDUTkqSRD~C7T3nA82PYxSzZgQouhquLVos6hgPPtQuhfV~mjYcH4EzHyMzkre9nR~d-hC76GMHkvxOYWMIAj9fKye7n~5dZ9H2YZasQfcvxphuo-KTcPpAMdCP3trYaj~9g6N3miRCA~USIkmJaMrcdVKyOka~mtw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H1 - Heading1/SM - SemiBold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.903Z",
+      "updated_at": "2022-08-08T23:51:59.037Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM|7"
+    },
+    {
+      "key": "0082b41eec78b17279ce6871ad5c8dafccf013ae",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6697:22",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/ghj/T2R/px6fPoio8BaNDFYj/style_thumbnail_29.png?Expires=1666569600&Signature=Pa2Q~bceMZxvr87i2XCBSmh6Xyd7bXbMpripBkSi5mn0izIEhkAnLqAVz0d96OfEFK8tNB1~Ctfeeey4O-4oPYRi0pbuF6eFTH~Y8dWykf3JokR2tLpQu26ZaUzmLDOnzvyT6ZQp3thMp4-h61o2tJGbcHmNoHB71H4Q2x78n2BeGNufOCvUKUKoiAaDCqAyvtehPD4ycy0ibc8fSE2Lbch0HmSn0dIkEe5zZk1wfkExZ-5FIjqibFZyZ09AwuI7krXtFbYLUtvdEqyhm3g-ODgMZ9MywbO94x7igAbkGNWHFAMkzPNq-dny0EAEsCcW6psdqJLegoriV9NvzIDBgw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H1 - Heading1/LG & MD - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.147Z",
+      "updated_at": "2022-08-08T23:52:03.533Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}|"
+    },
+    {
+      "key": "036559f5b33f906ba55c6be9a9bd28d6153cd436",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:63",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/5n8/Q8F/M8LGexRFug2GXwP4/style_thumbnail_2.png?Expires=1666569600&Signature=EjqdCzMHgD4MTRIDRq12qYTEvxzYHuKCxpl9sYIZbSn96l1XaEQ4DlbD3V-iZP-8xg8qwaBfHVRnmbqN9ML1CnQUJfGvIRVG8rDiu82Q7JvvfqoUkylplsChJkIK0D-vsDKf1ywDHzo9Mmm3Wc5xQBhwGCdPu9WxbxiybhHs8axTzNEMEVRTyhAYECMgdy2CGd1UyfoalnWekroGmDum3EAM9aTgF~F~6QVmX~1rzufZ0kwIMsBGDNEUfnDIe6QFg0P2c3VyiFowt31k~FM9Rn-BLF2EYKhxiCrcR3hblT1Ddv51xoXYECm5~wQgGvuPjZa9K6ILN7jIX8nm6nT9Jw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H1 - Heading1/SM - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:25:59.941Z",
+      "updated_at": "2022-08-08T23:52:03.551Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}x"
+    },
+    {
+      "key": "066f3fa4452c0da851b5d8f5f081a6f7edbdc9dc",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "7118:3",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/9kF/rA1/Smx2U4snB7wgt4JU/style_thumbnail_0.png?Expires=1666569600&Signature=c7zl2L2bOecm0G2absTUztQAjtdMYQ3wI3YRP~r5d2tmphq8x93zdWD6eaFQSU3XTnrAdKONdSRP~U1K6qRAiuvrcw0seqQtBBYVhm7HCqZzb8prO6hgniwXL8cE1GGWtFjX-sPyaVYTLW5gvWM72GpfxWoshc3L~Osn~Rw4UMYD~3JpaNCcSYerTqsE0YS2q7Pc5uCs8ShnUKRM2lZNsBKy17yaadkUPV12pxehpERQN6GV4RSIYyVMojOdhCipeZepjohkEpfETLffvUAeXNPRiWT4cw3Qkk1nJB~5DkVy30Xkv2hgormWIzFZIR-SG-SJvQgyLL14t1pkLvSwGg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Stroke & divider/Invert White",
+      "description": "",
+      "created_at": "2021-02-11T11:11:09.232Z",
+      "updated_at": "2022-08-08T23:52:03.557Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}{f"
+    },
+    {
+      "key": "08c3939815f439eff4aa8063fdc7ba53d025b133",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "7438:2",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/zLV/U1R/kMZASmn0JLD6PLDN/style_thumbnail_0.png?Expires=1666569600&Signature=ATHdXy7hgXXhHc-4~jLSr8EN1Jyfnm57b-1D3XmzbCj4SCbidaNh3O9HKL~Hxad5uTjyf~nlclpCvhycQrHO2napsszVg4sCy3RbY6KEhrxTbhyjxIAl2rmw-nNnOr1Rn~OL~ZxrMmW9KDK1AcbLRsj2aqyACrhER~e8GpwIE0YQ7qDTr8-jbRABQzTo4EkfZ5jUnv~CvALjBrcRKPNB8Yjm68WBa4FmjC44SumLuNR0JBXpk20tLKVzvlCcYmUcrmGqG97SBYSidnxCgb3PrzSv6YggPJ0jSa2RZ08HzMHPxvJqsSpO2yLASc-r4d69nY0oVNR-ndiHKbXHZ47Gkw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Baked into components / TextField Label",
+      "description": "",
+      "created_at": "2021-04-06T11:27:10.050Z",
+      "updated_at": "2022-08-08T23:52:03.562Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!pl"
+    },
+    {
+      "key": "0f1ec8f5e8bd43860a68d1548b03aafee0647eb1",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "1049:40",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/tHV/xEr/fXoHZsuyXwKiNj1u/style_thumbnail_12.png?Expires=1666569600&Signature=FcXJGpXbhllx8pvvl~Lj9Fiq~QGrbCnEQX8MQPQmOnNSAVKmlkEJHWvtS9daV03bxzjq95CqhcTTH1TIQDqSHDYLinK8rTjsHfVa9QWtGc933~JxskNvJPCV~qhPyUnNRyFPvSxD2M~8f~Ksonidgil8qDQcJS~6CYOgj5PzsHeqLdqwwhOHqwwCX9DrVH0g79mAJWYTMop0Zbgj9b3TUdve06vWdwqAmd0-4U0zl3QAD-IJ8RavSRONhkuZcgaUPnZ7pKQQtX3VpeS8-jCuDFKFqd4N9tSPax~bbowhOTvW0ii7ZKKd9fCy8OPF9xlqrR6C97MsXUJu~cGNTn9BrQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H4 Bold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.990Z",
+      "updated_at": "2022-08-08T23:52:03.567Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}|"
+    },
+    {
+      "key": "10daaced36dfe78458191c7f67245e887833c837",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2313",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/5kl/8N5/Zup2xcfJtUaYLiKd/style_thumbnail_24.png?Expires=1666569600&Signature=ML2q~SAUN88mrkvYquAvQG-OUUHpv9fXKiItmbyiZCtwKAP7r1qnlXa5Ha96iqzc-AhI7Rz2pFkN~AK9wk2qGBVd2timI5ii76WwUlFRpb~b9uuBSQOKSbVCs6wo34JM2kh2O0094wHQspxwLUfTt9gfzLSS9eJJEsOzigRwNZsKs3GMbDQUZfpQ8alIDH6j67RB2~Go5BLFL5k3o6VY98nan7tGuPjhMAtJyOAlRAjbQQC6Txmzo9FEfLkkI73rX1dyLNuz1heyRw5e~dZFFM79WHMnTZ5UslsUUxcqdZa4l9nzQ5g0lzyE~Kzys5vlrnaP59YeDrZpSOO0dnQO1w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Background (BG)/LightBG White",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.058Z",
+      "updated_at": "2022-08-08T23:52:03.572Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}f"
+    },
+    {
+      "key": "11cf9d33042300749ba65c2b22e3ed1134577e0a",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "7054:1",
+      "style_type": "GRID",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/WU1/SGc/59jlUEVxsJchbF82/style_thumbnail_0.png?Expires=1666569600&Signature=D0oCL61guNlLQcCDL-BWu4xmcnl9N-GaUVVZ0OqawW8nM5LBRGO7crZ1xZklhf-3QaIee5IcGdvueS~6nvGQ8S81zLIjV-WejVWB9ms3k9qi83mNZdLmgHYhX-G5R2PPamVj3TTrhv7w3uUTnZPlWP6JvM2T7ugU~6FNIfFyuuwrGN9friHf1BbDvmZmB1ZuRdaXixTTub4USgSf99~EWY0kXkQFBW8Ul7ecQ5ltJnvcJ4gO26z2JJb~nmHnL3OM~7LiJ7tTZ-LVrLUV24ExGvAc9WThpfqzBmdhVMH6nY6FgMHlQMPbhY8N4iII9SV7o7RNWs4jQKOwy06KciiOjw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "LG Fluid (1440-1919)",
+      "description": "",
+      "created_at": "2021-02-03T12:48:17.378Z",
+      "updated_at": "2022-08-08T23:51:59.045Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!xf"
+    },
+    {
+      "key": "23f20a18da3cbe323bdca8e6ad461fb0f2c47297",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "682:165",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Ghe/ACP/C5wqRtz0gQMYzcV6/style_thumbnail_25.png?Expires=1666569600&Signature=HuEFaAOIX7wHkJ5WeoM35WDlcXVG-vGSWhhyPnLpSBAYWGTRuxMVj99EHy5~MXK542i86QDLrtzPTcJu0CpBReJ0RueYT1bNPGBdKFSb0psNAJkTvmNoahC2duI-7lR6a~-NQRnjksfRqhGpYHln8t149mTcedS0nNerNyN-WtCJN23uUdHOSWtmX-~XZ5f3z~9mV~BuwxkThB4sYmWlAmTRclRKZQgn9hCFpjUpL9otWt1UkB~kIcwgNon5NARRJ8aVtkbNFydya75-bgaVEyqoD8nfwVGzNOWMqzImapxwxCA4hmOBARDjJf9uq9RguKlF6we3tsyel~~24SSxuw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Background (BG)/LightBG Grey100",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.148Z",
+      "updated_at": "2022-08-08T23:51:59.051Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}r"
+    },
+    {
+      "key": "4be7c48e63ad7dae3e1b7590ea5f4d05f53907ad",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:61",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Q6g/DdQ/VFmDzRQf2Mnj04mW/style_thumbnail_4.png?Expires=1666569600&Signature=JXTAVqIQKp3f2iEuZ7MThFfVcsXq3FYMaIlTX-ffGslRXgCmIsE1cur7zGY7l8Hia8f5GOr3bVI35Fa-FxC-eIfZO7z~yb0fRKBkNsjRw0rglh--xFXBT1jlIsuazsQD2-GPdZttHGynC~sDzyDlFQS-FKzpf6uHnlF-Jvy4DzTatcf4kR0F8-XHlCrWc3zMJVXFjLqPo8drUWu4~vgIu3vLa6zmrsuhIbVRraZTnxWmt0wSyKf1noYP8Au3VOmp15fedSyOG-70no6rwReYeyM1946nCb7biqvT11dEHlvYYEpm4vvSJIlHxJxCXZGkduZVxrQJniVqnwh1TCNj6w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D2 - Display2/SM - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:25:59.949Z",
+      "updated_at": "2022-08-08T23:51:59.058Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}r"
+    },
+    {
+      "key": "63fae65542ad3246bb404d6c346f80017be57d08",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "3246:3054",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/260/jty/pf0RmIcKuFjFLmsU/style_thumbnail_66.png?Expires=1666569600&Signature=dwvzZR7GVAX8mUy1QYYy8L2zmT3h5dPSDDtVrOJ9rsJUS5KnfKfB4uYLfprCOKirlfpwExxAyI6w6YSlmpoxA1vPjOj5exSPXqUZ3j7OeW5CjafLKMkHEaSL96WbOKLLv9Xga-AammGfubeyjdZCWdkD3SF2MLjlRQT1dLz4DJrzagxznDxL8Yf8uyOXYk2009au~wHsYQUaRegRyDQOm~V4xlV9zDQB3JGp7fR~S6T090uutpeVjVO-nRoN~p9sx9sSZPvqxkUC~05jpXtZrJrhAkgSR7I2jqjtBrdq1c2oG0XQVm~~uK7SbEfsnQzNuIRLUOkjC11SxN1rLzGQ4Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Error / LightBG Red50",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.113Z",
+      "updated_at": "2022-08-08T23:51:59.066Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "vO"
+    },
+    {
+      "key": "8364000707a222ee4ab75bb029595e9e26c5b06c",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6318:43982",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/sM3/iz2/H6s9QWNZT4bpcoUd/style_thumbnail_10.png?Expires=1666569600&Signature=bRZ2pdYlmHam3UPAc2dnEjA05XQrTkP19sh-BgCW3GCKnabO3J5TDgkb1avxD0ek2X2eL8KMJ2VuhKZ1sAfrsnVnpQGG4StjAia4gmKYt4tuvDa6hs3gRoY1QiZ28ko7HyNDNj2MSi3TSJknvzSAi5qm6WHjDvuE2hls3awxDf1A4IS-8fZefTnTWFB2jyZb8EZ1Iy57P6wPJ-pcRe1boT0kstub54cb7zrDJPLMPCpFhZutmObFxGbTI9kDRyp8RVjeM52Ir9QXGmB~DLfeIOk9BBtdk3au4aJcaMKpbuPUPy-XEMiJlLnAlVCePQiwEJ-oSuNsVyO8fov~fEL7BQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Interactive/InvertBG White",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.971Z",
+      "updated_at": "2022-08-08T23:51:59.072Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "Zf"
+    },
+    {
+      "key": "8cde13abeb69ebb3544fe7349c539361628e51da",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:54",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/v2L/QIa/lKsdzeqa1rURSZfx/style_thumbnail_22.png?Expires=1666569600&Signature=fQqOphfkkpJ~xwzBYd4QFggQ6LtJAkqAQYfVLq5-7a0xDvss-q-d4QSmbFwMYSXhNj5awiYIggrl8tzy2YubGfH5O6vOfFVMVZtuwy-fz~Pst9N9Qi-1K6xz-xKhrR2Cy6xpyX85xfxRCl7hxK9Qkcurk1Za2xUEp9QYozrvPGGS3Uolw1LY8cQxxmRGWBvm-tLbp3kmOlh9wgoa6K6hX8sXz1iF-JTL9ofRlGEGjfpI5qcH~FI4szApk4WpfZCrN1acdjHFSdrsy47b14kyDKzkkvJqndd81jvgnL5Bg2XF7O791Os2RN103i6rwfJd5vTAi~fWeybfC-Z1hQbesg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H2 SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:25:59.959Z",
+      "updated_at": "2022-08-08T23:51:59.078Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}f"
+    },
+    {
+      "key": "99b381fff7e255ca6986f66d4d281d02b6376a25",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42170",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/gPn/3dZ/vbh7uGGwrY6R3h51/style_thumbnail_19.png?Expires=1666569600&Signature=YmIT57bEt-1RdiDnv9RF66462ff-W7bdWnrX2TaNN8bHKn7zGJ3yO86YsmISHAEsjXfCK3JZdXFnEw12ixiWrfFknt4WcVfd28vfihZfPBtwTrLDEa-qxJeVt~muERywpYQ7IkQ6HgdUMyAHCoD1s2JXmF9zVMwq0nPRs9MezDUciXohZT0XdPTzeO59SfyrH6HEx7OAKn8WdqdCfZm0riYkaMLtiIRs7ym2u25nn9jlMOIOoEaQ31fYuyxKGcmQIIXemqasCVbUa5qBvw3d3sbW3IN7UA-jNnzHr9uu4Gut9qnpwsCSzs1TQJnxfBZSPs-AGcU3Ddy96wYFqYo8iw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI / Neutral / Disabled / Dark Copy Grey400",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.945Z",
+      "updated_at": "2022-08-08T23:51:59.084Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}O"
+    },
+    {
+      "key": "9e7b1ddfbf738d734cdb9790b613469128b4abbe",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "658:33",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/xl2/w6Y/4vfca7hYkQV5X59M/style_thumbnail_24.png?Expires=1666569600&Signature=gRH1bgLPF6Ke30uHfX-CrgebPGwkjKfsWSEMXNjqQmfmMlKIBVbhJd757hZPgV9zX4nnqRRPYXF5ulQM~Bd7NDbbxrzMQgemglEhz7SYjL~2Sd4eIqSLSB4GnleFEDlo71CVGmzlpb-l42yWgMPGx0O9NQacXHxAVIERgYmMwkSPvKNb4xtKUe9z-9Bqh9IeoMv6EkS29Bt1HHV5vs95NbHs90ww6snvjNVudKqMHcFsFins2TEAaadXd0m3ZlYL2yIv2N8kLLMeIwnYl~X6z-nm7Ikp6OsatK98F8YTuOTnFATF7h8rsNb-Z24X5vSVn7U2w9drAwQ0lI-UiwHikA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H2 - Heading2/Semibold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.941Z",
+      "updated_at": "2022-08-08T23:51:59.091Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM{7"
+    },
+    {
+      "key": "a70a92f98720422f5cd04bb4143d26cdf504492b",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "3156:8491",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Vs7/dOy/70VCzLvFfZIwjr7z/style_thumbnail_40.png?Expires=1666569600&Signature=PUuuL42fyBfWP6IteyXvGNE34UYqzEqCGy1ijy9rrketaXgIrgCpB8N29qAgiqF~i7OaZJwyvmGnfebMyd7B2950NWBVpE8fZZ4WjomyABIE-OS2aWsbchvRq9ZLGxGEDRLjtdMw~LQSC2uk4zoUI266V7ZzGZhkr62iG70km2wwaEipIiHxAv1zIUr48gHgYD~utw4yiIjpf4KkfeNOjg5NSYuiabq3hDnV8eeZ5Ku-I50LwstKZl73bqA6XHlNF~PkTomRC37aP3DnJZ-KHyhQTZ5FSCgA8cBZG8fbDjzvXeugwSb68cK9LheraJerqA~3dmm2andqCKKuYaIyHw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Interactive / PressedBG Purple50",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.021Z",
+      "updated_at": "2022-08-08T23:51:59.097Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "UO"
+    },
+    {
+      "key": "b92f33f809cc1461324d252dffcbde3182637027",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42167",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/wCK/X9G/ZiYDTn17BtAXU0u3/style_thumbnail_4.png?Expires=1666569600&Signature=Vwl~tkpdmiyYminaDOvnq96zWzAUI6HQKJOPGlOK66TcEXGnw44iP3sLeM9ZWiUzzi5UK~Lfh6b1XECaImtjayKTyTUDCExEOSwghwMFlskqffTGLcNqi-NRY2P8y2wZ2aFcQGE7UmNurYRoO22qbP2TlcVUUNJSmpbRtks4Y~H60xT76ANLQZgc-mW1R4UYFRivlti9R~aCTtjbJgIRlWSI82ksMDBZEb9KCyle8jVdC~a34Kf5rWxpKCoNDdfSqCjRP41BB8ldfLaeb4nkMNgSUhfmRjw~kVQUaIW1zdWA0TPK9jnmGRiSGjeZf9iL0HlkoalCN1CRzx12QD2ruQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Background (BG)/DarkBG Blue600",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.961Z",
+      "updated_at": "2022-08-08T23:51:59.103Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}f"
+    },
+    {
+      "key": "b965e4b26eb19ef5fc0a67722a8f9c53502f1500",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2311",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Vmj/JhP/YXoLnGrIA9eAQPrS/style_thumbnail_51.png?Expires=1666569600&Signature=L7ffVi1ZqAifBMYm2S3LFvoSVWs54GMdUB7rN1MqeznJiPLeB3eKeai5~idSZaq4JtjG-kj5f7opNIIdKNhjgD4RdYP-AONJna7XiowyiHJ1u0KFBYTMi40WW7yUSxz~wtfzeah5iJA3rrUBLOhR0tZu2AVnZ4YLUHLsSkkYIA4OfGU~ToJEdlpNmXbE1GkZLj5KLr8UGthehfO-GrIi2O2TkZFszk7ZTlF6L8LkF3APyJsy5u8ko9gZF7Med4WMxFV9UHV-xcoT3ia0JD~-vQkrebyepgLSvF8vhXApDTzdBpDf9tiz7lPs5tpNMetBP74JrHEMnkwyod9lz6ETLw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Success / Copy Green700",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.062Z",
+      "updated_at": "2022-08-08T23:51:59.110Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "~6I"
+    },
+    {
+      "key": "bc30b89816cf6105b7ae1e428e0c8dfc6fe6c373",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "7097:1251",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/a1h/wKN/46j0QNVPSrSZgp6h/style_thumbnail_21.png?Expires=1666569600&Signature=X3~jxURYdzSPqeZKcp12w8UTJPabteQGESLQ9-JBHCgjtbH-q0edt93MzNf1v~vNbUAhk08ev~6q3tDjV~jcwvOBOpGUO5G1Ip-yY3AL~ev41xkStOguWj8sApngO3QG~ATHHYqt-zRVCYofe~ze2rKOv7W1twtd1XMj0LSmHrRGVTFHKRANGsDLHnrhm4KZR4-n7A7F7g7fcUausqF7S8zn3CyG9mwpzDqj6c7AYDTty62-CViiZba0hraNoMhPnppTNdl3XIj0jyfzOXUYyjAOVMEhXJO-cu49nAwYLJekyDEZp5UBiojwv0oifEcMI0lcca5ipi8JD0MIC9xTGg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Stroke & divider/Light Grey300",
+      "description": "",
+      "created_at": "2021-02-08T16:00:34.249Z",
+      "updated_at": "2022-08-08T23:51:59.116Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}{O"
+    },
+    {
+      "key": "ef0ee75ac00e695cf6e9e2c1cc81567a41f748d8",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2312",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/JwH/w8p/Dia19mQFE5HDOy6f/style_thumbnail_79.png?Expires=1666569600&Signature=ctogVvTz6rNTxzauiqtAtQ1Iz-WacvUm2akH6QAQ6x7~2PJi8OVf137JDEo5nYFVFGug6h3j-F~9PLP~mTr2VmMubCdVZBRNJyRRRHqrqdOEhTzNZRT6vWDPVQQTpJFYHS4rZUsfy-EoyjXXjkSsUJXCoO~Dv7tL-jypRwD3cuuSy9OKbsZtrSFexWTCGFGA2QZ6MZHGhOXhaSW4Tfq~uOMe4JgyPHagzkYIvOyAmB2fl53~87JwwxbQgg780DfbA0ZQkhuJV~-XvVLt9sEdP1QySlQuinHPlwGZ0Im9lTcVBTuTTXEqj73NMz0hG0vYAVx--tCV50LH~LMjrlHlDw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Success / InvertBG Green100",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.160Z",
+      "updated_at": "2022-08-08T23:51:59.122Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "~6F"
+    },
+    {
+      "key": "f70472fc7dacac8bce85a68addafc34be2230390",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6655:1517",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/qMR/aKj/mXALehi57dZctVKg/style_thumbnail_26.png?Expires=1666569600&Signature=d9PJUA4RwQJU5nSBW88rVPX4O1NxxgX4SHHUWUdPtcdWHIg4euIQ7lYPhwDlTUQAXzVmGveo62paxqK8NNrSBCEqnoYgfHoL-H8APIcVb3KPAetE6-pMdocrTutidyZxqotcC9jS-ufW6k-~s04~WAXNHvINED8xRe71sBwkVIKQyslRUQaqMMWqq-TNRuzQFp8hjOnophfTQVAaaKcqAkHerbwIrIhIUpiQcxNDzECpyRQ8pz2VZg9YIgk-joaPz3E3JYF7f1phfv5VWBe1iZiv26kqY0jEmjneNXxJBRe9~4pV09BmEe7eOPnL4CAYg-Q0V3Uj7o5sE5JwfpYK~Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/Links Blue600",
+      "description": "",
+      "created_at": "2020-12-23T19:20:13.683Z",
+      "updated_at": "2022-08-08T23:51:59.128Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}v"
+    },
+    {
+      "key": "1407b7cb7bbc9b7cf6e37c3ef24b56c14c724fac",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2307",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/81A/YOf/N68abVz8JF3iooPU/style_thumbnail_74.png?Expires=1666569600&Signature=CgOtwY9rS1gA8t5wOjMDtvHpNG23rdLfp29NzLgf4HyBybFfUp9p-YdhGPERxSDzFgqFm2eaMNCh1qIKlm7RE2uZ1JOpW~ufDYTUe8Yox2XtIuV6AU7pgpYu7JIb2zCv1fjHTw1W8bzOZ8BdkPwqE44czF7aevAnrKzjDAX6t6MX8Az1v2mbSKp8wEgLPgNIMAEzlXuwAKvUHksjPwdLZ7RuMnXj15jxtPEnzUhLqHxysiORL194mbdDt7HTrHQnqSPm56vr3KNfv7pi7jKZoT2heWpEqeeXy6fXxe1gwnlj93mFSARIC5A2sQKXRV1QMFF5hwVUEyRI-M2Z6mTdyw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Error / Copy Red700",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.142Z",
+      "updated_at": "2022-08-08T23:52:03.577Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "zO"
+    },
+    {
+      "key": "17dd23a960f370736b4c4a36fb7515a3c40f87ab",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "682:158",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/EnP/upz/EHbByXwACwf6VVOz/style_thumbnail_29.png?Expires=1666569600&Signature=cQP67UOcDNQLCsSKbY7X4py783n-f3tbHNfet1y0j7KoxshG-Sjn0ehSO6dKeSjdGvyx9CUYpnycQ9TyQSrt8B5dUrAK5M6LsyrwI-lPl3UYFtgwgEMlv0JI5eFfMDFN-mPRH6boUw5EXmx~SbpuHvsBEUUO43-fvlam6fBrAzReTxPTDWDrdlVdKmtljWTgOjQSlCdVnZlCtmwXp68N1qNBbZtEUex72I-0q3Pad7zho8QYfIzNYgFMD59OTStpfR-PBLWSQnjT05QDM9auINWxd~LwoAxmx1K4mTWNL8mcr5Uc5OwCvhb4xi1zrv0rOIEN2azLiSTG~FWTxn4WoQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/supportText",
+      "description": "Grey700",
+      "created_at": "2020-11-27T18:51:12.164Z",
+      "updated_at": "2022-08-08T23:52:03.583Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"LO"
+    },
+    {
+      "key": "1a292e6e8c406e5303e799c16680e1fe615841a9",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "851:10",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/GN7/LpL/uSk9Nhz70Sn8itfV/style_thumbnail_22.png?Expires=1666569600&Signature=JEAcUxaUMWmA-FFUgyDyweBj21veXzm8hEoEbBUFhIeNwDfkL5JiIW3cz86IhhSV2nE0GCuMyEUY-z~YmtYGSrRTWbrb4BL8bIMA4whkU3zoeJXYYA41KGZ4nfZZa~dwYLJ7WxpfkmymP6N3bMYiH2I5DFrkmwAZMmyQMhK9m7QqPX6YS0mEEalK3NtbKYkFOhwU5R6Sq5gvRWWwekVyuXOgiZQxMYzk3hDMoy4RftwiYt5N8OLhNwMA1GPzQz3c2~tEwZMNLJl~R6SlCnUW00q0QhLFBCE6shf7DIUxXOo82bNqwjzpwnJVzi3CsGR7GZdl80RZbpjGcxtt1Yy-EQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/body",
+      "description": "Black500",
+      "created_at": "2020-11-27T18:51:12.092Z",
+      "updated_at": "2022-08-08T23:52:03.588Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"L"
+    },
+    {
+      "key": "1a510e899bb85d5e5b9a5031337ea67735def86a",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6538:11",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/HpN/3BV/IYST6D4n2TEFfL1L/style_thumbnail_9.png?Expires=1666569600&Signature=LCEVPsMe5UFizRh9fEzTSS1qDzQrJP-Qu8GYQl4DLjvyFhtqJutVCjfPP4UqtZ6SoDEMwevA6arpbOFE~N94xQ2MMPs492lcSRUT77qj1qUaQoQPtLGT6rD43FDweVoFz7RlJP0Oh4A60g1cY5gS3CutBMsd8-5Va6tNLAriP2xylPrJPjBAgRB6bO5Z3KchLgd4XguOWownmOEs2fGv66H60RrTL11zv2Exth9gF51LLfzcz2aAIOHGXkd2dXtYUrC47-9mpYBqyeg~z4Er9pPemijuSMoH0Pk5PHFlPfFbptu05c47ea2Cm6tzZ0u2F1Y2IFqA63DBwBXN6a4Q3g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D1 - Display1/SM- SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T16:07:13.870Z",
+      "updated_at": "2022-08-08T23:52:03.594Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}v"
+    },
+    {
+      "key": "1a549210686c84671b047fb6a0157e42c7ec9e4e",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "7366:7",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/TJb/qAy/2epkaDlN4ypEuTWb/style_thumbnail_0.png?Expires=1666569600&Signature=IohExxPb9VHRCQfae-0pDmpv3rdLXOGPgkP~cgAELoM03xsd3-xlZA8L5CkVqjHsfhrXl2YI07KXRHilmzYP9WWvuRTeRqWas8lvy22N1X9yHHF3N4sl8EBnG-AJQxXeP2cg0SaZcYVjHslP3OJTB~9HdslEqiMZ~E0rtOVjwyS65SRz6RA2UDNHhHrfEPiDHyWBI0GdW4G3D5Pdskh~X9NuLhx4H4co1KaTiJHVLYPLeh5xRW23JVHd4znQEYG9EMFBxVHV~F5eDmtubzKNdbquSmiApwRUQY5TybXrAUckXAd8zcqg-xAdiTxvD-g8xXWQyYb48QIuJQwqExLI0w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H3 - Heading3 Semibold",
+      "description": "",
+      "created_at": "2021-03-23T18:13:34.207Z",
+      "updated_at": "2022-08-08T23:52:03.599Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}7"
+    },
+    {
+      "key": "23ba01e159d24b68bc47074ff586d3b9629deb36",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2292",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/RtB/FM9/BDAdx3R4fi3ToQRU/style_thumbnail_58.png?Expires=1666569600&Signature=XyF3mSKu2nmwSZpwFrT1agiFVvHOO~2JLF2p5KMUf-4JMLH7--~Xbcw8SnE7TFfacvOMrecVKLXcyCihWPDj6RSLfgvtfTVUXM4r2X-Z63l-BCSYF4S0HyagRDgVhB2lgWcHdMmtk1Q56uycdl9fPV5wqsZkwexQyS4sPzgdEMLJkjryEIwuvf6Df3AeQomwa8NPw1TTazGZp9B7tWbluESj~TgD7H2gUud1DXW2CyUBWg2Q94qm1ZkUTZujy5SqT~FLRyCWBLnWVJuGF2sphvTIEsqhuJZGJ-JZw-DfZktTEuAjt7XHx4ALBhmyQENVDiu2yliAirMWXDqELvyhXA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Interactive / Focus Purple600",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.086Z",
+      "updated_at": "2022-08-08T23:52:03.605Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "SO"
+    },
+    {
+      "key": "24c392250c9ed967ff55eba9d8be2ec6a728f2eb",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "658:30",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/5gr/C6r/Nc8SKdR9lvxNgx0Z/style_thumbnail_7.png?Expires=1666569600&Signature=LXbYnT~~0~-hr2ook3Odikc4A~BqCHiQVCIMgRUwJ6~cKvrgscyriZk3ucTvL1RW6wwPeqDCpO~VIX3IkqMp6rEsTQsFvQ1Ne9eXbpzdLwHwMabB-DMHX853CSTaNHbC7ZYHA6qiytmYz7CSyoQKBQIUgJ-9~oFa8-PD8sJmhgCg8M59DhR58HLiRCLRBrglqYOK4s2nTrTO5pE53yptEB1vqIjF602niUcVpMvYwCmZ6diL~8Loxaz2BzWEsbUbFNyrprW0OC~4r~WgqUFGle7SgTDHq5we~drDPZBbggDCIOKFmxvbqBkIUzrGwKNEOKDG3Di03i~gAfMOmOWseQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H1 - Heading1/LG & MD - SemiBold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.917Z",
+      "updated_at": "2022-08-08T23:52:03.610Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM|+"
+    },
+    {
+      "key": "274b559c866487fde9dd70852b6f1a66c6be0e0d",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "658:28",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/SUf/BFc/9Q86FivP56oJkvCV/style_thumbnail_16.png?Expires=1666569600&Signature=ZVHcZXkgHjWdyXIUDmUF~wpBR0WddPMprAoyr~vc1bSLRKDQgyqJz~IkW07-bSZMFAaNHHNqboYL82edpR1VTT~xNiWPR5P1vAJj-eyuYpkzGLySBAnbhgyWO1TU-Uver~aojpJn9ei8VGEBrBv6eDubZwFSXn8jd5q7440grkkmzjqyeXdpMMlILQ64YDzAWKwXRBTAqOXQiIup6Ou1l2mA4tpVeT8yu3DcnGXmGOouSmoPvW6N9FC7ewaHYYVKLRMcHB~GBTJnjewyaSgCnGrX7K~pwI4SNsJG8iY6AjnR3smYKbZ1sfg7KKgjjz6b1Ip2TNZjkhVcTwxJcpjUyQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H1 - Heading1/LG & MD -  Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.923Z",
+      "updated_at": "2022-08-08T23:52:03.616Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM|f"
+    },
+    {
+      "key": "27f21915a2295fd8208ce411614b7590a50322db",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42171",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/g1l/Qh5/ziylX5vbGb7rFdvX/style_thumbnail_3.png?Expires=1666569600&Signature=G9HdTJ7-nYZTeh0UE8lq6zsSDvauP8Y~NP-dSC6EY5rXS4q1-BIu4L4hLJ4DlIcStF~iHPHx1OPbf4pgnYbFUOCaabVwJiw-IvwcTQxQ4~C~fR8pSeZ-NoR-bsfothcg9gOYQsadKQ9DRg8IAfjqdp0lPVjs~4OspgnfRXNmymA70a7nt0vYyWBAF3Mwdoe3tXqBvy6zY3bk3CmgqKfZxRRA2jRvv~24O08hn3T6OOOLa5THQAUjsTTlO~BobQbfPsg4enM9sD0eKvzVbV7qj2lqjx4fFx32wrlSe74vEvxFCHspRV7iIDExYv4uE8PpBeRxPpSXDJkPTpzzWV25PA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Icons/invert",
+      "description": "White",
+      "created_at": "2020-11-27T18:51:12.055Z",
+      "updated_at": "2022-08-08T23:52:03.621Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}r"
+    },
+    {
+      "key": "2b659d64186afe058005835d64a7102db3c81baf",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6028:1235",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/9FF/IEz/BhShaNpICzR0zAAt/style_thumbnail_11.png?Expires=1666569600&Signature=e31tzRHiOK0s3VkdV1VEQRpvz4DfgL7nH1Di11fDY~a~M2Z0aBaCeSHGss4Kh4dSkUK5gye~NJuRQ9cXdaFDLM9jWMvd~JXUNi61JOs93wO6wxQHR47qzV7Cu9odoOLFf~0~4K9bXR4ih-O9EJhIpfmoBd8Y5TxG9sVtd4pW98vrd7hRoQtcCbCeklfpn2RjehgmmYH3eRyPQN1LfwIZ1HfoMEfDspD6nUl~i3Z496hDI-RXlH39xxGzIhV4lH~izxnE-P8F6QhJco9HTWQIMGctHYZDIC~DRQXL2XC1635YMKsbX1U4m~MMSRwH9wYRcLrf44QuBGCt6LtbLPz7Zw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Background (BG)/LightBG Blue100",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.980Z",
+      "updated_at": "2022-08-08T23:52:03.627Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}{"
+    },
+    {
+      "key": "2bcaf194cb82a2416252d85043bda3c1a565c633",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "3156:8490",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/gVF/M6u/gQrmAmkrT0JsSspw/style_thumbnail_41.png?Expires=1666569600&Signature=dJNPPhz50NCOqRdIJDv6twkJczJ5CovBKVkQ8zae9t8Am4EphSoNt~K6mcpg1hYGIY-zT6EllBx1s6qKSlq76liEUBcRsKvVMCIBfKTEGhBGs7HOR5ne7mulShA53BWtNXJEuNT4aFceWIGcfggXLsMFHT9pqBHLjesbQGt9G8aAnOH-K4nkWz0BmFzURKxdh9QtQyXxJKk5dkR8gc-eQOniWCjXOwzv708Epo0KgwhOInyZ~DSdor4oYjkuyucDrnRg70q~rJFaUBpqgubzOCYElhxqOMZq7YrwihE5emhS8~mIRVRpFQrO0LNif3zvQAAbZRh8gZVOB8rt8NFr1Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Interactive / HoverBG Blue50",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.025Z",
+      "updated_at": "2022-08-08T23:52:03.632Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"f"
+    },
+    {
+      "key": "2f73da20caf9209436ed2385854054f8607312d4",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "961:1",
+      "style_type": "GRID",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/y8C/mCN/DXQxr60O0Da9P3r9/style_thumbnail_2.png?Expires=1666569600&Signature=T8DFcZS0IKNyv6Y1x8ieWjyjsAt16LKHc4vNKd-t1GbzpXjeKJ~HTROMG8OsOxx-Wkx3fVva8H4QRInTSBiw0o9lDcu3brP4H0SsUt0zbQtPCGMkS7t-gw1lOr4L9tJUeK6RiEcPOz631-wHK~iI7pRg2ouQaQcvSt5HSfu3dQt8u-Ksd6EJm-jbDIzeRDf8JQ0K1z9fHDWZp0Yph2UICrk37~Fe~QXPfgoQEdVKp1OUKijXNiXCzNYDwD~14QFLapTtYVRkK-uyyVMVCmfIxmM5d2m-uIR4~auKjZ5oKQOjxMoF2fv6jgEpaQN8R7Z3njHzI5IrLwt3xvB1F9YH~A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "SM (600-1023)",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.872Z",
+      "updated_at": "2022-08-08T23:52:03.638Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!v"
+    },
+    {
+      "key": "32eadfa321c81f2e9f42c5837c507f54873f5a2a",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42166",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/WQP/OW6/DSDbS22ZXYDLGAG8/style_thumbnail_5.png?Expires=1666569600&Signature=cG0HAOsGuCMqdnoM1oIXTvkLKlJyH9ZGN50MOT6ZjBjUZ~Rr24xrjH2XNFDGnAFxRaQ0xm-aILQET5u6rHqPRbCBnKUekEVw9igTUe6BjVuJJGTdzodyDNeaNYC9eHuKQqweJCgkbFmgxd2hE3C5g-EcOZCeXqYf8zyX9qRLrXNf1vSbe~AxiL6pLIZbx~A5RpmviLFUdzDhgTLYYivMuyePOmgaUEPFfuqLsAUZmTj3ewHrLbSPNdYEjvIQCu-HliX-BMoiVRE4ADA3oU4lNbwD79wgkHr4Cz9eBuQPXj6ldTluNPMtWHdUDmJfnnRUPSRksOmeSqV3Q4SfCyUD7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Background (BG)/DarkBG Purple800",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.006Z",
+      "updated_at": "2022-08-08T23:52:03.643Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}O"
+    },
+    {
+      "key": "33adb2af2bf556225ea7385932dd26d6139af66e",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:64",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/aIU/vh4/v19QG5GxEYRZ5L3y/style_thumbnail_27.png?Expires=1666569600&Signature=bM~MfwzWKnxiXDcYta-~eNcEBMpVJNgxXA0vIDI7JeZPCxle2GmTl1-s4gRYn27ScdF0oRvDNjzCgjFUEllYGdqEvpEpterx4C~yL9i8VkjLIfTwVtEa45hkD4Yu6864mktlCsDvJCXhvMt0MXcigOo4hOwG8gED18eubKA1Q9GEeyvqe6IUbLQUC9oonnanLIQ~-qXrCrAUVF1VY8Pey6qRApMIP9QQSSVYs8KiTZSmrVjG9qv-4WmgTEvmESPeDF9U43lTnCH8Hc~U3v3dQ0StcXwgv6jcGwJgGe3uVbOhrpXVRXUMNKNIbEmMBZedtJyyWw9-wrA8qP0OAskLew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H1 - Heading1/XS - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:25:59.963Z",
+      "updated_at": "2022-08-08T23:52:03.648Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}{"
+    },
+    {
+      "key": "35c091bc9f936fd8774503a6249f197ddc5ef771",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:50",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/bT7/ARR/0uLpg5dHlMX5opgH/style_thumbnail_15.png?Expires=1666569600&Signature=TUZkw4Ru043FEBWU8BOJ2CqcJNh9zecCmheu48BdpRCJOh5Prjt-5w9T6c2s~XPnRdJym0Nwa5IMl14mBwCiuCT6qvhgjtKB8EcojV9bycw7JAmuOgEufCvF6TfYo8thDDGt3fIwDr~o7v21Sh~8F7SmlyzcyCsE6t~vtoD1~g0EQyetaWBz~Za~Rgj7uNPGDfpGiR7MiOft4A7EUiRJsubp4fYyaEUWYvObzrDZ-bYyQs7xnLagDPZFSx9MyGCB72Egil6aY8FFPwlmPMd2UClxviZLno4nzIfahUEfoq--wteRDiPkLg2iC3U4HDapjlDKcqHPGBYhSwSRDIoMZA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D1 - Display1/SM - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:11:00.243Z",
+      "updated_at": "2022-08-08T23:52:03.653Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}}f"
+    },
+    {
+      "key": "3717ec8102e741fd412bb508540ab7fba12db107",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "658:25",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/hFv/eXH/MOMeQnJrZJxTapun/style_thumbnail_10.png?Expires=1666569600&Signature=d5DdxmLj9pjwmnOa2rMBbt8bGUXaxPaVa4o16X7j-cXR8M-KpsNfPRGDjT9Ogf2p1npR32VtZcfnelz7qPTcvWaG6hDsdxTD8coFumMfgLRZ-xK6U1px2H3juM-KVztNmrNk4mNZBt11PI8~bqApppOhTBlmt6ZeP3rAYpiF1f4Eq14O24PdwuZY0LKXc6mBgyteChcHzkFxjLXtSdF7ZbTLwDjBDjkUsAgkRMx00XvNR0qehgjWSXasyDWarcW7vKXZQB6TojRzlgbOVBloXgbBvH1vpV0y6s4fU7vXZuE7SsmitZQC4XkaQ85uhZlx4SqhC6lU5qjH7g1BK5cUwQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D2 - Display2/LG & MD - Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.927Z",
+      "updated_at": "2022-08-08T23:52:03.659Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}n"
+    },
+    {
+      "key": "374acb6c2423a0b653186d005fbf2061bb9f6c92",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2436",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/XdM/lBm/DAYT8UskS2DqTXlv/style_thumbnail_28.png?Expires=1666569600&Signature=K2K8UarlKCnoLyieYCSb1984vzEKzvBCZAwsdjBTd8FM3g6P3PywlC1Aa8UBmpOu3~FCpcgXtssUAtZyXbRMKunbDu3t7MmLXgV~hBoVGr-XwGw4YoGDyCKS7mYJo5KOYl0sBsvLSisYad6hauBv23eiofuLdzmp22jPGvFWrd~oNbkoScfwus~KP7Lbnf~nlJwdBjyexBaCJVWX3a7dOvol-~V0J0u~C2cFBXqPfxXQ8GqEf-qh0hnlA84Hv5mQ2IV-S7kKZvWJZ2n12N0W8qqwd00ro8lkhLuvu00WmTJbv56yandDMzVV81Zg~C-1MimpP0h-8~CMpPG1XzB0dg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D2 - Display2/XS - Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.037Z",
+      "updated_at": "2022-08-08T23:52:03.665Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}r"
+    },
+    {
+      "key": "3bd9f7f9eac49c31e02bc71676f1936819a4d6b7",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42162",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/jue/L2f/vk9yF13Q2JdBGgyV/style_thumbnail_7.png?Expires=1666569600&Signature=S25S~Xtak1GF1Y4MjuN020rShvNMCb1tQdDHx61o79vKN4mpDszjPf3o2E--SjMFX7qZuWoF7F5WfJIHqy4KYb~p8j-CDhIaxFakJrGBBjyPgx47T6VBPJ6wzyogPD49hAULquDqX7gHVW1g81UUUCL4HQQajWHxrVeqsuHSCbXV7ESqWMdoXZVMEND8aNF4Q98Xi0Wzg4goEpat5Bj1T2jpsGXQ2IbRp6-8AGYihhPciMHCrKCypoNF-mp0lIEx6D6LdIueoJHMKSox1zF0j58V2KEo5NJIk8d49WdNeEMwqPxM00mwRyBDRIOv2Ctgw5hBJZ7IMf35nAz8QJY~eg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/eyebrowPurple",
+      "description": "Purple800",
+      "created_at": "2020-11-27T18:51:12.041Z",
+      "updated_at": "2022-08-08T23:52:03.670Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}r"
+    },
+    {
+      "key": "3f754ed0a53c5224bdb2023f737faaa04dfb27cd",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42173",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Xt0/lz8/HikiLuFlRo0eUgLk/style_thumbnail_20.png?Expires=1666569600&Signature=dpLrVhoUfFPBGOV3PqGkZSpAUc-3H2~ViO1c1-4EL-kIoLR9kdmvoFSvtezDh5X4aCIJ52wUsDjEYZ0Fbrkx5ofgCk6QWNPdjnQqRcwGzHXUHqIJ-TOUHHVxuIfaYZgsa5mVDrL6348niLeIq9VLHmVXqOj8UzpYCArVD-iBJPGxJ52wYg51kn~nAWGgiKpS~itT2fMHt-kvC2IT~rpZdRY44M4~cJDNmfUxVEnpA8tQqwyRiEK7CVm33Z6B8xnHZR1YgUcIEAcPgguerLDMPo8qTfubuBqYPQBqSn3KdSMKOP34PVCQFUeG3IszrvJxRHQKJwo5ehiqcCLbcXgmYA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Icons/interactive",
+      "description": "Blue600",
+      "created_at": "2020-11-27T18:51:12.051Z",
+      "updated_at": "2022-08-08T23:52:03.680Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}{"
+    },
+    {
+      "key": "44163147df55b7725194d169d9ae854985ae3ad3",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42177",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/FtE/LBM/i71GTVSlGXQ30GZd/style_thumbnail_2.png?Expires=1666569600&Signature=UKiFVt76Xz81-Ub-rVnwUFP71YkiEl-bV5y3EGsetU2J6Y5K7G0ivhe8GCk6pXjHaHdQutxo94U5pPvJ1kMFhDxqvAKmXTVapbv6GrwIeLpJJ3AT6rg1EMVuiELZiImTNqapFL5itSV3XqQwXQH6wNMGDUn0R3mAsbwutRPSr1IOkXGpYPfIqmBwfaij9oSb~UrmU7owppGfRD3bXPRlwJItv4pm0c5f3xFftp4uHbALhm8T1p5xu9KY8gZuITZc5SIV5sdoOuK290fS6B5IYzD3po0wKtcqaiA3oI5EPlrdQyqijoSj9rHBZ8SXVfomCJTqlsZFdoL~cJ9tj2m13g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Baked into components/Warning Solid Fill Yellow500",
+      "description": "Warning icon backgrounds that can only be used within 0 color property icons",
+      "created_at": "2020-11-27T18:51:12.099Z",
+      "updated_at": "2022-08-08T23:52:03.686Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "~6OO"
+    },
+    {
+      "key": "4bb9ce5bc03ac75a190459969e9c28f76ecf12b2",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "961:0",
+      "style_type": "GRID",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/SMg/UG1/9cFBAsr8FFryXyEW/style_thumbnail_0.png?Expires=1666569600&Signature=T99qDkwK3arOuBXgXEZMODFo~kCKG3~BnrMmhVcX1djP9EJXO78FzoFDc1AtARIcuC-Tmos7FHmpwHkuvSuHDfKAoPL8fhpM2gbHMMG3LViVueC8Qr5muJDdmL-yLphdwb9kIWfV3aUTP2snmmX24Xtgt8jwZWYWO0GmzZ6ZbBmzczQKDErW8SQ4TjlZmqlZVhWEbwU~jb249XPRJH5Sq5Rdkb7idX0b0MVsiyYWBNee95X0vVUbAFa4RlHj3pH5WfXRdZjZjgCkjmvNOtrYS-mDMCKXLtsJrSODMqQuB5RkLWAMiMkbIRVfNRk1hBV6Ok4F5lHtmz6DhkUFhCMJLA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "XS (320-599)",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.879Z",
+      "updated_at": "2022-08-08T23:52:03.691Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!u"
+    },
+    {
+      "key": "517130e29d3a8a0464a71f5af67cae03ccc6245b",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42175",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/UDF/3b4/yALikNosCukSbHX7/style_thumbnail_2.png?Expires=1666569600&Signature=J5vUU3BXZWmsrbV40kn2Ex1hQuCoRu8jAnzYedJ0f4NbrqiHx0VOriDXxIowX1tbsWvzzVNDR64D2SESn3~PBbgvkkraJUsAv21avoyNu1RiwM4SxfEv2vBVt~GrENFRu7DKd~Sx8k6-mVBLpPTAmrW99pdUWfSfnkK7YXxHvs7hj-5z0CzwUNC8Ht8kVFxcv9~XBREHXGKZ2AUH8C~okIf9HWVtIbhpeXjzl1-DFzsGfYHfQl9E2r0fLTliMfax6HwPygrLSkep7m5yRvHX-ZOIsfmcXeQhIHI0BnAudYdQAiJLf8O-N1nkw1yoG4REUfBl4YrhX2wbfzX9s0Dr~Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Icons/success",
+      "description": "Green700",
+      "created_at": "2020-11-27T18:51:11.996Z",
+      "updated_at": "2022-08-08T23:52:03.697Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}}f"
+    },
+    {
+      "key": "51d17c46d16f896eb4e1de03d2d7dc1725f82f19",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "7118:2",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/OXB/q7d/O6JsZ5sw8tWAVlPz/style_thumbnail_1.png?Expires=1666569600&Signature=OJIKlgysYglpU33g-OZTy102DY3fQsmJG52jqGNqbKsU-~Z9wVJk0DNpK1xTPTT88hJgOBDCeQglzThRX~wFxfBSP4cJ~stvLPn7Myai6l8ovdA6iE-QLCd0qQYDo9OxJ752VGri85Vokt64wSjiDZNi0sLgEj2QWWnEYO5EWNcbnRzfLuQXuGH9kwH0yzGMytG2M41y-BWY8-s7zmpm6SPV3ulRx1V6o-LHnsfa0ANSqcH8lsg5mMalLSuTtdctvrsxQW2ISr3sWOZ5FtMYuPl0irMBZWtz75YMMu6ChiuRRXVl~Wfrd2V0rFqCEUxgbFGHarLRuaOpD627vDIQbw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/highlightPurple",
+      "description": "Purple800",
+      "created_at": "2021-02-11T11:11:09.236Z",
+      "updated_at": "2022-08-08T23:52:03.702Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"ML"
+    },
+    {
+      "key": "535e890805ff889c86a204d9d813bd5943631905",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "682:161",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/oBj/qfx/qCqUnqPYqyoKNH8E/style_thumbnail_22.png?Expires=1666569600&Signature=G~N4eOHw3ofNRBpMt2ZmNyWG2ki0thbcWhR411hHYVQbZH8bNuZz4M-fJYYzD5nItqTRWFocBF~FvciF7-t~Oznj9DmaGUg4YqZ0i-VVMRP9qQ4tWqe-FjuoyU~dWKvdDLJxS5jKYiddqvGDHnUzOY9-QrNyD6LIffUXrpWa8ctSj0sKr6OYPolaIJwhtw-4Rp-1dh8qQ0aqzAUgEq~YuV7GaRDHuK2uDuUQiMweRMKrP8av1zj~b3pD~ntEZd2m0Rl3y3~P5ALRKLcrM7Q857k297zypqJ0CWiW4jGIHKW20P7~f8fFGjm886-rgVHPVxnndT79BaDu11xYzoWIWQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Stroke & divider/Dark Grey500",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.920Z",
+      "updated_at": "2022-08-08T23:52:03.707Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}{"
+    },
+    {
+      "key": "55648e20b918a28233ee41c5af82ace256099efe",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42158",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/WWl/jOo/rcfiNO7XnhC8ZfyO/style_thumbnail_28.png?Expires=1666569600&Signature=eCU98N9tRr0IBGltrsxDG9g569JrlMHyOj-QkMiWvEAXh~10VLWillngsBgLgjh7D4f9DojbX8H8GZt2RDC4utfdjwbhIQ-xc6B~T1E7x1wm6uCT5G~vlFa7QkZ-efmCVM3j4e9cW7JHufPW4g-Ef6X7SOyvgk3E-IoYVuqWPV9eRHisA~q98WcZMWVJLNnEpP9CRU8pm5dEyIOKnS~tvyCMLX~RPF~dX1jjiaHp024mom2Qr218SqO1LWDlTNe3Xud88dr6BAPp0GPKtnLX6LgHS1q-ny5FwKC8WtSBFC4fL9kjp9KAXEUcC-Fgzz3JxD37PXTRlDLLGcLjauQ~Hg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/success",
+      "description": "Green700",
+      "created_at": "2020-11-27T18:51:12.157Z",
+      "updated_at": "2022-08-08T23:52:03.718Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"Lx"
+    },
+    {
+      "key": "57bc443e6658b532c0aa0f60a74001ab0ab695bf",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42159",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/4kq/se5/C1QFukCc89vkahU3/style_thumbnail_8.png?Expires=1666569600&Signature=CR9x-HsirnnChenMcatAxO5blejKlQBqgQAzuRZUT4MUKbSiHy-7idVBuVcJachDPpT3DONs8OrxyBcDfuLoBGx0q40ERNonlYi3RpjGDq0-O1PneeyG0ln390gxpHfaP3NOdnTm4~Vm76IsqKR4NFDN7bAdMggXg~JpT3TxEs7KOG3CjrxExI~hANTYE1Je-wCTOjfCkGIpfpATfr-5D865upvxVkafxq5xb5GrjkHYdSxoy4NkcH2gcfUReRJ0FRQx6wg8FEIAHebXqYWaEhIJSi-WAguvi3Pv0AW7fpHfZ7N~NUHwmvP30yHwEyn8IDc4uaIVHS1i2kzWquqRcw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/error",
+      "description": "Red700",
+      "created_at": "2020-11-27T18:51:12.010Z",
+      "updated_at": "2022-08-08T23:52:03.723Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"Lr"
+    },
+    {
+      "key": "57f4b8568b0bab2dd226b6f07884085c16a508bf",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:62",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/8eR/GBE/XrXgkV8PywctDCVI/style_thumbnail_3.png?Expires=1666569600&Signature=MIsqqmi3g7SmO7buApFbDTpq7fIkr-2LUt-lj3voRWqnxqJzyR92hSRXaaZAzN~ROWnlDV-ddUK~RCKGVNTpiq-1rBBJalrx~SrJT4aDmaUFWG8VggItBnDBVtGKumJ3DnVVpvLzREctaygX~kpE4S9eq7yLOchCftKW9GAUrNOmjTg01rmk6ywhkipsy2FQUFMSXhhxejBpyn7GOzSlG9X7pXslRSXmWSln4C-eZXRmMiPo1tuHyPzFDUvKP3Z5Cg~e~eARI9fAchiZxXS-YRT34v804ZcZDh277Nh9LTE79s8k0DhL13tQmbfY3iIvHhFRZvLh3dAHtuGEdOoZJA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D2 - Display2/XS - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:25:59.946Z",
+      "updated_at": "2022-08-08T23:52:03.728Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}x"
+    },
+    {
+      "key": "5d54ac3dba0b22941ba1a6778972e44f86e4f4df",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42157",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/3IH/AV0/pDeVszGUzvVjx54W/style_thumbnail_16.png?Expires=1666569600&Signature=C62ZLyg9pAiLlr1aHf6vxk5ezPmE3AtgAqltRtOqkIx6~cxuKoCRlclpUoglZhMEssA~AHdpeI8-QX8YKZrHOCBjK5t0Z6hB9SuQmzVw6W2GFS7Ewb~WblpMC96Y5VyLXsaMkJ0M~dsJgxQD5RqX1zMdWN2F1NHTcxzLVgc4WqqqjfbqEyRo~v641H6X~zv6sQ6~i2X-hh7fXeXjo0nMtdI7YGSuxvskWC6iOPpcnCRpcukGFu8ycB8FGEvmz2JdG5cqaHoZ-rxq8PJw0Gk65laLdPEtkW~mksFYpuKUmG1fiSfgVmkTsWgxU-niH25vPkT~B9OXe9b2dP0ILuqBKg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/highlightBlue",
+      "description": "Blue800",
+      "created_at": "2020-11-27T18:51:12.072Z",
+      "updated_at": "2022-08-08T23:52:03.734Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M6"
+    },
+    {
+      "key": "5d7a5d45ba22058e3e7f0afb12d266ac8ac8262f",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2308",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/qgK/wHh/cduYA49O5jA9VaUe/style_thumbnail_52.png?Expires=1666569600&Signature=Jsj8JiBcWtw8HTGqSl2tyZZy2Ub7TSHDjzLYoDTwVLdJXcls61EyItxTtHzglLfJRDvIiEcRQf6aUUo~nMA3MG2PJaFZLAFQhgRWlWJmXhtjlhEiSQhPzr31QUPT~Lr4TuskTKCJv1DuX2RbKyV~pvhhz7dReZZ5IuCMILnGfcbQcomtVpyKXvWzi6szsDNQkCVPFHKZn6pamdn0w-vCDGJptR1tej34NUIIQWwBgYmg2TMcx02qXCR11gYztER~GoURPZi-~XHZcf89GPHL653QQjEvxP0OVag-yxdfE1EtTXtGkkYYWW05oMwKV0apnwj1JdyFhEJnxs6KjupnbA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Error / InvertBG Red100",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.065Z",
+      "updated_at": "2022-08-08T23:52:03.739Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "yO"
+    },
+    {
+      "key": "617bedc95a82c4b6933dce29d5a7a86b6221e04a",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42176",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/rE5/Qxa/es4jXHX114u583h1/style_thumbnail_18.png?Expires=1666569600&Signature=CDd7mMfyl52t32zS2rGVk~AlMj6kF46vs0FMOScjCCBSvSEPL9uLelYioBH0lsod8WOUXqZtQKrvszE9PnpQvAq5emfAwq0GarZswOIA2pG1rT2wtRT3bS~rvqG-iABwrwtukGwQt9cKBkdewwexFLWZsytkIfjGpZsOdfnahs9ozp~QjIasoDTS3Q11uE7F2Wt8sjv30PjuzolUE1f~WZPkVu6hbj-Axd8iiLRQgtV4WtvAyvloEuFqSc3zUNMkI0rH4-bNZ~WmL-zMPAX2Mi4T9k-MjwIzmSp-39cijk0k1wJZW-6EJ~AG4XY9hNK77ZMKyd-rWkZ-FqlQUfHGvg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Icons/warning",
+      "description": "Yellow800",
+      "created_at": "2020-11-27T18:51:12.138Z",
+      "updated_at": "2022-08-08T23:52:03.746Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}}"
+    },
+    {
+      "key": "63b527604e2c8073e0a7195421894574cdafdea6",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6698:4",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/kEB/GgD/WiBFk5ridxiyi09y/style_thumbnail_0.png?Expires=1666569600&Signature=FZF6ipV8QqOpyA87csFrIMbdQmQC8RY~SyUcY6DX-c9dqJFcZUZZZoMQw2ymEGo9fWlApmoQzx0gnsfAqKNO61xZdhXPfOeRf-wcbbFXuAob2lEr5mAUzasebxeX6f1k1tPj-rXcQz4eAjfyy2VHr-SMa6hhBsAHnBLYsPegsuOi4yLbq5p0Cgs47UErFbzHLj8x7drG5QbKp8kVKI6koPnvIqHSdrgrNrQhbTwWFUJD2uDFfKJpFlpC8QOr5bO64boQTJ1pYhOqbP50Kzu2jKMWD1QfB67RsYfyBNCjzyxGCcsQnYVLi79H8gSvsOJf3QpqeQSBSefzKDxbqNLLQw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D1 - Display1/SM - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.113Z",
+      "updated_at": "2022-08-08T23:52:03.752Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}}{"
+    },
+    {
+      "key": "651c64ab576fc54bcc53e157c6504e3e73936fe9",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6167:888",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/QeX/rfa/L8vwzMN8pUYaB9zr/style_thumbnail_35.png?Expires=1666569600&Signature=bwbjQjRlWRGH54rdMxvrr-yn1kDsjXSDWLh~PxecIvLTAuAasDr6unD9vwoC0zs-Rx2tGlVFzL~QoopQ3mYjuQ1s9vBS233uI1E9bSWuyArviBN0Oi4VC-mjJPGG8fpbzjATUQiiX7H2aRWXtrqjQatoIKYiaPHEeI0VveKKbuOznZ3E-rdhy~ZkIewldwN-3RgnCxHwaP79sSA4dYAORDYmZhdXBxHYy~6SNPpRUO2Se3x5AKfJkLcm0aZzZTXqZdr7kO52mBlF6vpHhDW0LlXtu3lKV6FIiFSvRVpXyygAGRTB~OQhNEU9qeIyRMNCiKbd77hDL523-BiqEcq3ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Information / Heading Blue600",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.003Z",
+      "updated_at": "2022-08-08T23:52:03.757Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "sO"
+    },
+    {
+      "key": "69cbfa33f10de3eaf6ac306561d88fd2f500603a",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6698:5",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/NP9/3v1/9ga3WRBIdmGBHKAf/style_thumbnail_14.png?Expires=1666569600&Signature=fjFOmEuQ3Qp0WsyxT7GMkWPGCqKjzXnAtirA5qWm8JFrrLmD4QiBAyNhE7mmjYiNf6jsaX-a5KqEs~RLrokZFPeyO40pkjzILm4Cda8iVu2MkmW8~L8c8hDj9FQCazPda6Xqp3g7VOzxQ2RnOzYTcIUANVS7EFftuL4yTHaFdeq-RIY-cj908fO0B3yJpf8IFoWyd4u8Zf98XsVjZafKvQolo4doEXXVD1S-TwILki9k~H8Y5Vv3-x2JC3ztXYArJmh02GVdDpq4eoimUzCUJyuNqkPENE6O1-GpVLiEqX1IpolmmtG2FEDuyPh8hHocK8a~v78bQX5zd~1uX5T-0w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D1 - Display1/XS - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.123Z",
+      "updated_at": "2022-08-08T23:52:03.763Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}}|"
+    },
+    {
+      "key": "6afbe5d047373db7aeef8d59b5b7068570105752",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "3246:3055",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/PiV/1so/k9ZfOLzWPu5uW8G5/style_thumbnail_39.png?Expires=1666569600&Signature=AosnGm71jM3zJ9wcYXBaN2INEQbTuf1iAGmEwAdiG-9gvQp5zeuGBZVwZN5DOQdmnQp0etJD6ZGpwuI4Nw3ux5YhIWhhrQrWAbVTGUawjuNQSbR3zutj4q8uJx7DBR9STxl2AUfPivnGfACPHZ15I3sV-cqGFwVU6gjZv1gELCXwb7x8Jh5PcJg1fiRzCp6HjwyDDv3pYIjUuWNmFEnxXldw40lA0UGZkegd1jPrHt7iwA94S~5XXxfR2yCOWFJAH~KZflBOlq9fsUWx71mE-hQ55SNJ2WWUFiTPGLmhXRDVFIiiY9oOMwtvhIX53DtJzjvgY2se1pSky-zf3h8MLg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Success / LightBG Green50",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.016Z",
+      "updated_at": "2022-08-08T23:52:03.768Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "~6D"
+    },
+    {
+      "key": "6eae9ddedfb31710d63494795f287dfc76ad4484",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6167:887",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/zip/g4y/8k6GDBpUMvGWkIaZ/style_thumbnail_60.png?Expires=1666569600&Signature=LZiu7PdIEhMejqUDhxO2HRuI-AkiXhZ3j6pO2UMwj6h55Jy~AnpXdSQgxOu-lMbvWA0wevrIbz58ofeeT8PzFguKmW-Ka~Fuh18HHE3MJB6l-CxI9p8qFG~7y6uaF6Dmhh5KHYuLAnQaPPBNu50FRDcvoxEDH6q6Kip5vSW0yDOKw16saiskK3twAj3wJAx8k4ciLVN2MMmad9tnIYKzow7Fl96niVWWJjadGibJM8DFCZ~xO8LgLM6pMDEXFJ5V5VdGxCZlTacUM6ZWkAP-3APZ553PUljBr0uMFxyV-5-U4Vi2raDxzuql6eDl4Ct6SLqXfl9BpKNcj6xxLZs3dA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic/Information/LightBG Blue50",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.975Z",
+      "updated_at": "2022-08-08T23:52:03.774Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\\O"
+    },
+    {
+      "key": "72229936faa31c32e5ca8b0446c3dfa892beef06",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "669:500",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/K7M/iWG/zGAmUhhs3oewjDpv/style_thumbnail_1.png?Expires=1666569600&Signature=PKwIh4fZeut9i0FVARPyp5YcEsOoxOVmZHudKyjJaQ8BNCy3QOPO4NWOlTUQuwiGhLnaMqK8vfAWa322ZjUbPsXy2CV1mrsVfvm9JMOcG2GF0ffeSoqfETGt-LUvB5h8GFAT~YecvXKCfiz7fRxAzMi3Vt6W3ISvrhnA1-I4B~fPOmdKJPTWCul2F1xsVsSZ5pJ5qFUd3TfzfL-383VB3dBaod9OqFz4YjPhvzxQBrr5yVVzEvoKo~necD-eUsHaRBBz8UR-c4~nhuG~9uui3O-C7PI6Ib1BAktVw3Z9~HfNEsjnffC1YOdhmOgKGO2et8peR23iaZaSbDolOrGEUw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Body1 (Default) / Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.935Z",
+      "updated_at": "2022-08-08T23:52:03.780Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM"
+    },
+    {
+      "key": "749ec4a78947b86bcba6e01b1e0941b30a328634",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42172",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/4O5/Qgb/0n2I9k2pTTDPARbF/style_thumbnail_21.png?Expires=1666569600&Signature=LrS9WE10obCgUJaBxW85OHTX7F8Lwv~6vfR2~jHVJbTpxztWBPKL-EvlDbPKYwPkVBFsPVaE9HHBpBQms1E6JGt2pcYk4y~qiuPNdb7M2mkf7lrWGKJMCKaIWO~TIG9HudC8~IYU63Mfi-7ibQ8so8MW80PElPX1WydXVANiNQDEt07QCTbVFJLhKbbjRs2VLMylst7UAXXy48kHJWERGDb9yKtLxwzNM8TsOd28jNwQYNe7J~cncPYE2IOOBe5f~Y6Cc8g5-3mCsDWxmJLtE6XG89HbDmNJ-ETtM-lFJjNL81zxsGP26-KhudWcYIOBw04mdbfDxpTFBQ8WyOhEEA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Icons/default",
+      "description": "Black500",
+      "created_at": "2020-11-27T18:51:11.999Z",
+      "updated_at": "2022-08-08T23:52:03.785Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}x"
+    },
+    {
+      "key": "755d89636d321622c308b1f5f238ba26edf9fabb",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2439",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/kiR/giQ/xRB1c46S2Rn1d5tn/style_thumbnail_30.png?Expires=1666569600&Signature=N8F~K9V7flkSSjvg5~cV5VgkLnpcCIzCetanGDIMzQBlzb~olGb697uY-toQTE6e9zPmTyVy3QGy-9YZkyAUNVcpcw1EiKMGHWthIXzdE~F5GGAK1dbxJHEqxJw2OTA9HuiGmvRWWf3opP52JNdfDLtAqq52MA6Q0tRUODSNGy4gqBXhDtw8ckw6-dYjJ7AOILp1YPD0QPBw3EHiHaecIcGFrvsCGcJ1iVlLFdEQa7dbYYqIMQ3rWf7Jb2IHW2wcO1GDqjQ7-h-nD0TbjEFBkJLd9n5K~DDpQjOrvYdqJbx0Nobkr2GYs95YA-jx11BtHheOB9bXBPxFrNwsX9mPug__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H1 - Heading1/XS - Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.082Z",
+      "updated_at": "2022-08-08T23:52:03.792Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}"
+    },
+    {
+      "key": "797dea597f738c03dbdf77dc3c66a2f5caee9fca",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42169",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/c6P/0uo/bwFJz5UgMA22N8Ph/style_thumbnail_20.png?Expires=1666569600&Signature=GfpZx9myiPh6cYaaK3a1rZ2ao5hHyQfQ0Qbo221YmiMBkLzFH2TUJsmjsb9U2iQGxppiZjObyP0vcCXxgqjqbM9IxUW5Vr0wkUt5SALXCI6dn8HSo9Y1UdMoZt4EljMqRbFDO-5YeoEV4A6xLXJnWmKzNRcKqLJqpHF2k~4UTZ0dDWjnLfpBN9L9bHm-NHUDeaBT~MPBrMrfP1A1DtgurgnZ~CsQnqGIz~vBm2c6f39b4nvlcisFTiCzbwoXvRyo2hoOBp13U5NQEdqhCIkIpxhNIWihkw0ekd6Cu3fepixsxpRgQGqYxnO~2xZ2U50eUz1Hk3PuP42UgXfxdCnJ0g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI / Neutral / Disabled / Light Copy Grey300",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.950Z",
+      "updated_at": "2022-08-08T23:52:03.799Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}"
+    },
+    {
+      "key": "7f1d5922900f92c7042d1913c1dc6a8489c15a8d",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6698:3",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/ns6/Yj9/RydbRV2ObpHNkJ1I/style_thumbnail_1.png?Expires=1666569600&Signature=DAelt2fM69Dx-gxN9rWZ73Qf4Jc1-evSKS78lzOZflrz5GjKgQSAuX9OkHt2faSNZvg-NU~q5D~PJK6-yiQ0GRqpiV~2PoPNbe1zh6R3bn2dmDNQlZKs00cULwXKs7RDdqoH0qiRyn-TNZW14GPUiU6tpMMBJUNRJzDe~-6UIWeRQLva2RIZTIYuc8Po-tFL6yBnGNq9b-sE4d7ZMTH-u4ss7Ftu10F-~jVU5rS92s1t8uBu0WMmY-Ya8AvGS6zV89qfU1TrkObtkoJ-Fp5GznSsWx5E3Cw4TXVRRs7oqaHQbt1HfsGwYGqD7coeB4rN9zvFYsdxvwR8imc9A7NEvg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D1 - Display1/LG & MD - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.119Z",
+      "updated_at": "2022-08-08T23:52:03.806Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}}x"
+    },
+    {
+      "key": "8112f6708fb45df1987834d4f81d61e9071042a0",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42168",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/TZJ/T8W/kd5M0DUP4HaMDD2D/style_thumbnail_21.png?Expires=1666569600&Signature=T~6xgJMEHUc8p9lViNiizU6hJURkE1i1JujbT9WHh8aamraCFM0ghq7OPmkrnubhB7JUR4mHyuISZ5pMOGU2OIky8d3m70QKmw8xJf2B1KobkvMIAhheNQ~AzWHU2osfBF5-aSC9bZW5i7dsXEBDC1pWEc8bJ~X-RnKeKAae-3OkceaSINWOcZq5EWNF5OSna-bTxLYJSBRDgEMHLi99rjFcUC4JQUpwbXIIUVKD2wF2paAIFNlcNDAYNRhRmvZGwusqIvRzBwd~kHrm~socY6l6w3PrMPAhivIgEKoBhJkMAISDZ6NsnRKzKMEs92FgIDYsu8sUl55qXK7Q7vURnA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI / Neutral / Disabled / LightBG Grey100",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.954Z",
+      "updated_at": "2022-08-08T23:52:03.812Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}|"
+    },
+    {
+      "key": "82845d511d4e54b0ed55027def61473c9c7f6d0a",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2432",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Glb/NPb/klqMnRBpMvXHJPcM/style_thumbnail_39.png?Expires=1666569600&Signature=cSJaehKJI1nloEOgOCPna8Ob14Y8NTBTGDZnFwyVRswfA10StOn9TEoaObbLOcf37GndT-JHfxtbII0VQHUTh8KtPYMB4jwWvYsb3DNlqYq6PSf739awGIS-TAnu2BR95fO58AYSO-GxmKzzZKy6zLdFsik2POFMs9AUmR5znn2U5MMXyNWc8XdHxsa2fQp7N5vB2sWmQMwOB4VG9oR6Q7eJUa-iJsMv30l4hD439uoRumaQVnFNlKfdtpRuRMrLSwU4s5PWM7eTLpuM36nXKpIHFerNE~exM-EiML3iWjNN~iNYRbhyHSiBmllBTnRzlSV6eZR6YLLwthbYDil2uQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D1 - Display1/XS - SemiBold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.152Z",
+      "updated_at": "2022-08-08T23:52:03.820Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}w"
+    },
+    {
+      "key": "842a53f9c6489a1bdfe74a6ae6b014ed5f951c02",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "1072:229",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/qIQ/NaE/MfuSICL8e9PAluuC/style_thumbnail_67.png?Expires=1666569600&Signature=Z5wHlFUYuNh3ATrnNntZTvLkFsS8Nw6rBBydGS3DWwLLxoOnYM0rw66jqHLNZy5P4OCriSdQuzV8UjtjxB7hbOkFZehqgS-0biW3OfbdOgMZNQDEzSjtfff8oaTWybdz5viHTQl3yJCSPF2j3HHd291KXqiiFxELRB7X9F~5tB~EqA22aPHH8rKuc7erbChwNTrhGOilzI13-HpQFe4yleITbeCISSvAWHni1JkglP4ofakKo55~vLpTIpY-BDTJx0BaDJa6KReWtd7z81r1fWZR0vnvgY36jf1hIUKaZ~yY9faYIxmDzTRn1ywBe9oIzkXUDLN4exWWM5qd-g5IDA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Error / Hover Red800",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.116Z",
+      "updated_at": "2022-08-08T23:52:03.827Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "~0O"
+    },
+    {
+      "key": "87ced7b54c2e0807d787d13a5b32a2aa983ea060",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "1072:231",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/H1l/KVW/4IDogFOlX0zry5Dl/style_thumbnail_29.png?Expires=1666569600&Signature=ApoLnHylPCEltsrM3KardZdV1msfhSxiCzkDV9wBIegh7Z~-iNrnvameHEoO2J1xP6S0dE~~005jaDHsXtFgBUXhRNFKDwK0EauRpKETAHScuM74KAJZk5LTCJVT00TiW0bHnQje1ngFdIgRtdHES9T0AaW5gZ7ty5LuQq2w6KKZCofRjKAbNhxnIHTGBaAf-timbLLtJM5rjtpZ1Pgyo1gZ7bmjJW2-Pb7EI489buWF4BE7qHt0PNAghqH96stHnnMV1sqvFYiyxP61ytsmChKG-zuzQFbiy4R8ZDJdsmXzBdNQYoBHt3pXxo6Wyq1riRNM~PGJAP1nlWtr-fbNjQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Success / Hover Green800",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.983Z",
+      "updated_at": "2022-08-08T23:52:03.833Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "~6O"
+    },
+    {
+      "key": "8ac157c3c8076451e7723236919f3b0444f19374",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:47",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/NaF/zDu/XMexz1A2bsoj2SiF/style_thumbnail_13.png?Expires=1666569600&Signature=ZaXbLKUzMlqO3XWi2t3-~LMOASjr7Bt5CMJArl0VAuu7x~I93LZ9Y~WncKin~AQCNc2cwgj-hEFdmS4iGg5t9Q2eHAB-JrX1w6BHqKe174jDPZvZNooBbTI6m3-hqWIAOGgWbI1baC0N3KOW-Rnr5~E9VFwbji2B2KKaD8w6~FBzEbZmeftArbojWPE2z7l2MRt54gpYqIj~1y49w0glsOt5lU1sRtXF3AZ-rXl8gsOcMZW0oPjbt7esV-XGELpiDnfgVselgWzlLaPXaDWZg9x27D5izqsdnuRF5JeknykrDjnvNggEdKFyqKTPE6t6snvgeFtMXYSO71VBLJuV8Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/Body2 Regular",
+      "description": "",
+      "created_at": "2020-11-30T17:11:00.240Z",
+      "updated_at": "2022-08-08T23:52:03.838Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}{"
+    },
+    {
+      "key": "8bd2487f54ec1016ff25e09cd05ea7ac36e4c08f",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6565:0",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/TEw/fSr/vk6Pjs3fSR2yeEOO/style_thumbnail_24.png?Expires=1666569600&Signature=EaEDUUnUrfGMwykyfT4p3NB~nOQ6ouRCCxm8sCGrfOFoxkDY9ebtiY8sZR29XVouZXdYKLINCTqUSB-SQcJdtZ4xz~jUmM76IKDU4L1aSZXhd5ncbr2yliLCvm1yUK4gIcgce1x6XZvUGHh0S9U4YPThJmG7c85-v1V2Gp2pXOYn0vrKecb~TPGyqZXlHK3WZEOkSUROm49UFViIbMy0Fo6MVh5JYUcr8lL3oLacDro-3J89VD-UPFGhS65tE04xUvU4CpYG3EA5~nGx1c0~6sKZv-b5Vr8bh4AejIW9QqTs366RSYQYggfNjycsTJj8hP888JnV8kZMzuUpZ7WqIQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H2 Regular",
+      "description": "",
+      "created_at": "2020-12-03T16:12:00.543Z",
+      "updated_at": "2022-08-08T23:52:03.844Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}O"
+    },
+    {
+      "key": "8cb7e9068a759d6ca3c72bfbe55bbd26d4a64d2f",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2310",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/ODc/CdD/ZHhhp72FejUXPssr/style_thumbnail_61.png?Expires=1666569600&Signature=KYkNq1vIyK5QOxEAxj66Y-sWTCy3z0fxuz7mpKwQ7sYFW7LRlU9CDscBxA1L9t3ubbChJucOJABEJ-jC4trL8Ppfny15zNE8HliX-uw3meMvLz9gHd5LzpUDsuX~ecoj-reiyJi8Z0dTfaaQq5A08sA-jhMCVUjzrV9lE42HICy2NUrauikOEEg6DuJA~E1DLzMzyDyRZB11XHyzzfiHWwJ8~uD8i0EPR8kY71Wdz5AgrbLrE~1f~~7XtPzf5YBG1FbEOahELwBwVzZs3StbIoWSl8Rau--vBac9Z9nBeHqmcPBUUrYeQzriFYSewm0BM56UE2rW372lL0uRuvLWTg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Warning / LightBG Yellow100",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.096Z",
+      "updated_at": "2022-08-08T23:52:03.849Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "sf"
+    },
+    {
+      "key": "8cd28b10b523193a39c5944817c586681aab5cdd",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:45",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/8Sm/nEt/GElqcINu5svPHFKm/style_thumbnail_21.png?Expires=1666569600&Signature=LpiZx6iHTafddbfJ6Hixho0f282jmFJtAF5SSq96wpodsU9DjmgIYbLapLgqQpBSSfYdea-r8f91C6pTyGR1lRhUHAibh616GbU8LJbwvz8pF1DB0U25efFgTpO1~Zu5tSbMSED4-~tjixYmfpNJHwoBAlbkVReGc97LCEZkp8L6m1s1FM9drxsc3flgZlnQ0wtf~G2B-QChceAswLIo0J1Ylde1BCLVEXZAVq4ngnbaruM8BGM0-Gc1niIVnHZ4nfIQl~Zbt~CFqPEGD2PFwDraKuZmb8ro0zl745XJFBX1Gm8gGT9YstTcQS7Jumy8fiocEjvwABnP7nmLp6Fo7w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/Body1 Regular",
+      "description": "",
+      "created_at": "2020-11-30T17:11:00.252Z",
+      "updated_at": "2022-08-08T23:52:03.854Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}x"
+    },
+    {
+      "key": "8d4b510aea1f610e0c76acec5971ab48c015d91a",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "1052:4433",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Dhs/AIK/Owmsm6XIZFKQFTtJ/style_thumbnail_26.png?Expires=1666569600&Signature=QzAe5TCmT7hqHDK2uZTXffp1Gpx-3zgP5PLbmTHeNaUh4BBTNn6mLmehTYcC9uJJ-l5HWZhvjcTWUhjGTVSQ5MzX951Kw3QEBmRXenmm-0uLTRgkEK00U9TZjKNzN7hWn~vIPv2U-Z8J0mlLQ1lhCDGdmVSJFkNJd77nXRFpJtWnAWuJYU92ExHwox9irD4rTWa6Zaf3~RIuslB8Qe~VtxbtTXF7ThzoyOEC7d4Fv2d1COzqY4pKAO1Jlb8wPaSvVJO2l5HjZ5F6XqGPbuiv5ubisGcGe50MA0sLqhJlCtG9h9m~0aIvMeRbrd2-qoKPWGRGtNfuyKo~21j-kzilGA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H3 Bold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.898Z",
+      "updated_at": "2022-08-08T23:52:03.860Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}"
+    },
+    {
+      "key": "8f52dfe079129ab6906e73e4876c271e15443ff8",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "2808:11",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/hER/OSN/CHp1ALOB7BPG5Z1z/style_thumbnail_1.png?Expires=1666569600&Signature=O4AXYKwhxgwwjN6M5yTwUGn17BQvg7Y3nbyBVBT21Nnpetgk55NvVw2okEUfko74rIFbg0u2lH7xaIQVFmqQ7AntTdHofoXgZKI2aEr73xAxB~LvhVuBlQv7-BcEwos4AFhtpMh2IF1d7tTHppRbmNibeqEb~KDt6yc~47Bg8AImqYQ6I5Q-lN7cf3HIo4-NuT7A1QPM-URxWv30VMzBHvzOuimlc1mI81AGGv5iCkb5V9ZXs-jk8DPnhynltfWHtozTDO-a~rQrq5k3Qvqpv6hOvKuFXAE9bRex-q1dPz9oF2q5yWZcr0ObBDnp2DDzVDsi-ZqTT8oJ9T2QsROmHw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Baked into components/Overlay (modal, dialog, draw)",
+      "description": "Overlay style can only be used with experience components",
+      "created_at": "2020-11-27T18:51:11.958Z",
+      "updated_at": "2022-08-08T23:52:03.865Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "~6P"
+    },
+    {
+      "key": "93c559012e148d76948c725b73eaeb34337cabee",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2435",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/9MU/JvV/0517HHaMJN5mn5NF/style_thumbnail_31.png?Expires=1666569600&Signature=U9pr2cPDxJtnPbtkiguQVIIPXBmQ454Zl5EXW~BTEFoYrwtIDnFWbFhGg035oU~BCjS-siT3aUOzCT7LjNMJPzlR3EVHdqTQru-8TcfiMkB2Y3vGpDGTPl8fKbRlN~S90NGsEwi9glwMl3KoURs3e0hZgrk7GwDlPuJbX4LjpVejKQA1MH00fbTqlx0pAEEtpSYk~Yq6G~LwWwqsXHUqJfPEG7PzD4oRQYy6Ncazmxm71nP-SUezHIRTcAmEMdn6rxP2MmEcjM3MXhMbmWyGewDhowYAyoUsVa-AExfv5fykTlDQh4-GlZyN2WkHuDRmvOef-vPgzGZXESP1zbCrQg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D2 - Display2/XS - SemiBold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.964Z",
+      "updated_at": "2022-08-08T23:52:03.870Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}l"
+    },
+    {
+      "key": "9ce7e2b2c0fbe66c98c6983e0d3d35ccca3ad609",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42174",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Cvx/bct/oHAW3S8VuMJ6YkSO/style_thumbnail_19.png?Expires=1666569600&Signature=XsINnu~uVxY-JGtlQBDMpK7QoNAsGDONB7erf0EWHhZFP32Y2U5DZ-YZlmwCEPBhoYTvXJohhiIETgxZWCZFRHFsotGyBP-U1Ns6Pzqzlnpfg6oKzbCEefiBebC2GWVKGUH8dlFCXkorPbqLFbEkp6FkdHmR37GVxtUsN3gx0pzdjKKaDatxpsYVsW-EN3r8VgR9stFptzcECOHqNvykQKPBGnKawJYmyrhb0TcLGfo4x6ZoXZgQLyDqRnQgLupbxZ6HjPlrL6dOYujht1oZ-LOLXwA9GaVT1lbaTaMukwEVJuHhnGKz1pOvmDyjS5yhltfdS6UiuDFnC3NZMRv6Gg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Icons/error",
+      "description": "Red700",
+      "created_at": "2020-11-27T18:51:12.130Z",
+      "updated_at": "2022-08-08T23:52:03.875Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}}O"
+    },
+    {
+      "key": "a53a632a179cfda23f79fad2447c18a1a64ce086",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2362",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/bw3/PGl/DUZE3chklus3XMuc/style_thumbnail_24.png?Expires=1666569600&Signature=fhwxpWM2p5X-nNnzkVTXrgAz-Dn~XGGcx3~KTK4vkD7Akqxmkip5jyG2Je~0RR6leIvjQ6e~k3cifVDeVKt9~Q9cPijbtDxq5dGfENVx60YaO70aMAHg3Y~j6pyI90hW6oTWCQSJIxRt57CQo1FTdz2cbP8JXf-5Zy8BWLABi2o91uxTKx-gUc66tsCXQvPlBLSquWtMt31fOwfKwBuc7j0ovehUTWZUMZMEEWGSP0GhiKLxVU-u180cLTY6vP7hTgqdeJuKuz~DbABerydvQRx9hnmxjibsXHylvN9KW7~JVQiDZMx4SadJMBp2spcVuwl1yBVlXT2jB7N~EWl72A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D2 - Display2/SM - Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.938Z",
+      "updated_at": "2022-08-08T23:52:03.881Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}p"
+    },
+    {
+      "key": "a63cd13d6f00524bf95b20ad366d786e5bafeb77",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "658:34",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/BZc/qOn/SFF2M5TaLg8n5n29/style_thumbnail_25.png?Expires=1666569600&Signature=ST3G-RQnmTPZnYcaNSMluOzNLJtVov5y9-Ssm3htxroSdWmMsC-CmVky~CQaBDlUkLPVo2hwEw5lHmPG~cdbVIeQQZjF5-ng2D4w5KXsSQoEi8LAiI8yp4WfOsdME5PTnPRclrogTwSgg~cgcMX-vHc72t2Oon7LtlqGVrPjKE4QNxw4tM4ZujcoawvSkuZmQnQjwe6qsTxuGsfwfBcFA4~O~YukN0I9TTDaYAChJNZHPun2EwCukqNuNkw0F~lXXIa~0DH8keLqe3P8S99F6kExUmEDdjQHOb0Qk5rIF6ufeDs2Mwc4nEhwmHYO-Dwl2vuXFTo3604z2IpCDAqg2g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H3 - Heading3/Bold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.889Z",
+      "updated_at": "2022-08-08T23:52:03.886Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iMy"
+    },
+    {
+      "key": "a7b955b9e8fec31a8746e65fe4593854f8ac0303",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "1072:230",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/M1y/6vk/Dwhn3fRbuVZnssP7/style_thumbnail_64.png?Expires=1666569600&Signature=LKZb07VsHTFbhkxzyt2mggsK-ZcH51BrL6OhdflMJs5IyMtmSsFI1bmhn7b6658cU49z4tXokC3Ci~4f~seUdkQf07szb9oo6zjRqtiPW5V6X8ZTvwW49e9afjLL5QW-3VVMRC35umjIRwfb5fnbx7xCPughBfw~05glItNz87ogWpUNOo~pJfBCJi0C~0pwZXCmyu0jL~H-5IqTRnjhmRWiXCgMJ5~mYdD~NVz5yWqvavd-CAtn5MnbwmNmA75FU5iXLdOeuXeYittGrAkw5bXZBwjD6ZD73DOxi5Wg3c~zUrnNza7tff4dq0l2cux2wK4uCEjse6BZTrB-EzfdRA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Semantic / Warning / Heading Yellow800",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.107Z",
+      "updated_at": "2022-08-08T23:52:03.891Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "sx"
+    },
+    {
+      "key": "af5563bf68b4203a7196d2d6b1bfc90b0f17c47c",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6698:2",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/D2p/45o/CIlvxIc0UO5Z0YVX/style_thumbnail_20.png?Expires=1666569600&Signature=Tf5MYFqH0SRXhyBH5tgdsO3F7u4Dsg1b0lBXpQdZg4lyX0d34Xpj3JhXX9oJDyk6P-wF5gWewrk6jOEYd5xMk2QaZgU1rEqxe73imjn1LACUYwLHTZgnkq8Ab8kfPlUAxpnIgDrm3OMlBFPEAE03AWNWFlAqU6iB6N2YDdRUqW2RXHGvLUnDV2-mtIggLi~NzuWGVECPb1kLz-icqrtquKZI12Jz~i0EQFMXa7X2NlVYa4WKfwph9s0r8xaxEXF4zhoiWZKzmmr6LlDR9kzIlF41IazjwLYrFCDdNoUnbb9oaS8Ne1JWEUr6stHAJS-ef3Aq7oIdlrKDRn1yYsDIaA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D2 - Display2/XS - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.143Z",
+      "updated_at": "2022-08-08T23:52:03.896Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}}"
+    },
+    {
+      "key": "b7ef024795c215be33c5ecf1e94b94be217315e2",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6538:12",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/OMK/S1L/QYdwXPd4HgeohtRZ/style_thumbnail_8.png?Expires=1666569600&Signature=Qs1AhE0kTe-suMB7JU2HKV6gme8zD--fcfF2zDmMRaWcJmVCJL69-R26GcfB6BKNpgP8TubhbPk1-UCH4xtAWA0c1A3IL-dIMgIC4opRgZmIFRwj6eWdQxvGh~3HDpkeCm9xxVbCj4pbylWiyW~9~4VN1uJaa63cxoXXMlT9ImIrd68U2UQYWiRhGerKLTfGXHn3AvG6tEV9Vyip1Skj38~r6pfBiVDpGZKkVcM1ykrR2J6p992MHhLuRWmOmAuIzC05OwQ3HKI4d1PDiu~GcHurxSSy~6iX4mcJ1TWHLf2v8MyhdNH0xZj3~ZtqwVZxWBxPj-t~VJbVmlDF6ed5Ag__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D1 - Display1/SM - Regular",
+      "description": "",
+      "created_at": "2020-11-30T16:07:13.864Z",
+      "updated_at": "2022-08-08T23:52:03.901Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}wf"
+    },
+    {
+      "key": "bae805da707132c179397f50606c84512fc73059",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2433",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/nBP/2ze/P8EDh2NZJx5Xx9RP/style_thumbnail_20.png?Expires=1666569600&Signature=RsdojyUMJKKByaEIxgCRchqgmT4PH040h6kj0wQBjlfyFzFYJorNfrEf2HdHgeMi0NjBf6utbGP8OGu3UgFPQtP0adDd2lWRY9-tT4f5nZlFTGxPGsVF3abwHVlIi~gHSd2tl8Slo86k3WECvMkRppt0HfOhjHOu2i6iwqQIg7rKU~5QncWz4v2fHEhpZOztqeuvjtYjbE8OrfWlbW9je3fULM4yFxIf6yHN84LUMBRNKV5guUsFR8LzsDXEO-Bo0hTy73g1bYxZq-MSiLnmkz7uigR6TW5eI5BIIoCRgdYCM7RCdK1PNyOYRzVIHfobQTgxo7UQB8BwekelJtXeYg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D1 - Display1/XS - Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.986Z",
+      "updated_at": "2022-08-08T23:52:03.906Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}wr"
+    },
+    {
+      "key": "bd4ea745195be4dc27bcd62ad519bb7bfba4dd89",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "1272:30",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Xo5/JIz/hI916RsrF0Wl7EZw/style_thumbnail_14.png?Expires=1666569600&Signature=CDmT7iRIRx3pacnTexVQ8Jp5QKCBikTJC9Ii2unB6eXhLHTQ8qCgc0eLdS0hSd9idukQZZTss7vNCLksSna~JGQXoGWj62h2IZVlztQs0KABBu~SNl2jLfgEpuI7FsrJab8vF-Fg5HdbFtN-E9S3VEZv~YTpxf6he3B2sBI9~YpyDk-Fh5VuM9V05Hor185vUkFrlhxV-B~yM6vV4LQK7Hy30PhxMyTLdDNbDsuH6qPoZrGLiXRghXaU1AiGCBbH~mkgU3tJ~p46Ga8sdr57hH6cgLmzeyY19Y4D-fsocrSHyeBuz0FyT1zz30vFs43RiS8Rg1dWDGEk2-kJxqtEoQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H3 - Heading3/Semibold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.907Z",
+      "updated_at": "2022-08-08T23:52:03.911Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM{"
+    },
+    {
+      "key": "bedbac61c6400dda7cae4ad8d6efd48d4e39c05e",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:60",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/LNb/QSE/YU49Gypbu9MzWtX8/style_thumbnail_5.png?Expires=1666569600&Signature=IRjw2j2Eslc~QsJfWhBdeBdkJXfKfRPqS450QL4TdNgjixyjuNgtuThxfRelWq1W4k44-CuCnaZUHCfKibpa-ngvArC6Cfwd5r4O10pAOW30Q9PlP8asYpjjLHtus6-4QGYl32sF2A44bUIUFTTrY8CuFaGkVOf~~p5MGjZspmlzhmKIIEhq-0rMy9QXue4Fs9ybVMNK-shsboI-REp8LXYXQGFmv-RiLXDB8RbbN5GCz1FFfkPu5iXhFvAVcoiROE0V408mCoA4r00eYdq-7T~kz3jJaAkGeDrm5bff6z1KU0jVjTV4k2RFHbFxLVCCrGRxCiYGfn6F8zPu2VgGDg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D2 - Display2/LG & MD - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:25:59.952Z",
+      "updated_at": "2022-08-08T23:52:03.916Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}f"
+    },
+    {
+      "key": "bf506d75d0d9d8f02fca1dfb7ae04fe43e454235",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "961:3",
+      "style_type": "GRID",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/DIT/Bre/18QsYVEIUXLzHJNu/style_thumbnail_0.png?Expires=1666569600&Signature=M4HtOrNqUQnHgHuJiZK78~QB42nnkaldM3lZEjg~AHGYavrRi7ZTajL6S9ONuiugWgBppLketgQ1nWvuLJ3FdMmj0g8AdAHHpTqdiKQJUK6uaQbH~WRTMAxqeDWNO6Wx3Qg7IucokRp964qx1Uo-C1fSW1RuefrG1mnrRFNzasbT2r74QPNbNauSBRv0x4YR0zuOzWFkD7At2X9JgwGcw4X99CXkUHC4YbZJpjhEo4x8XANvpRfQixQu0qlWQ8us4q68LA6zi6HpDg~XyE00ARj07usYM7HJPifqEfuD9m8rwXBgnrlq6ZH3nMVa8A1WlFZdeQjxbTQk-eXzHvWaGQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "LG Fixed (1440)",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.882Z",
+      "updated_at": "2022-08-08T23:52:03.921Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!x"
+    },
+    {
+      "key": "c26ccbb297f61dd3e3abe21936646bd1a57c81cb",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6697:24",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/ixR/WuC/34oWLtcLvlLmZk6T/style_thumbnail_25.png?Expires=1666569600&Signature=FZIIOQgl0a~7Hjjg3BCvuAPxTcsI~SutUZueq-U7erEp1kfVo5iTJ7JvwHGNWFYj9jpX87Magi2DDtvMUqoNWfHzaKZaV-0mgPIQZMaMFfSbpLe~MblqdxR~jbz8RNPm-ZiZdbm~Z0wtlaR4J2b2YYGf2afTrWSN8nbJbbgaFvFJGkIq7GfHqB4LHhm7NJVWMuTBXkpxQvFlMWHKvArFUTkTNtvoxFUtbW76VaRt3gcZvcMYDSSlLUEWZqoieWSCoHXvVdoQKKRJLNkUCjxybezEaQznZQRjt96TfY6zCbNQPTcHgbhjcMPSJjcsloy6cb4mRY94eHnZ-u-nOdiwGQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H1 - Heading1/XS - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.140Z",
+      "updated_at": "2022-08-08T23:52:03.926Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}O"
+    },
+    {
+      "key": "c30a3c93cbd2d2d2dc10220069db864a1d67e99c",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42163",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/EGs/SM0/oZAK6x4YtHNqkfKS/style_thumbnail_14.png?Expires=1666569600&Signature=hw1wUpaWx3dgqAOyQgYY3J8zVDlw-nE0pnPNNOsNKq9VJkrDVC9TTMJXmcmmB-Mju9WvI9eNtzfpVT2b70dPTHAzZIGC9PbU8hSE6PY82Gb1zMCr65OanfJxteKwx2oH3ALmY7O2YOwOZ2mS9YpNXgwxqk18GqaIGtRdyW2619m6PZ8-bzUKHoMDC1G0ijsTjHyIgAFOaYBVweQ5rKkJ52ZRDNErqVoLsqhLxSXAZOPgm~qKLmZ5FnKemNZs6s94rYCm1oHazlFhIXl9uYS2QRtxOGHUqZa6pCol~Ak5G3RiwosduLp7nl9GQG3ruWRJLnsugq1VaveZF1I6vgvzJw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Background (BG)/LightBG Yellow50",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.069Z",
+      "updated_at": "2022-08-08T23:52:03.932Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}x"
+    },
+    {
+      "key": "c37292c7a9f42781564bd4f96705e285f75a42a8",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6538:8",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/U0C/NrL/V6vOMp11Ga4pdsZ4/style_thumbnail_12.png?Expires=1666569600&Signature=IeQdNpfvhu1hOE8kHFEtoMHXpSvEjfMeOnH43VeY~~HihpmD1mw~C4bmt~twRCad6lB9uvb6jThG23rzv7zWF5CjrPvNAeuAtwkG-~GNKm9LiUSqTApt0aquUAa~3WzrKboaKgiad2wKcZxpiHWmd~IG94CBn4wLOJhobMiS12DFw3h1XS2oXZ3rD0ac3GzGzZKkPN0~8WfS8s32O9zDls9W7fE7ChPJojcC5X~D8oEIbif5CJ2ZHLkoP3C3yUZcQDYyQZ20L6YsVQPGDs1rdjDvrh9RZ7~0xSJeE~haUD68tOwiOPGErvRfTYoSlLVXcSu7cBvHeo6N14BkBWXWlA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D1 - Display1/LG & MD - Regular",
+      "description": "",
+      "created_at": "2020-11-30T16:07:13.877Z",
+      "updated_at": "2022-08-08T23:52:03.937Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}wO"
+    },
+    {
+      "key": "c6f2c5cbc9e3bd66815dd0fb52474006b388d1bd",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2438",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/1AX/6zV/edB4q4cUT94c67lV/style_thumbnail_38.png?Expires=1666569600&Signature=DS8E4cpvG6kcuGLe4zc~75agwtwEMKal9vO5fuyeOFGeLZFs7RiSeIfdLN~gHqNfUIrwN-cL7cb7FPXXNIMXCEdt493npD08VnXdwbc4fmrihKWx0njBJLqeG7zYOGkZlwsv9qC9-ax6rYXDaoHStmqSoWOXHEOWxdbxybc9Nbmd2LufBSYtn~P2ioK1SrWX4RLplJF2srYWLCrHZ1IzlGYE2Jge80S9XB1oeX7g16IsgiKXbgdzva6SxJhtzD8fNjpNvtI0B9cLBWHS4cbnEdn~ksrf7TYbSDl1kkVGb4gaHpu22-fZopclhuR~kDLBRikG583csNUSuwbVO3TBCA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H1 - Heading1/XS - SemiBold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.029Z",
+      "updated_at": "2022-08-08T23:52:03.942Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM|O"
+    },
+    {
+      "key": "cb5d645f9819cda818f59f11171d6468d6f1d551",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:49",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/i9C/euN/HebeGOrlxygqHGN5/style_thumbnail_7.png?Expires=1666569600&Signature=CWC1xFYb3Tb5C6ge3-Ekmxn4KIZxpVA2QGTz0s8z0PTyfe5VNr82-8mWj3Wz68YZnclZ2wZ1FfLpId9-KFDz8BJk7u-cwFwQVm38aJgnA-XPMz1o7ff8rM-xHjPeIL96Ts~cnB~Ptten~q9k1XQqzptxShEXJpIt8iMXI3otjo8UlBvT0MSpWed6f0syL9tln6YPwvBXd0udC~Ef5vXyKeglOhOHbsANbJqVDy~VB8nGZNrgON1pRpO0x0ulRJTHxeRUjMcs0M9efZneQnTsczuCuCjqWsso4MqFV04hAdEhAjERSbdP2sHCigNaUU66~kUio0nklURbMziMNtOwTg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D1 - Display1/LG & MD - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:11:00.232Z",
+      "updated_at": "2022-08-08T23:52:03.947Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}}O"
+    },
+    {
+      "key": "cbe59dc124439ba312906b3b7c7bffce64fb2a3b",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6698:0",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/L09/WA9/5G19gqpfcSJ9v7px/style_thumbnail_17.png?Expires=1666569600&Signature=gKRknR6XP8dPYBk2G5KB2d2HAqOj1nVr8fCWAd6c4npXeZ~c54D9Hhw4dTs02aOFv21xukgni9tFPoJi1lmHguVNzEOlUavVBtl-VYrbCbNFNyHUQP1QeuN03eHY2LbgpEHaozinOmFIwlRU2yCKbeu6m~9hIWz0RZts3PuB8nYbSOSQHwSFg7HFWgU2a0HYiRbNhfwqGR6~DE3~0VacAfWj3GmI0vIMrpsA0rYXy4aA6lV3F824dyw853JSmRLAqUuGu78JqN1-xrOwaJp3mFt3q6zU5jK-BbLX0Jj3Zm0Di8V99pVQiJBgWH3wSgw3GWvcZg6a9IlObJ1DlPrfjg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D2 - Display2/LG & MD - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.132Z",
+      "updated_at": "2022-08-08T23:52:03.952Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}{"
+    },
+    {
+      "key": "ccb4c5766fe28e11ad27a437f61c97d3a2b699cf",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "10433:11240",
+      "style_type": "EFFECT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/ZoF/8on/25N0Pz0WxJpgZmUs/style_thumbnail_0.png?Expires=1666569600&Signature=Ux7KFMBx19iotMVPMU33xi4e14B5f1cF6owHA8-DDAxPD8kAkroG1ztCWBhw0RejMRx~TohgyLjlf~2W51RlxwDZb48JvOwmPh4YuCt3KzTXuk2Hsj560l7Xpq2D0GN9prFP5FZntOkwGpipQ8pKE2ZXkF19fAT1kNBsTN3RcN7pea4pdVBYXDsd9CjBbSYsKoA8Mc-kgP-EqcwkqMVu8WO4aDZpgL9bQ6dYpGgaz2UcLHyelhT5w2CxBBmqEqEva-voT5Fe~R3q1pMY7MRuTJz9NqVmJgtOApUcEc9lb73f~IVKODsuk7vyc8ot9uVdl~Ue8GmgLnWlRyGVc~xYpQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Focus Style",
+      "description": "",
+      "created_at": "2021-12-15T16:27:50.091Z",
+      "updated_at": "2022-08-08T23:52:03.957Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!~"
+    },
+    {
+      "key": "cd0135baa7f08a4b85ba34bb6b6e7e7c87bff849",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "1:60",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/YOR/IcJ/bIoTDiwQdjnsa0BP/style_thumbnail_0.png?Expires=1666569600&Signature=PkUmhBO7hjiu0Asg1uJQlX1-UxwP0fT947xWXimPMMf9pIoxcgyUCW-HTE6BHjf3RPz45kH1pOLvQ7MvUbv4zfiZQ17g0p3Mlv7Vfz-vMN9hcKTFKltbAfawTcrVEJZaSy-reNOYjc9oi4dglQxHTYLraBKQBbQF5xcOzntoB13OCsYeLFQhFa~1~tsiaOR0BRF1K17412~G7NgC-EzFlji6Mnxb8ivPcJoiW10hZRwmfuWoVsMUjzyX770Y5001lu8hP-Zh567CUJFGfyz8Kt4BwWEb7EqhawUDMRkmgf25ShRNkt3Az22hnU4w9mn~fw4a03kjByBjTa~8P5H2mg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Interactive / Default Blue600",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.127Z",
+      "updated_at": "2022-08-08T23:52:03.963Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "$"
+    },
+    {
+      "key": "ce58bcaaeff5012c2ed8e4f27e701b0780bb9e71",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42156",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/HW9/Azf/6fCANTBkv0jJWnqY/style_thumbnail_27.png?Expires=1666569600&Signature=Dqw1Cyl5Tmnn3hZ0JKRN~rwLpR~xvpb9ksBodHYK9gM9aorpGdBxvVs24TX1eF96yeLhSipI0hG4O~yzM1m2YJnbJLvpkb7SO8mRLbOTLOtTPwV3SeAJZb9Rz7ZhFzKogB271AzsWbmhS4eSUe0VmknMZR84SlHNF1YjSnTSKkWkmKrrcpDgax1fI1vJeQmRKYEDZruKtD-9MZ-7s7n16E2uACZASfO7zXUPhccZdIOJniPo2P8RW8MjiuFLx1SSJHOJW6BHkBsbb6Ouym8B21Ih9L5rif8OJTNaGASxP93zVoG7DhS7LpiDn67xzqRjB2jwzg-9a2Sw5rU1stHENw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/primaryHeadline",
+      "description": "Purple800",
+      "created_at": "2020-11-27T18:51:11.993Z",
+      "updated_at": "2022-08-08T23:52:03.968Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"Lf"
+    },
+    {
+      "key": "cf8ca52b414e61d2caa65b6320c5fe017aa45b78",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "658:27",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/u4a/CM0/6Y3ugyL02vYYaba3/style_thumbnail_20.png?Expires=1666569600&Signature=TENB3UOxJPRcGXPlLgrkURDbmLtsmF5WCjalRgYOP8WTN0fD8vdq-wupHhvvS84TNIgRUQ~D-e6l80J0k02bDY2UCktpNsz5X6lz4W7wgzCChVr03UDaL49XgYe7Rr9TdxDY-zInfNb1HLUs936mTfd4Aj~OvTT5CXaHRnFLe3NG8WXzrnZs0A1hX1uz8atIOIMMMr8tyRQ6Y43DPyzKg87Er~ffQzUuNkhcOOZwXQ-2nokQ20aAwdLI9NPGKY8IugKZbPv7mwH1sh6zgsqXAvTf3jbBsA9417jCs6lh6hmWsV7nxSrEoO~KtcXajqg1--yhr~SIq2Pou2IF6~IKdA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D2 - Display2/LG & MD - SemiBold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.079Z",
+      "updated_at": "2022-08-08T23:52:03.973Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}i"
+    },
+    {
+      "key": "d07e0aad5284410faf76fb9d3f6b19a5c01bb2fb",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2425",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/oHv/FSg/6S7sKgRDKklbQ29n/style_thumbnail_18.png?Expires=1666569600&Signature=DfBo6n4Ylu0iu7Ae-bEIncIwBsQnvQyUZCCojQ9M6HnI5Zp5fiBw4S4A9ZZXYUAGFWwyvubxKJaFV8Op47logRjaahMScMCZQPJ4pTq3weoblTNjORsRAxyBCYZ2MRvEu-~tryxnxvMmaoUG3hAEayUjJnqeFvJ37~GEoB9LRfoOHdj4TV9APA~~41ZWmgzoyrgg7tL7WBm-VaNCiD3MrjIcfyYnBHmA1PFn2ttQCBXXnlBEVuI7JZGnBo4Y8CG0YQTKzBJeR1CUmi5taduDrxwW~XsX0ryH3wqAcCZFlyw6Fkt4UH03AI0UK26VtUITm75XTTXne4x1ZHTZgGGV8A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H1 - Heading1/SM -  Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.076Z",
+      "updated_at": "2022-08-08T23:52:03.978Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM|r"
+    },
+    {
+      "key": "d58ea03374da20f0eed348f8687308de35fa4d2f",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "961:2",
+      "style_type": "GRID",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Dge/w2p/fMe5j5l0ja1hmPsN/style_thumbnail_1.png?Expires=1666569600&Signature=AUoelOYs~lmEMyWyg5KEl0VMoop6lp9fgfe3Yeps033TgNjUA0kcRHzdpZT838WehX8qWVJHUfHteaLu5DtSbSe3n-xY0qPit4l89nTu8z7LFx2hqIs7tBnlQHhJCXovIWvERo6sfiKCaYBm23~MtMDHMiSkf0QP~BpFWT1FIZ~4mu7ZUWdCO-S1Qv8nzkPctRdTBgDnay0zTHZPSvuNpdolzm2Nqab8UgDzlRudd4V9k2-e7YvdVmj98UZI5LcyDsF6IcM5rdq9DAqvEKKCcY350eNIWxZ0o5c3M9MPSQjut7qukpOFAkedh~UacTFbYo6jB7B-qgyTtR-M2erPmg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "MD (1024-1439)",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.894Z",
+      "updated_at": "2022-08-08T23:52:03.983Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!w"
+    },
+    {
+      "key": "d72e1f1d623afd89d5355fc54f2903bb97e48d5f",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2293",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/MRt/DpH/y3pDajMdijY32peA/style_thumbnail_46.png?Expires=1666569600&Signature=TlJAlIxbIbdqkeu5s7XhKSfHv8QX9Ya3JgsO1KGmIEwQOaFGPnOWX6mncsqj7GCpJfaO1wLzOVeR4dlO5hHAnsfGVvVR9nHU~SZV9q82i1yTkvk8ORxZAqfnr9UAYhoVBTJS8eMLqlvoWKqwRDfE0J-ObTQtKhYTT~YP8goOVUUQBRcgC-yeGgxHcLYUBh4oqnUAcdeS9tMB0P3tivvy8RHNgTOCDYvywaJ473DWvFlgULrSd-86VYhIuw63fkXw02P2aIMCJXxGdh2uynxvBIoIebz7xnp5DPR3m8blOgOSWWcIQzkcnTDBjIHIR6dz-DkbwmT8~dZSAK6DNmATNw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Interactive / VisitedPressed Purple800",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.044Z",
+      "updated_at": "2022-08-08T23:52:03.988Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "ZO"
+    },
+    {
+      "key": "d73e22a462cf091964a018352276812bfbd28c2d",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6697:23",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/Vlx/iqy/nx8ZZPra0ZIJgTgT/style_thumbnail_23.png?Expires=1666569600&Signature=KohuSuK-eZrv6RO3ZebEb3gWUmu0UznLxhQ2WWr7N1c~04KkD6Mf22iEgPkrZWGfAkPL6fdS39Eqg12Z30oYefLZt2MykA-FL2Qau549lOSL3qmxJzYXkWPpqZOAXVHxg5Ba8EMl2SEztRu0uH8weGa6cNudXW7-1PIRUnbrXIi5EG9AJZaMgbiAINni5SGDungfw5EJc1GGacdfXgtuW4WqdNJSxwNrz14eSKYpm69uFFfHeFAGCQHWp5g~okuQgqv4ftBnsxdlr9CH2DmoPHHI9wRkBBtPSS6rznxi8aO0FXQFYJsRFlwGndhYVXTQQl22Gc6hetcvwZZLV-P9Sw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H1 - Heading1/SM - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.136Z",
+      "updated_at": "2022-08-08T23:52:03.993Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}"
+    },
+    {
+      "key": "d94b8a2aa2cfb983096060359b4f7bb9b7b05dc2",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6538:7",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/alI/PGL/aQDIHAt2DDd7Jbmj/style_thumbnail_11.png?Expires=1666569600&Signature=CneW4M2QgHuzX7iTS1MBDCYZC5~lfRCn1OiFW4XjCLuBZTXSCr0-XEY24ecEygqPo3bvXw2t~t64-p6M~UtWs1ko~YrLZYLvrruviHkzVraNSqlLjcEbk6PE8Lcepf3Zy6bpyuyc-cTovQRqM8823Fh~qp1Jh5Wgi320an78j1WCXfuWcMc3KxqOsU7UOPChUiTvpMrdo9sRSPPfNCRqLcsBuOokTqBKtMY3~v7ODYXAgc-KLdxEH~2Ugzjb5jYEkxpe0YO9UDm3EArYGVaAlF~M1d9J7~FN3VAbZzBn8Ep2nNbWiBKo8qdBAwESPx294gRWrmJopt-bwPTBCRYu1w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D1 - Display1/LG & MD - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T16:07:13.874Z",
+      "updated_at": "2022-08-08T23:52:03.999Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}u"
+    },
+    {
+      "key": "dda40ed4d5160f5bc670a783263f7eb272bfe18f",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:51",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/3OJ/m8K/kpdpKDyuXDxkmW8X/style_thumbnail_18.png?Expires=1666569600&Signature=ZHkE0OrNTrre2RW52lGCNeE0OvyPMyO5ypovNO1JvHpdG-gGLnGNnC2JCgkOGM~GFZOzuJz3UbS647j9NQ4AcsdAzjZ2u4I6z~Y-a-X3akN8VLiWRg3eCEbFDrUDne4ktOGp79vyYqZfRAENUS4qMmpl26nYb4knoHM-J-NyMkaSwwEixHzznbQ-6N3nINX3QeuEJgf0elgO5TupUhsPMZ5ix5i4L4hhWiX0mhb0NIHC7k1ZrwXXBatT289Zc5Q84AzuVCuSZYYjCU18bBQrmXZjFOhFSbmZqQqqvRlCGv-Aqf6~fJ6R4EC9Xk~P0LH~gD~VJ2gMYi4VOiRpbq-5Sw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D1 - Display1/XS - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:11:00.249Z",
+      "updated_at": "2022-08-08T23:52:04.004Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}}r"
+    },
+    {
+      "key": "deb60be3ace3516a3b8367a74fc648d6ca14770d",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42160",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/77Y/BQu/NFCDKx8Sx9Eooao5/style_thumbnail_15.png?Expires=1666569600&Signature=gaZZiwBF0oiGaFzJhxc88H4l8hVAwOzfZE8Odwsip4Uckv3IvgG3yj11-qRdmqcfcIpww74Erbsah7ER0WMi2huh7kN6kG9rV-OQAnEC39p3ChPRd2AsnwuwM0SR4pidUHxoZAiZxDnAiHjYs7F8ea77HAtuuvjcZLtP7DoY8-CfKuXADkxMO4xc-RvZc3epUFXeIak5gIXTItRNKEU7jFjDWIS5rIWs~h9Dn4bkk0qL0GUSZyZV26k1cq6tgh65BY9YlUW9uwD5HBdnWCjdUbtoj29cJS0XTcGdb4gXtwBFyP6GDMTKnU-~W7E5selAhcRDxIaY5cMIa9uffpkq9g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/eyebrowYellow",
+      "description": "Yellow500",
+      "created_at": "2020-11-27T18:51:12.047Z",
+      "updated_at": "2022-08-08T23:52:04.009Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}O"
+    },
+    {
+      "key": "e5b26472c8d946c753bd704de25b1434cd1a1eb2",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42165",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/PZJ/H0j/7BYsjAY5IlMA8iBf/style_thumbnail_6.png?Expires=1666569600&Signature=Mrgp6~qzBlwLkbWRBoivSBMPTWtGpV96C9OOIUtxT9tafAQjIDzZEdG67bgjwV2XCdV4jEPpQ6fmahTZYGi7Yipfpg2~iuoECPIVP9VV81kqTn26QAyO7cO6n9o9vNS-g5etRQJNROuYCRLovrsAE14mqf0u~bMvz1O1MZ0uSFluqPDozTvNJlmAmZLVnzzEzWCxF98zqK4MUdhZuE2v2qQVCqWF69J3GmG82CzU-89hfsfxExXpquFgc77Ty1nq6ERcZ26i2L7ayq6CLSKU2WLwJnjhBC8m~VCr1b3hYZRVcEjkC~kZxVJbPYIDqAqAaxzobAMTWXvDIEWdiGaA4g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Background (BG)/DarkBG Blue900",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.034Z",
+      "updated_at": "2022-08-08T23:52:04.014Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}}"
+    },
+    {
+      "key": "e6f26e0c3fa85f0b5dacfa5b8af0ead7ee854c7e",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6545:59",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/KLS/E6H/Tb6oKY0kFRQqEmhi/style_thumbnail_6.png?Expires=1666569600&Signature=E2O7PFmogv6qK7ZqU00eQKA4-7NJetpMUMf4BqmFy8E79ikR8tOsiiiAGzb8QyQJj4pjuV2ENnAP5rKWqnwGWaIn3K3i8R7gnYh-l~DrztUeodOSOJK1ZsC-71m7XiCxtwQrS~DIa7WwCOBRCdTkF2vflAU2Az9B7Li0e~EBTpSFC7vrKVy23lbC28RiT~R668okS5z1M37tFAOPPzGE4uU0tSRNA2XouD9Y~cYGGebXSOKefPXS6faTsjOYRbTq-WXeSwpVidTqILAf19iUUZPxGT3INWp6ER~dyNUAlVxZEjjXv3zBx8k~mQihJc1c32CFbuCgm~rHCtcjjzrJZA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/H1 - Heading1/LG & MD - SemiBold",
+      "description": "",
+      "created_at": "2020-11-30T17:25:59.956Z",
+      "updated_at": "2022-08-08T23:52:04.019Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}r"
+    },
+    {
+      "key": "e877b9e2a51fa96872f03a086515e3d9c6580d60",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "658:31",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/HUj/M6a/WRplOUVaUdOLifDa/style_thumbnail_22.png?Expires=1666569600&Signature=GQ1-SZNsbDS5BrKMdV5-wJUR345u01-OfvhdQt9ZsmHpSWkjpjE2fGrOCeriJKq-JDYMjUcT0eszzHNk5dqU4ytLb9byzUbRyrTg9X~zCIkee2TamyJuVLnBvWM6S7QTqMT8TP~ix7~e7ktHkrCKOAVH2M~p8WVaZFD8zVhcMTR3eYnbwhWv6~MNjOJOcfwmv-PJJs5WavumRSyFGHAzLWgeVKdTM2zx1KIe-2INlJfjEFXELpy-Wjjoud4jKREnVrW7~UjLBd7oqSYQJP3oUhs17KZ-BMJIQfb4J8SaIsSNPyPWxbdP5TT1N1HhwyOxgnaFy~IK0gcE1TDhMwbqQg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "H2 - Heading2/Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:11.913Z",
+      "updated_at": "2022-08-08T23:52:04.024Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM{O"
+    },
+    {
+      "key": "ecbfb4b51205bf8bc13350b945113637216a15cb",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6698:1",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/4Qf/mLZ/vMRRbG6emPIw9YhQ/style_thumbnail_16.png?Expires=1666569600&Signature=HqqcHHpe9sUTPEagMDEHiE4AuUQsGu-2swQB~acp39LC2iy02O8aCkB3nB801TTh7iRH-F9FZEeoTiKOUjWu7e4Aw0rnf0z5UO2TXcQgcIiTQZO7DN5odvvkNTLDZe5vBBfDjF~fXSEssDS4pG1YrkoXs2cFkWD6mSpm~7~Zv~PZTgjVvdv6JlO0-MzjQPNK8RPUj91ETYukGLRt459DJ4IlLbsN7kef9sqmJ6PoDvj4uL7ZmHS-LSsTcvQszPnE57O8gd-tFTO2qeEdOe1t8dESbELmsbOIxxnY1vWLF43YeIDS6k-fMGUWXrd0Li6N56xlPMSaQn9ewpyjh3Cz7Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Underline/D2 - Display2/SM - Regular",
+      "description": "",
+      "created_at": "2021-01-07T20:26:09.128Z",
+      "updated_at": "2022-08-08T23:52:04.029Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}}}|"
+    },
+    {
+      "key": "ed7dcfb8b7fab278eb502d1dfbf715662ba00e43",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42161",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/GmY/ZvT/MXLWq37ngWdgVhP1/style_thumbnail_23.png?Expires=1666569600&Signature=HWBOfGkyYAY8U0dOdtqUmeQifZH4DnIwLES8kBsukspTdSks9IiQ6j5h5yPf2YVsA0htZPFM67pA9ZcYc-YfHn9SOIpmanbFDv8RIRYF4JSGR9R3y6YzP87VxVD0cW~pTZxYTjoZG0kIoRv0XGlYcCdcAG6~Bd8JJPKfb9Lt~D70ZQxCf1rc~ApDFUwm5VQbzJxugHauK8byC9cX-nrq4-Kgymy2AbBbPsZJtrSJsjnKDQ559XRZHz-JS9ShxaGwKsMAfV-EqjNLeaI6mIr7IUvMZXZZflIEzzFJCCrJz3JY9-~bCUw8RN1-MPYTBj4GkTNMja0-CxnMiiWa4uXG6Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/eyebrowAqua",
+      "description": "Aqua300",
+      "created_at": "2020-11-27T18:51:12.123Z",
+      "updated_at": "2022-08-08T23:52:04.034Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}f"
+    },
+    {
+      "key": "f202f53b1b511186738daef2eb87687d9624acf7",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2290",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/G0u/BRI/McJwpmkxgZFgQKUA/style_thumbnail_59.png?Expires=1666569600&Signature=aLb70Ty37DkbzWtb9gH5paWfqSCppDjrjUPlOADHkkOM9M3pcPFSnYKjzoINn6CdYJXOSV5NW5TWR8I5HtyYx9zmaCVaQyrtuzk2nWvcjnUEDpQl8wMqusePZZvBjVhkBm5MEIQ33gb-gPBmp2U0LT12Sb4pWJ3zsiwU147btSCdnFzLMu3-yMMp4OmQey7etc2QpAPaLwi2cOZxlf0rnul7oam6~4Z0GYpb7O~wUhBabKqbqc-x0aIHlUW0xEqhYAxuWzgIlj3cRnfeTyXeHh-uWaxYzRRt0ENR9p28ye737wqP1EmGsfN~BAwHx3-s5GAwBDbU7ampmwscWVs4Ww__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Interactive / Hover Blue700",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.089Z",
+      "updated_at": "2022-08-08T23:52:04.040Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "$O"
+    },
+    {
+      "key": "f6fc815d0f5f93c45fb854c61abe69caa5450b74",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2361",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/rvL/ecK/bTmBXydjCGyW6hCm/style_thumbnail_23.png?Expires=1666569600&Signature=ciQkqZF14cZLkJefwNvLMCleVC2AQRRCDoG0UGAKUcSF04Bm5dDcCapRKbgBTMt-1ej9AHQ-bAXFGdFD2hUHxQo5YFAXjU3Qw~2mp0G98eQQCjn4cl-395iMOB4h-oJaPVwf0JqPm-HTslrMmgqQTk2S3r258GC14H2oCh0qbZAeaToJD~ZS4b4OWZaYWXgeiKRCL1FnvUAFJm5DRpV2sTeeeTHjtVYFjyKCtDMQ~4gY68q5OCAfAmmmXugxON4Gg0Rn--ThtDIKL66MJd~2V0W-Pe2t1UwE8c2rZEG~TjocxlkL9GOhNekR4Y3dkfdLoSh9Io5KngyascnmTLEeyA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "D2 - Display2/SM - SemiBold",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.013Z",
+      "updated_at": "2022-08-08T23:52:04.045Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "!iM}j"
+    },
+    {
+      "key": "fc813e4d71b822da78d235c87a31ec8f68c8f804",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42155",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/dW0/z17/xw0q6wPsZTk1rpso/style_thumbnail_9.png?Expires=1666569600&Signature=FhdyPv~e6Lhl021w~t5NZp-vv-GbHX1G2nh4hDD5AyhsX5HbU8aW5NjGYpmorqFNhUo31aqR9S5~9WdVkOZaC5GnAndZA4Dhv7xZCLbfUA0Nppk-Mjs7MfyLPEvD3QpDJb4lcm-ZkoZYQrB1YYx6BavCnzWqTum0KJ9KxLi7AfEp05usa-G3tNfzhAGFz4Bg11A8644DIGBTqIPhYNBTyacygDlQ3Sn2zQFmOTeYq8TDAryH8yCm2pTS4uD3Af7-~7fAidm2FlTx0Vjz0ZH5mLKKY0uq738RBDpNhl8Td2xak6ckG6rbaGx-W0AIBdaQjWnZvDfCevxI4VZqii7RfA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Typography/invertBody",
+      "description": "White",
+      "created_at": "2020-11-27T18:51:11.967Z",
+      "updated_at": "2022-08-08T23:52:04.050Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M"
+    },
+    {
+      "key": "ff7936c4c56c88f3dce03d648563c6d2eedc017b",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "6394:42164",
+      "style_type": "FILL",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/xPq/UgS/CqjsavCM1mEOus1W/style_thumbnail_13.png?Expires=1666569600&Signature=EBD5HrA36W87UmeC41cDIon3Ag2D5Avnn4WFstZ08eI3CN~p-enbvmeQgit8vnGFNpiKTw6MCBysRJ-ZPMc-PICcSX~yLVnzLf~F80GASOzG4iS86EjpP-6zN9qXs9YU8471ZayEwtT9kIXe31NLNk0MsNK~~QHyX49PCfae0d~zN7XwXV2g77TQ-nSW-aGjdoDJoV5XDCZJLOeJ2FRBgGr39g1XSAl~Ozok7ylfDkH3Pl4G0g3ErOIxqsmsRtxdRwW4fPZqFYMoMLdj3ICKPKEcnahr~3u4moPN1veSeJLMXATzeVCm29Z9STChb2ROtZ6ZQZs8oIvsVmikBYaxRg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "UI/Neutral/Background (BG)/LightBG Purple50",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.110Z",
+      "updated_at": "2022-08-08T23:52:04.055Z",
+      "user": {
+        "id": "1014206219307433718",
+        "handle": "Milee Yu",
+        "img_url": "https://s3-alpha.figma.com/profile/09bcc8e0-80d5-4b24-9edb-f16ec98120c7"
+      },
+      "sort_position": "\"M}}|"
+    },
+    {
+      "key": "3f6359a7ed80098fcbf617d68ce6adefd9930b10",
+      "file_key": "K8HHPpzBgBrGteAUzqqC1H",
+      "node_id": "953:2441",
+      "style_type": "TEXT",
+      "thumbnail_url": "https://s3-alpha-sig.figma.com/checkpoints/hDL/8V5/IxrzPXyFdpHOpIny/style_thumbnail_0.png?Expires=1666569600&Signature=FUZn4aay7q2MpW1NBXqonZUCoyPDU9r92Y7tQKlQCKGwPqRWkOGkRctphHkAIJl7goohOMgfM3cu8cnndqLRyMbnU1jK1tmfHCx3yP2ovrJx4ZHWyN1p00BzRB1azcvAwVa7Q0v4CGF-khBUw8fmMjb5W6sOOAU~TTXIxs1aqrEJfWVCCypG3ZgzHbqIFUc3KHP5kogyfK3AWCuZ65XVAH0ySX5Js6yM8HmW9yiPVLtHhnDM3KITFX18fnXD3jQAfvr0Vwf2IK-C6Q1fCvNkruyCRFdZNT3nEzWdMdoUl3ppNhICwXgy3v4zJf2JTn9erM9XYl~HcrqrfhwbhVY9gA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "name": "Body2/Regular",
+      "description": "",
+      "created_at": "2020-11-27T18:51:12.120Z",
+      "updated_at": "2022-09-12T20:24:14.908Z",
+      "user": {
+        "id": "1019271258631385429",
+        "handle": "Dylan Parks",
+        "img_url": "https://www.gravatar.com/avatar/2a7fd9be3845bed739e479d471e448af?size=240&default=https%3A%2F%2Fs3-alpha.figma.com%2Fstatic%2Fuser_d_v2.png"
+      },
+      "sort_position": "!iMO"
+    }
+  ]
+}

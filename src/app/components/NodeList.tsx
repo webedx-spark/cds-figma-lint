@@ -1,22 +1,22 @@
-import * as React from "react";
-import { motion } from "framer-motion/dist/framer-motion";
+import * as React from 'react';
+import { motion } from 'framer-motion';
 
-import ListItem from "./ListItem";
-import TotalErrorCount from "./TotalErrorCount";
+import ListItem from './ListItem';
+import TotalErrorCount from './TotalErrorCount';
 
 function NodeList(props) {
   // Reduce the size of our array of errors by removing
   // nodes with no errors on them.
   let filteredErrorArray = props.errorArray.filter(
-    item => item.errors.length >= 1
+    (item) => item.errors.length >= 1
   );
 
-  filteredErrorArray.forEach(item => {
+  filteredErrorArray.forEach((item) => {
     // Check each layer/node to see if an error that matches it's layer id
-    if (props.ignoredErrorArray.some(x => x.node.id === item.id)) {
+    if (props.ignoredErrorArray.some((x) => x.node.id === item.id)) {
       // When we know a matching error exists loop over all the ignored
       // errors until we find it.
-      props.ignoredErrorArray.forEach(ignoredError => {
+      props.ignoredErrorArray.forEach((ignoredError) => {
         if (ignoredError.node.id === item.id) {
           // Loop over every error this layer/node until we find the
           // error that should be ignored, then remove it.
@@ -31,15 +31,15 @@ function NodeList(props) {
     }
   });
 
-  const handleNodeClick = id => {
+  const handleNodeClick = (id) => {
     // Opens the panel if theres an error.
-    let activeId = props.errorArray.find(e => e.id === id);
+    let activeId = props.errorArray.find((e) => e.id === id);
 
     if (activeId.errors.length) {
       // Pass the plugin the ID of the layer we want to fetch.
       parent.postMessage(
-        { pluginMessage: { type: "fetch-layer-data", id: id } },
-        "*"
+        { pluginMessage: { type: 'fetch-layer-data', id: id } },
+        '*'
       );
 
       props.onErrorUpdate(activeId);
@@ -62,7 +62,7 @@ function NodeList(props) {
   if (props.nodeArray.length) {
     let nodes = props.nodeArray;
 
-    const listItems = nodes.map(node => (
+    const listItems = nodes.map((node) => (
       <ListItem
         ignoredErrorArray={props.ignoredErrorArray}
         activeNodeIds={props.activeNodeIds}
@@ -77,7 +77,7 @@ function NodeList(props) {
     const variants = {
       initial: { opacity: 1, y: 10, scale: 1 },
       enter: { opacity: 1, y: 0, scale: 1 },
-      exit: { opacity: 0, y: -10, scale: 0.8 }
+      exit: { opacity: 0, y: -10, scale: 0.8 },
     };
 
     return (
@@ -96,7 +96,7 @@ function NodeList(props) {
             <button
               className="button button--primary button--flex"
               disabled={filteredErrorArray.length === 0}
-              onClick={event => {
+              onClick={(event) => {
                 event.stopPropagation();
                 handleOpenFirstError();
               }}

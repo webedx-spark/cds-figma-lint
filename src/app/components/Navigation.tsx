@@ -1,23 +1,25 @@
-import * as React from "react";
-import SettingsPanel from "./SettingsPanel";
+import * as React from 'react';
+import SettingsPanel from './SettingsPanel';
+
+import { ReactComponent as RefreshIcon } from '../assets/refresh.svg';
 
 function Navigation(props) {
   const [panelVisible, setPanelVisible] = React.useState(false);
   let activePage = props.activePage;
 
   const layersClick = () => {
-    props.onPageSelection("layers");
+    props.onPageSelection('layers');
   };
 
   const bulkListClick = () => {
-    props.onPageSelection("bulk");
+    props.onPageSelection('bulk');
   };
 
-  const handleLintRulesChange = boolean => {
+  const handleLintRulesChange = (boolean) => {
     props.updateLintRules(boolean);
   };
 
-  const handlePanelVisible = boolean => {
+  const handlePanelVisible = (boolean) => {
     setPanelVisible(boolean);
   };
 
@@ -30,13 +32,13 @@ function Navigation(props) {
       <div className="navigation-wrapper">
         <nav className="nav">
           <div
-            className={`nav-item ${activePage === "layers" ? "active" : ""}`}
+            className={`nav-item ${activePage === 'layers' ? 'active' : ''}`}
             onClick={layersClick}
           >
             Layers
           </div>
           <div
-            className={`nav-item ${activePage === "bulk" ? "active" : ""}`}
+            className={`nav-item ${activePage === 'bulk' ? 'active' : ''}`}
             onClick={bulkListClick}
           >
             Errors by Category
@@ -44,16 +46,16 @@ function Navigation(props) {
           <div className="nav-icon-wrapper">
             <button
               className="icon icon--refresh icon--button settings-button"
-              onClick={event => {
+              onClick={(event) => {
                 event.stopPropagation();
                 handleRefreshSelection();
               }}
             >
-              <img src={require("../assets/refresh.svg")} />
+              <RefreshIcon />
             </button>
             <button
               className="icon icon--adjust icon--button settings-button"
-              onClick={event => {
+              onClick={(event) => {
                 event.stopPropagation();
                 handlePanelVisible(true);
               }}

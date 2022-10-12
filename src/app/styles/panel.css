@@ -176,7 +176,7 @@
   border-radius: 64px;
 }
 
-.error-type img {
+.error-type svg {
   display: inline-block;
   margin: auto;
   height: 12px;

@@ -1,20 +1,21 @@
-import * as React from "react";
-import BulkErrorListItem from "./BulkErrorListItem";
-import TotalErrorCount from "./TotalErrorCount";
-import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
+import * as React from 'react';
+import BulkErrorListItem from './BulkErrorListItem';
+import TotalErrorCount from './TotalErrorCount';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ReactComponent as SmileIcon } from '../assets/smile.svg';
 
 function BulkErrorList(props) {
   // Reduce the size of our array of errors by removing nodes with no errors on them.
   let filteredErrorArray = props.errorArray.filter(
-    item => item.errors.length >= 1
+    (item) => item.errors.length >= 1
   );
 
-  filteredErrorArray.forEach(item => {
+  filteredErrorArray.forEach((item) => {
     // Check each layer/node to see if an error that matches it's layer id
-    if (props.ignoredErrorArray.some(x => x.node.id === item.id)) {
+    if (props.ignoredErrorArray.some((x) => x.node.id === item.id)) {
       // When we know a matching error exists loop over all the ignored
       // errors until we find it.
-      props.ignoredErrorArray.forEach(ignoredError => {
+      props.ignoredErrorArray.forEach((ignoredError) => {
         if (ignoredError.node.id === item.id) {
           // Loop over every error this layer/node until we find the
           // error that should be ignored, then remove it.
@@ -32,14 +33,14 @@ function BulkErrorList(props) {
   let bulkErrorList = [];
 
   // Create the list we'll use to display all the errors in bulk.
-  filteredErrorArray.forEach(item => {
+  filteredErrorArray.forEach((item) => {
     let nodeErrors = item.errors;
 
-    nodeErrors.forEach(error => {
+    nodeErrors.forEach((error) => {
       // Check to see if another error with this same value exists.
-      if (bulkErrorList.some(e => e.value === error.value)) {
+      if (bulkErrorList.some((e) => e.value === error.value)) {
         // Find the error of this type that already exists.
-        let duplicateError = bulkErrorList.find(e => e.value === error.value);
+        let duplicateError = bulkErrorList.find((e) => e.value === error.value);
         let nodesThatShareErrors = duplicateError.nodes;
         // Add the nodes id that share this error to the object
         // That way we can select them all at once.
@@ -65,11 +66,11 @@ function BulkErrorList(props) {
     parent.postMessage(
       {
         pluginMessage: {
-          type: "select-multiple-layers",
-          nodeArray: error.nodes
-        }
+          type: 'select-multiple-layers',
+          nodeArray: error.nodes,
+        },
       },
-      "*"
+      '*'
     );
   }
 
@@ -77,19 +78,19 @@ function BulkErrorList(props) {
     parent.postMessage(
       {
         pluginMessage: {
-          type: "fetch-layer-data",
-          id: error.node.id
-        }
+          type: 'fetch-layer-data',
+          id: error.node.id,
+        },
       },
-      "*"
+      '*'
     );
   }
 
   function handleIgnoreAll(error) {
     let errorsToBeIgnored = [];
 
-    filteredErrorArray.forEach(node => {
-      node.errors.forEach(item => {
+    filteredErrorArray.forEach((node) => {
+      node.errors.forEach((item) => {
         if (item.value === error.value) {
           if (item.type === error.type) {
             errorsToBeIgnored.push(item);
@@ -125,10 +126,7 @@ function BulkErrorList(props) {
         ) : (
           <div className="success-message">
             <div className="success-shape">
-              <img
-                className="success-icon"
-                src={require("../assets/smile.svg")}
-              />
+              <SmileIcon className="success-icon" />
             </div>
             All errors fixed in the selection
           </div>

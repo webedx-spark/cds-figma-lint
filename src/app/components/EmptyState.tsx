@@ -1,5 +1,7 @@
-import * as React from "react";
-import { motion } from "framer-motion/dist/framer-motion";
+import * as React from 'react';
+import { motion } from 'framer-motion';
+import meshBackgroundIcon from '../assets/mesh-background.png';
+import { ReactComponent as NewLogo } from '../assets/new-logo.svg';
 
 function EmptyState(props) {
   const onRunApp = () => {
@@ -13,20 +15,17 @@ function EmptyState(props) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -16 }}
       transition={{
-        type: "spring",
+        type: 'spring',
         stiffness: 260,
-        damping: 20
+        damping: 20,
       }}
     >
       <div className="background-wrapper">
-        <img
-          className="empty-state-background"
-          src={require("../assets/mesh-background.png")}
-        />
+        <img className="empty-state-background" src={meshBackgroundIcon} />
       </div>
       <div className="empty-state">
         <div className="empty-state__image">
-          <img className="layer-icon" src={require("../assets/new-logo.svg")} />
+          <NewLogo className="layer-icon" />
         </div>
         <div className="empty-state__title">Select a layer to get started.</div>
         <button

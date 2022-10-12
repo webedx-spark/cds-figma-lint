@@ -3,26 +3,40 @@ import {
   checkEffects,
   checkFills,
   checkStrokes,
-  checkType
+  checkType,
+  checkCdsStyles,
   // customCheckTextFills,
   // uncomment this as an example of a custom lint function ^
-} from "./lintingFunctions";
+} from './lintingFunctions';
+
+import styles from './styles.json';
+
+const normalizedStyles = styles.styles.reduce((stylesMap, style) => {
+  if (stylesMap[style.style_type]) {
+    stylesMap[style.style_type][style.key] = style;
+  } else {
+    stylesMap[style.style_type] = {};
+    stylesMap[style.style_type][style.key] = style;
+  }
+
+  return stylesMap;
+}, {} as Record<StyleType, Record<string, BaseStyle>>);
 
 figma.showUI(__html__, { width: 360, height: 580 });
 
 let borderRadiusArray = [0, 2, 4, 8, 16, 24, 32];
-let originalNodeTree = [];
+let originalNodeTree: Array<SceneNode> = [];
 let lintVectors = false;
 
 figma.skipInvisibleInstanceChildren = true;
 
-figma.ui.onmessage = msg => {
-  if (msg.type === "close") {
+figma.ui.onmessage = (msg) => {
+  if (msg.type === 'close') {
     figma.closePlugin();
   }
 
   // Fetch a specific node by ID.
-  if (msg.type === "fetch-layer-data") {
+  if (msg.type === 'fetch-layer-data') {
     let layer = figma.getNodeById(msg.id);
     let layerArray = [];
 
@@ -36,72 +50,72 @@ figma.ui.onmessage = msg => {
     figma.viewport.scrollAndZoomIntoView(layerArray);
 
     let layerData = JSON.stringify(layer, [
-      "id",
-      "name",
-      "description",
-      "fills",
-      "key",
-      "type",
-      "remote",
-      "paints",
-      "fontName",
-      "fontSize",
-      "font"
+      'id',
+      'name',
+      'description',
+      'fills',
+      'key',
+      'type',
+      'remote',
+      'paints',
+      'fontName',
+      'fontSize',
+      'font',
     ]);
 
     figma.ui.postMessage({
-      type: "fetched layer",
-      message: layerData
+      type: 'fetched layer',
+      message: layerData,
     });
   }
 
   // Could this be made less expensive?
-  if (msg.type === "update-errors") {
+  if (msg.type === 'update-errors') {
     figma.ui.postMessage({
-      type: "updated errors",
-      errors: lint(originalNodeTree)
+      type: 'updated errors',
+      errors: lint(originalNodeTree),
     });
   }
 
   // Updates client storage with a new ignored error
   // when the user selects "ignore" from the context menu
-  if (msg.type === "update-storage") {
+  if (msg.type === 'update-storage') {
     let arrayToBeStored = JSON.stringify(msg.storageArray);
-    figma.clientStorage.setAsync("storedErrorsToIgnore", arrayToBeStored);
+    figma.clientStorage.setAsync('storedErrorsToIgnore', arrayToBeStored);
   }
 
   // Clears all ignored errors
   // invoked from the settings menu
-  if (msg.type === "update-storage-from-settings") {
+  if (msg.type === 'update-storage-from-settings') {
     let arrayToBeStored = JSON.stringify(msg.storageArray);
-    figma.clientStorage.setAsync("storedErrorsToIgnore", arrayToBeStored);
+    figma.clientStorage.setAsync('storedErrorsToIgnore', arrayToBeStored);
 
     figma.ui.postMessage({
-      type: "reset storage",
-      storage: arrayToBeStored
+      type: 'reset storage',
+      storage: arrayToBeStored,
     });
 
-    figma.notify("Cleared ignored errors", { timeout: 1000 });
+    figma.notify('Cleared ignored errors', { timeout: 1000 });
   }
 
   // Remembers the last tab selected in the UI and sets it
   // to be active (layers vs error by category view)
-  if (msg.type === "update-active-page-in-settings") {
+  if (msg.type === 'update-active-page-in-settings') {
     let pageToBeStored = JSON.stringify(msg.page);
-    figma.clientStorage.setAsync("storedActivePage", pageToBeStored);
+    figma.clientStorage.setAsync('storedActivePage', pageToBeStored);
   }
 
   // Changes the linting rules, invoked from the settings menu
-  if (msg.type === "update-lint-rules-from-settings") {
+  if (msg.type === 'update-lint-rules-from-settings') {
     lintVectors = msg.boolean;
   }
 
   // For when the user updates the border radius values to lint from the settings menu.
-  if (msg.type === "update-border-radius") {
-    let newString = msg.radiusValues.replace(/\s+/g, "");
-    let newRadiusArray = newString.split(",");
+  if (msg.type === 'update-border-radius') {
+    let newString = msg.radiusValues.replace(/\s+/g, '');
+    let newRadiusArray = newString.split(',');
     newRadiusArray = newRadiusArray
-      .filter(x => x.trim().length && !isNaN(x))
+      .filter((x) => x.trim().length && !isNaN(x))
       .map(Number);
 
     // Most users won't add 0 to the array of border radius so let's add it in for them.
@@ -114,33 +128,33 @@ figma.ui.onmessage = msg => {
 
     // Save this value in client storage.
     let radiusToBeStored = JSON.stringify(borderRadiusArray);
-    figma.clientStorage.setAsync("storedRadiusValues", radiusToBeStored);
+    figma.clientStorage.setAsync('storedRadiusValues', radiusToBeStored);
 
     figma.ui.postMessage({
-      type: "fetched border radius",
-      storage: JSON.stringify(borderRadiusArray)
+      type: 'fetched border radius',
+      storage: JSON.stringify(borderRadiusArray),
     });
 
-    figma.notify("Saved new border radius values", { timeout: 1000 });
+    figma.notify('Saved new border radius values', { timeout: 1000 });
   }
 
-  if (msg.type === "reset-border-radius") {
+  if (msg.type === 'reset-border-radius') {
     borderRadiusArray = [0, 2, 4, 8, 16, 24, 32];
-    figma.clientStorage.setAsync("storedRadiusValues", []);
+    figma.clientStorage.setAsync('storedRadiusValues', []);
 
     figma.ui.postMessage({
-      type: "fetched border radius",
-      storage: JSON.stringify(borderRadiusArray)
+      type: 'fetched border radius',
+      storage: JSON.stringify(borderRadiusArray),
     });
 
-    figma.notify("Reset border radius value", { timeout: 1000 });
+    figma.notify('Reset border radius value', { timeout: 1000 });
   }
 
-  if (msg.type === "select-multiple-layers") {
+  if (msg.type === 'select-multiple-layers') {
     const layerArray = msg.nodeArray;
     let nodesToBeSelected = [];
 
-    layerArray.forEach(item => {
+    layerArray.forEach((item) => {
       let layer = figma.getNodeById(item);
       // Using selection and viewport requires an array.
       nodesToBeSelected.push(layer);
@@ -149,16 +163,16 @@ figma.ui.onmessage = msg => {
     // Moves the layer into focus and selects so the user can update it.
     figma.currentPage.selection = nodesToBeSelected;
     figma.viewport.scrollAndZoomIntoView(nodesToBeSelected);
-    figma.notify("Multiple layers selected", { timeout: 1000 });
+    figma.notify('Multiple layers selected', { timeout: 1000 });
   }
 
   // Serialize nodes to pass back to the UI.
   function serializeNodes(nodes) {
     let serializedNodes = JSON.stringify(nodes, [
-      "name",
-      "type",
-      "children",
-      "id"
+      'name',
+      'type',
+      'children',
+      'id',
     ]);
 
     return serializedNodes;
@@ -168,14 +182,14 @@ figma.ui.onmessage = msg => {
     let errorArray = [];
     let childArray = [];
 
-    nodes.forEach(node => {
+    nodes.forEach((node) => {
       let isLayerLocked;
 
       // Create a new object.
       let newObject = {};
 
       // Give it the existing node id.
-      newObject["id"] = node.id;
+      newObject['id'] = node.id;
 
       let children = node.children;
 
@@ -191,9 +205,9 @@ figma.ui.onmessage = msg => {
       }
 
       if (isLayerLocked === true) {
-        newObject["errors"] = [];
+        newObject['errors'] = [];
       } else {
-        newObject["errors"] = determineType(node);
+        newObject['errors'] = determineType(node);
       }
 
       if (!children) {
@@ -201,18 +215,18 @@ figma.ui.onmessage = msg => {
         return;
       } else if (children) {
         // Recursively run this function to flatten out children and grandchildren nodes
-        node["children"].forEach(childNode => {
+        node['children'].forEach((childNode) => {
           childArray.push(childNode.id);
         });
 
-        newObject["children"] = childArray;
+        newObject['children'] = childArray;
 
         // If the layer is locked, pass the optional parameter to the recursive Lint
         // function to indicate this layer is locked.
         if (isLayerLocked === true) {
-          errorArray.push(...lint(node["children"], true));
+          errorArray.push(...lint(node['children'], true));
         } else {
-          errorArray.push(...lint(node["children"], false));
+          errorArray.push(...lint(node['children'], false));
         }
       }
 
@@ -222,23 +236,23 @@ figma.ui.onmessage = msg => {
     return errorArray;
   }
 
-  if (msg.type === "lint-all") {
+  if (msg.type === 'lint-all') {
     // Pass the array back to the UI to be displayed.
     figma.ui.postMessage({
-      type: "complete",
+      type: 'complete',
       errors: lint(originalNodeTree),
-      message: serializeNodes(msg.nodes)
+      message: serializeNodes(msg.nodes),
     });
 
     figma.notify(`Design lint is running and will auto refresh for changes`, {
-      timeout: 2000
+      timeout: 2000,
     });
   }
 
   // Initialize the app
-  if (msg.type === "run-app") {
+  if (msg.type === 'run-app') {
     if (figma.currentPage.selection.length === 0) {
-      figma.notify("Select a frame(s) to get started", { timeout: 2000 });
+      figma.notify('Select a frame(s) to get started', { timeout: 2000 });
       return;
     } else {
       let nodes = figma.currentPage.selection;
@@ -248,37 +262,37 @@ figma.ui.onmessage = msg => {
 
       // Maintain the original tree structure so we can enable
       // refreshing the tree and live updating errors.
-      originalNodeTree = nodes;
+      originalNodeTree = [...nodes];
 
       // We want to immediately render the first selection
       // to avoid freezing up the UI.
       figma.ui.postMessage({
-        type: "first node",
+        type: 'first node',
         message: serializeNodes(nodes),
-        errors: lint(firstNode)
+        errors: lint(firstNode),
       });
 
-      figma.clientStorage.getAsync("storedErrorsToIgnore").then(result => {
+      figma.clientStorage.getAsync('storedErrorsToIgnore').then((result) => {
         figma.ui.postMessage({
-          type: "fetched storage",
-          storage: result
+          type: 'fetched storage',
+          storage: result,
         });
       });
 
-      figma.clientStorage.getAsync("storedActivePage").then(result => {
+      figma.clientStorage.getAsync('storedActivePage').then((result) => {
         figma.ui.postMessage({
-          type: "fetched active page",
-          storage: result
+          type: 'fetched active page',
+          storage: result,
         });
       });
 
-      figma.clientStorage.getAsync("storedRadiusValues").then(result => {
+      figma.clientStorage.getAsync('storedRadiusValues').then((result) => {
         if (result.length) {
           borderRadiusArray = JSON.parse(result);
 
           figma.ui.postMessage({
-            type: "fetched border radius",
-            storage: result
+            type: 'fetched border radius',
+            storage: result,
           });
         }
       });
@@ -287,42 +301,42 @@ figma.ui.onmessage = msg => {
 
   function determineType(node) {
     switch (node.type) {
-      case "SLICE":
-      case "GROUP": {
+      case 'SLICE':
+      case 'GROUP': {
         // Groups styles apply to their children so we can skip this node type.
         let errors = [];
         return errors;
       }
-      case "BOOLEAN_OPERATION":
-      case "VECTOR": {
+      case 'BOOLEAN_OPERATION':
+      case 'VECTOR': {
         return lintVectorRules(node);
       }
-      case "POLYGON":
-      case "STAR":
-      case "ELLIPSE": {
+      case 'POLYGON':
+      case 'STAR':
+      case 'ELLIPSE': {
         return lintShapeRules(node);
       }
-      case "FRAME": {
+      case 'FRAME': {
         return lintFrameRules(node);
       }
-      case "INSTANCE":
-      case "RECTANGLE": {
+      case 'INSTANCE':
+      case 'RECTANGLE': {
         return lintRectangleRules(node);
       }
-      case "COMPONENT": {
+      case 'COMPONENT': {
         return lintComponentRules(node);
       }
-      case "COMPONENT_SET": {
+      case 'COMPONENT_SET': {
         // Component Set is the frame that wraps a set of variants
         // the variants within the set are still linted as components (lintComponentRules)
         // this type is generally only present where the variant is defined so it
         // doesn't need as many linting requirements.
         return lintVariantWrapperRules(node);
       }
-      case "TEXT": {
+      case 'TEXT': {
         return lintTextRules(node);
       }
-      case "LINE": {
+      case 'LINE': {
         return lintLineRules(node);
       }
       default: {
@@ -395,6 +409,7 @@ figma.ui.onmessage = msg => {
   function lintRectangleRules(node) {
     let errors = [];
 
+    checkCdsStyles(normalizedStyles)(node, errors);
     checkFills(node, errors);
     checkRadius(node, errors, borderRadiusArray);
     checkStrokes(node, errors);
