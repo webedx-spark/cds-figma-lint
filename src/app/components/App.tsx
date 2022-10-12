@@ -11,6 +11,7 @@ import BulkErrorList from './BulkErrorList';
 import '../styles/figma.ds.css';
 import '../styles/ui.css';
 import '../styles/empty-state.css';
+import { MessageType } from '../../types';
 
 const App = ({}) => {
   const [errorArray, setErrorArray] = useState([]);
@@ -66,7 +67,7 @@ const App = ({}) => {
     parent.postMessage(
       {
         pluginMessage: {
-          type: 'update-active-page-in-settings',
+          type: MessageType.UPDATE_ACTIVE_PAGE_IN_SETTINGS,
           page: page,
         },
       },
@@ -111,7 +112,7 @@ const App = ({}) => {
     parent.postMessage(
       {
         pluginMessage: {
-          type: 'update-lint-rules-from-settings',
+          type: MessageType.UPDATE_LINT_RULES_FROM_SETTINGS,
           boolean: boolean,
         },
       },
@@ -131,7 +132,9 @@ const App = ({}) => {
 
   const onRunApp = React.useCallback(() => {
     parent.postMessage(
-      { pluginMessage: { type: 'run-app', lintVectors: lintVectors } },
+      {
+        pluginMessage: { type: MessageType.RUN_APP, lintVectors: lintVectors },
+      },
       '*'
     );
   }, []);
@@ -143,7 +146,10 @@ const App = ({}) => {
       // How often we poll for new changes.
       let timer = 1500;
 
-      parent.postMessage({ pluginMessage: { type: 'update-errors' } }, '*');
+      parent.postMessage(
+        { pluginMessage: { type: MessageType.UPDATE_ERRORS } },
+        '*'
+      );
       counter++;
 
       setTimeout(() => {
@@ -172,7 +178,7 @@ const App = ({}) => {
       parent.postMessage(
         {
           pluginMessage: {
-            type: 'update-storage',
+            type: MessageType.UPDATE_STORAGE,
             storageArray: ignoredErrorArray,
           },
         },
@@ -201,7 +207,7 @@ const App = ({}) => {
         parent.postMessage(
           {
             pluginMessage: {
-              type: 'fetch-layer-data',
+              type: MessageType.FETCH_LAYER_DATA,
               id: nodeObject[0].id,
               nodeArray: nodeObject,
             },
@@ -231,7 +237,7 @@ const App = ({}) => {
         parent.postMessage(
           {
             pluginMessage: {
-              type: 'lint-all',
+              type: MessageType.LINT_ALL,
               nodes: nodeObject,
             },
           },
@@ -241,7 +247,7 @@ const App = ({}) => {
         parent.postMessage(
           {
             pluginMessage: {
-              type: 'fetch-layer-data',
+              type: MessageType.FETCH_LAYER_DATA,
               id: nodeObject[0].id,
               nodeArray: nodeObject,
             },
@@ -265,13 +271,19 @@ const App = ({}) => {
       } else if (type === 'reset storage') {
         let clientStorage = JSON.parse(storage);
         setIgnoreErrorArray([...clientStorage]);
-        parent.postMessage({ pluginMessage: { type: 'update-errors' } }, '*');
+        parent.postMessage(
+          { pluginMessage: { type: MessageType.UPDATE_ERRORS } },
+          '*'
+        );
       } else if (type === 'fetched layer') {
         // Grabs the properties of the first layer.
         setSelectedNode(() => JSON.parse(message));
 
         // Ask the controller to lint the layers for errors.
-        parent.postMessage({ pluginMessage: { type: 'update-errors' } }, '*');
+        parent.postMessage(
+          { pluginMessage: { type: MessageType.UPDATE_ERRORS } },
+          '*'
+        );
       } else if (type === 'updated errors') {
         // Once the errors are returned, update the error array.
         updateErrorArray(errors);

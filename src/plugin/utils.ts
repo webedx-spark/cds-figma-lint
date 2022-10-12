@@ -28,3 +28,15 @@ export const RGBToHex = (r: string, g: string, b: string) => {
 
   return '#' + r + g + b;
 };
+
+// Serialize nodes to pass back to the UI.
+export const serializeNodes = (nodes: Readonly<Array<SceneNode>>) => {
+  let serializedNodes = JSON.stringify(nodes, [
+    'name',
+    'type',
+    'children',
+    'id',
+  ]);
+
+  return serializedNodes;
+};

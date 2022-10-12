@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MessageType } from '../../types';
 
 function SettingsForm(props) {
   const [radiusValue, setRadiusValue] = useState('');
@@ -11,7 +12,7 @@ function SettingsForm(props) {
       parent.postMessage(
         {
           pluginMessage: {
-            type: 'update-border-radius',
+            type: MessageType.UPDATE_BORDER_RADIUS,
             radiusValues: radiusValue,
           },
         },
@@ -24,7 +25,7 @@ function SettingsForm(props) {
     parent.postMessage(
       {
         pluginMessage: {
-          type: 'reset-border-radius',
+          type: MessageType.RESET_BORDER_RADIUS,
         },
       },
       '*'

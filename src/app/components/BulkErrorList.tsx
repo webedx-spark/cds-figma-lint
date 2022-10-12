@@ -3,6 +3,7 @@ import BulkErrorListItem from './BulkErrorListItem';
 import TotalErrorCount from './TotalErrorCount';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ReactComponent as SmileIcon } from '../assets/smile.svg';
+import { MessageType } from '../../types';
 
 function BulkErrorList(props) {
   // Reduce the size of our array of errors by removing nodes with no errors on them.
@@ -66,7 +67,7 @@ function BulkErrorList(props) {
     parent.postMessage(
       {
         pluginMessage: {
-          type: 'select-multiple-layers',
+          type: MessageType.SELECT_MULTIPLE_LAYERS,
           nodeArray: error.nodes,
         },
       },
@@ -78,7 +79,7 @@ function BulkErrorList(props) {
     parent.postMessage(
       {
         pluginMessage: {
-          type: 'fetch-layer-data',
+          type: MessageType.FETCH_LAYER_DATA,
           id: error.node.id,
         },
       },

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import PanelHeader from './PanelHeader';
 import SettingsForm from './SettingsForm';
 import '../styles/panel.css';
+import { MessageType } from '../../types';
 
 function SettingsPanel(props) {
   const isVisible = props.panelVisible;
@@ -28,7 +29,7 @@ function SettingsPanel(props) {
     parent.postMessage(
       {
         pluginMessage: {
-          type: 'update-storage-from-settings',
+          type: MessageType.UPDATE_STORAGE_FROM_SETTINGS,
           storageArray: [],
         },
       },

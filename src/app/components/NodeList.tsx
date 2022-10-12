@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 
 import ListItem from './ListItem';
 import TotalErrorCount from './TotalErrorCount';
+import { MessageType } from '../../types';
 
 function NodeList(props) {
   // Reduce the size of our array of errors by removing
@@ -38,7 +39,7 @@ function NodeList(props) {
     if (activeId.errors.length) {
       // Pass the plugin the ID of the layer we want to fetch.
       parent.postMessage(
-        { pluginMessage: { type: 'fetch-layer-data', id: id } },
+        { pluginMessage: { type: MessageType.FETCH_LAYER_DATA, id: id } },
         '*'
       );
 

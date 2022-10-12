@@ -1,5 +1,6 @@
 import { MessageType } from '../types';
 import { lint } from './lint';
+import { serializeNodes } from './utils';
 
 function isSceneNode(node: BaseNode): node is SceneNode {
   return node.type !== 'PAGE' && node.type !== 'DOCUMENT';
@@ -19,7 +20,7 @@ figma.ui.onmessage = (msg) => {
   }
 
   // Fetch a specific node by ID.
-  if (msg.type === 'fetch-layer-data') {
+  if (msg.type === MessageType.FETCH_LAYER_DATA) {
     let layer = figma.getNodeById(msg.id);
     let layerArray: Array<SceneNode> = [];
 
@@ -56,7 +57,7 @@ figma.ui.onmessage = (msg) => {
   }
 
   // Could this be made less expensive?
-  if (msg.type === 'update-errors') {
+  if (msg.type === MessageType.UPDATE_ERRORS) {
     figma.ui.postMessage({
       type: 'updated errors',
       errors: lint(originalNodeTree, false, { lintVectors, borderRadiusArray }),
@@ -65,14 +66,14 @@ figma.ui.onmessage = (msg) => {
 
   // Updates client storage with a new ignored error
   // when the user selects "ignore" from the context menu
-  if (msg.type === 'update-storage') {
+  if (msg.type === MessageType.UPDATE_STORAGE) {
     let arrayToBeStored = JSON.stringify(msg.storageArray);
     figma.clientStorage.setAsync('storedErrorsToIgnore', arrayToBeStored);
   }
 
   // Clears all ignored errors
   // invoked from the settings menu
-  if (msg.type === 'update-storage-from-settings') {
+  if (msg.type === MessageType.UPDATE_STORAGE_FROM_SETTINGS) {
     let arrayToBeStored = JSON.stringify(msg.storageArray);
     figma.clientStorage.setAsync('storedErrorsToIgnore', arrayToBeStored);
 
@@ -86,18 +87,18 @@ figma.ui.onmessage = (msg) => {
 
   // Remembers the last tab selected in the UI and sets it
   // to be active (layers vs error by category view)
-  if (msg.type === 'update-active-page-in-settings') {
+  if (msg.type === MessageType.UPDATE_ACTIVE_PAGE_IN_SETTINGS) {
     let pageToBeStored = JSON.stringify(msg.page);
     figma.clientStorage.setAsync('storedActivePage', pageToBeStored);
   }
 
   // Changes the linting rules, invoked from the settings menu
-  if (msg.type === 'update-lint-rules-from-settings') {
+  if (msg.type === MessageType.UPDATE_LINT_RULES_FROM_SETTINGS) {
     lintVectors = msg.boolean;
   }
 
   // For when the user updates the border radius values to lint from the settings menu.
-  if (msg.type === 'update-border-radius') {
+  if (msg.type === MessageType.UPDATE_BORDER_RADIUS) {
     let newString = msg.radiusValues.replace(/\s+/g, '');
     let newRadiusArray = newString.split(',');
     newRadiusArray = newRadiusArray
@@ -124,7 +125,7 @@ figma.ui.onmessage = (msg) => {
     figma.notify('Saved new border radius values', { timeout: 1000 });
   }
 
-  if (msg.type === 'reset-border-radius') {
+  if (msg.type === MessageType.RESET_BORDER_RADIUS) {
     borderRadiusArray = [0, 2, 4, 8, 16, 24, 32];
     figma.clientStorage.setAsync('storedRadiusValues', []);
 
@@ -136,7 +137,7 @@ figma.ui.onmessage = (msg) => {
     figma.notify('Reset border radius value', { timeout: 1000 });
   }
 
-  if (msg.type === 'select-multiple-layers') {
+  if (msg.type === MessageType.SELECT_MULTIPLE_LAYERS) {
     const layerArray = msg.nodeArray;
     let nodesToBeSelected: Array<SceneNode> = [];
 
@@ -152,18 +153,6 @@ figma.ui.onmessage = (msg) => {
     figma.currentPage.selection = nodesToBeSelected;
     figma.viewport.scrollAndZoomIntoView(nodesToBeSelected);
     figma.notify('Multiple layers selected', { timeout: 1000 });
-  }
-
-  // Serialize nodes to pass back to the UI.
-  function serializeNodes(nodes: Readonly<Array<SceneNode>>) {
-    let serializedNodes = JSON.stringify(nodes, [
-      'name',
-      'type',
-      'children',
-      'id',
-    ]);
-
-    return serializedNodes;
   }
 
   if (msg.type === MessageType.LINT_ALL) {

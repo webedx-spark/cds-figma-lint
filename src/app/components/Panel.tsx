@@ -8,6 +8,7 @@ import Preloader from './Preloader';
 import '../styles/panel.css';
 
 import { ReactComponent as SmileIcon } from '../assets/smile.svg';
+import { MessageType } from '../../types';
 
 function Panel(props) {
   const isVisible = props.visibility;
@@ -65,7 +66,9 @@ function Panel(props) {
     props.onSelectedListUpdate(activeId.id);
 
     parent.postMessage(
-      { pluginMessage: { type: 'fetch-layer-data', id: activeId.id } },
+      {
+        pluginMessage: { type: MessageType.FETCH_LAYER_DATA, id: activeId.id },
+      },
       '*'
     );
   }
@@ -87,7 +90,9 @@ function Panel(props) {
     props.onSelectedListUpdate(activeId.id);
 
     parent.postMessage(
-      { pluginMessage: { type: 'fetch-layer-data', id: activeId.id } },
+      {
+        pluginMessage: { type: MessageType.FETCH_LAYER_DATA, id: activeId.id },
+      },
       '*'
     );
   }
@@ -119,7 +124,7 @@ function Panel(props) {
       parent.postMessage(
         {
           pluginMessage: {
-            type: 'select-multiple-layers',
+            type: MessageType.SELECT_MULTIPLE_LAYERS,
             nodeArray: nodesToBeSelected,
           },
         },
