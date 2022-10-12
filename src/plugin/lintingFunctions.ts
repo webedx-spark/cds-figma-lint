@@ -1,37 +1,22 @@
 // Linting functions
 
-// Generic function for creating an error object to pass to the app.
-export function createErrorObject(node, type, message, value?) {
-  let error = {
-    message: '',
-    type: '',
-    node: '',
-    value: '',
-  };
+import { convertColor, RGBToHex } from './utils';
 
-  error.message = message;
-  error.type = type;
-  error.node = node;
-
-  if (value !== undefined) {
-    error.value = value;
-  }
-
-  return error;
-}
+import { createErrorObject } from './errors';
 
 // Determine a nodes fills
 export function determineFill(fills) {
-  let fillValues = [];
+  let fillValues: Array<string> = [];
 
   fills.forEach((fill) => {
     if (fill.type === 'SOLID') {
       let rgbObj = convertColor(fill.color);
+
       fillValues.push(RGBToHex(rgbObj['r'], rgbObj['g'], rgbObj['b']));
     } else if (fill.type === 'IMAGE') {
       fillValues.push('Image - ' + fill.imageHash);
     } else {
-      const gradientValues = [];
+      const gradientValues: Array<string> = [];
       fill.gradientStops.forEach((gradientStops) => {
         let gradientColorObject = convertColor(gradientStops.color);
         gradientValues.push(
@@ -172,7 +157,14 @@ export function customCheckTextFills(node, errors) {
 export function checkEffects(node, errors) {
   if (node.effects.length && node.visible === true) {
     if (node.effectStyleId === '') {
-      const effectsArray = [];
+      const effectsArray: Array<{
+        type: string;
+        radius: string;
+        offsetX: string;
+        offsetY: string;
+        fill: string;
+        value: string;
+      }> = [];
 
       node.effects.forEach((effect) => {
         let effectsObject = {
@@ -230,9 +222,9 @@ export function checkEffects(node, errors) {
   }
 }
 
-export function checkFills(node, errors) {
+export function checkFills(node: DefaultShapeMixin, errors) {
   if (
-    (node.fills.length && node.visible === true) ||
+    (Array.isArray(node.fills) && node.fills.length && node.visible === true) ||
     typeof node.fills === 'symbol'
   ) {
     let nodeFills = node.fills;
@@ -270,13 +262,13 @@ export function checkFills(node, errors) {
   }
 }
 
-export function checkStrokes(node, errors) {
-  if (node.strokes.length) {
+export function checkStrokes(node: DefaultShapeMixin, errors) {
+  if ('strokes' in node && node.strokes.length) {
     if (node.strokeStyleId === '' && node.visible === true) {
       let strokeObject = {
-        strokeWeight: '',
+        strokeWeight: 0,
         strokeAlign: '',
-        strokeFills: [],
+        strokeFills: '',
       };
 
       strokeObject.strokeWeight = node.strokeWeight;
@@ -294,12 +286,12 @@ export function checkStrokes(node, errors) {
   }
 }
 
-export function checkType(node, errors) {
+export function checkType(node: TextNode, errors) {
   if (node.textStyleId === '' && node.visible === true) {
     let textObject = {
       font: '',
       fontStyle: '',
-      fontSize: '',
+      fontSize: 0,
       lineHeight: {},
     };
 
@@ -328,12 +320,21 @@ export function checkType(node, errors) {
       );
     }
 
-    textObject.font = node.fontName.family;
-    textObject.fontStyle = node.fontName.style;
-    textObject.fontSize = node.fontSize;
+    if (typeof node.fontName !== 'symbol') {
+      textObject.font = node.fontName.family;
+      textObject.fontStyle = node.fontName.style;
+    }
+
+    if (typeof node.fontSize !== 'symbol') {
+      textObject.fontSize = node.fontSize;
+    }
 
     // Line height can be "auto" or a pixel value
-    if (node.lineHeight.value !== undefined) {
+    if (
+      typeof node.lineHeight !== 'symbol' &&
+      'value' in node.lineHeight &&
+      node.lineHeight.value !== undefined
+    ) {
       textObject.lineHeight = node.lineHeight.value;
     } else {
       textObject.lineHeight = 'Auto';
@@ -369,33 +370,3 @@ export const checkCdsStyles =
       }
     }
   };
-
-// Utility functions for color conversion.
-const convertColor = (color) => {
-  const colorObj = color;
-  const figmaColor = {};
-
-  Object.entries(colorObj).forEach((cf) => {
-    const [key, value] = cf;
-
-    if (['r', 'g', 'b'].includes(key)) {
-      figmaColor[key] = (255 * (value as number)).toFixed(0);
-    }
-    if (key === 'a') {
-      figmaColor[key] = value;
-    }
-  });
-  return figmaColor;
-};
-
-function RGBToHex(r, g, b) {
-  r = Number(r).toString(16);
-  g = Number(g).toString(16);
-  b = Number(b).toString(16);
-
-  if (r.length == 1) r = '0' + r;
-  if (g.length == 1) g = '0' + g;
-  if (b.length == 1) b = '0' + b;
-
-  return '#' + r + g + b;
-}

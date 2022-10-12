@@ -1,3 +1,4 @@
+import { LintError } from './errors';
 import {
   checkRadius,
   checkEffects,
@@ -10,6 +11,10 @@ import {
 } from './lintingFunctions';
 
 import styles from './styles.json';
+
+function isSceneNode(node: BaseNode): node is SceneNode {
+  return node.type !== 'PAGE' && node.type !== 'DOCUMENT';
+}
 
 const normalizedStyles = styles.styles.reduce((stylesMap, style) => {
   if (stylesMap[style.style_type]) {
@@ -38,7 +43,10 @@ figma.ui.onmessage = (msg) => {
   // Fetch a specific node by ID.
   if (msg.type === 'fetch-layer-data') {
     let layer = figma.getNodeById(msg.id);
-    let layerArray = [];
+    let layerArray: Array<SceneNode> = [];
+
+    // Ignore other layers than scene nodes
+    if (!layer || !isSceneNode(layer)) return;
 
     // Using figma UI selection and scroll to viewport requires an array.
     layerArray.push(layer);
@@ -152,12 +160,14 @@ figma.ui.onmessage = (msg) => {
 
   if (msg.type === 'select-multiple-layers') {
     const layerArray = msg.nodeArray;
-    let nodesToBeSelected = [];
+    let nodesToBeSelected: Array<SceneNode> = [];
 
     layerArray.forEach((item) => {
       let layer = figma.getNodeById(item);
-      // Using selection and viewport requires an array.
-      nodesToBeSelected.push(layer);
+      if (layer && isSceneNode(layer)) {
+        // Using selection and viewport requires an array.
+        nodesToBeSelected.push(layer);
+      }
     });
 
     // Moves the layer into focus and selects so the user can update it.
@@ -167,7 +177,7 @@ figma.ui.onmessage = (msg) => {
   }
 
   // Serialize nodes to pass back to the UI.
-  function serializeNodes(nodes) {
+  function serializeNodes(nodes: Readonly<Array<SceneNode>>) {
     let serializedNodes = JSON.stringify(nodes, [
       'name',
       'type',
@@ -178,20 +188,23 @@ figma.ui.onmessage = (msg) => {
     return serializedNodes;
   }
 
-  function lint(nodes, lockedParentNode?) {
-    let errorArray = [];
-    let childArray = [];
+  type NodeErrors = {
+    id: string;
+    errors?: Array<LintError>;
+    children?: Array<string>;
+  };
+
+  function lint(nodes: Readonly<Array<SceneNode>>, lockedParentNode?) {
+    let errorArray: Array<NodeErrors> = [];
+    let childArray: Array<string> = [];
 
     nodes.forEach((node) => {
       let isLayerLocked;
 
       // Create a new object.
-      let newObject = {};
-
-      // Give it the existing node id.
-      newObject['id'] = node.id;
-
-      let children = node.children;
+      let newObject: NodeErrors = {
+        id: node.id,
+      };
 
       // Don't lint locked layers or the children/grandchildren of locked layers.
       if (lockedParentNode === undefined && node.locked === true) {
@@ -210,23 +223,27 @@ figma.ui.onmessage = (msg) => {
         newObject['errors'] = determineType(node);
       }
 
-      if (!children) {
-        errorArray.push(newObject);
-        return;
-      } else if (children) {
-        // Recursively run this function to flatten out children and grandchildren nodes
-        node['children'].forEach((childNode) => {
-          childArray.push(childNode.id);
-        });
+      if ('children' in node) {
+        let children = node.children;
 
-        newObject['children'] = childArray;
+        if (!children) {
+          errorArray.push(newObject);
+          return;
+        } else if (children) {
+          // Recursively run this function to flatten out children and grandchildren nodes
+          node.children.forEach((childNode) => {
+            childArray.push(childNode.id);
+          });
 
-        // If the layer is locked, pass the optional parameter to the recursive Lint
-        // function to indicate this layer is locked.
-        if (isLayerLocked === true) {
-          errorArray.push(...lint(node['children'], true));
-        } else {
-          errorArray.push(...lint(node['children'], false));
+          newObject.children = childArray;
+
+          // If the layer is locked, pass the optional parameter to the recursive Lint
+          // function to indicate this layer is locked.
+          if (isLayerLocked === true) {
+            errorArray.push(...lint(node['children'], true));
+          } else {
+            errorArray.push(...lint(node['children'], false));
+          }
         }
       }
 
@@ -256,7 +273,7 @@ figma.ui.onmessage = (msg) => {
       return;
     } else {
       let nodes = figma.currentPage.selection;
-      let firstNode = [];
+      let firstNode: Array<SceneNode> = [];
 
       firstNode.push(figma.currentPage.selection[0]);
 
@@ -299,7 +316,7 @@ figma.ui.onmessage = (msg) => {
     }
   }
 
-  function determineType(node) {
+  function determineType(node: SceneNode) {
     switch (node.type) {
       case 'SLICE':
       case 'GROUP': {
@@ -345,7 +362,7 @@ figma.ui.onmessage = (msg) => {
     }
   }
 
-  function lintComponentRules(node) {
+  function lintComponentRules(node: ComponentNode) {
     let errors = [];
 
     // Example of how we can make a custom rule specifically for components
@@ -363,15 +380,16 @@ figma.ui.onmessage = (msg) => {
     return errors;
   }
 
-  function lintVariantWrapperRules(node) {
+  function lintVariantWrapperRules(node: ComponentSetNode) {
     let errors = [];
 
-    checkFills(node, errors);
+    // checkFills(node, errors);
+    console.log(`Skip linting: ${node.toString()}`);
 
     return errors;
   }
 
-  function lintLineRules(node) {
+  function lintLineRules(node: LineNode) {
     let errors = [];
 
     checkStrokes(node, errors);
@@ -380,7 +398,7 @@ figma.ui.onmessage = (msg) => {
     return errors;
   }
 
-  function lintFrameRules(node) {
+  function lintFrameRules(node: FrameNode) {
     let errors = [];
 
     checkFills(node, errors);
@@ -391,7 +409,7 @@ figma.ui.onmessage = (msg) => {
     return errors;
   }
 
-  function lintTextRules(node) {
+  function lintTextRules(node: TextNode) {
     let errors = [];
 
     checkType(node, errors);
@@ -406,7 +424,7 @@ figma.ui.onmessage = (msg) => {
     return errors;
   }
 
-  function lintRectangleRules(node) {
+  function lintRectangleRules(node: RectangleNode | InstanceNode) {
     let errors = [];
 
     checkCdsStyles(normalizedStyles)(node, errors);
@@ -418,7 +436,7 @@ figma.ui.onmessage = (msg) => {
     return errors;
   }
 
-  function lintVectorRules(node) {
+  function lintVectorRules(node: DefaultShapeMixin) {
     let errors = [];
 
     // This can be enabled by the user in settings.
@@ -431,7 +449,7 @@ figma.ui.onmessage = (msg) => {
     return errors;
   }
 
-  function lintShapeRules(node) {
+  function lintShapeRules(node: DefaultShapeMixin) {
     let errors = [];
 
     checkFills(node, errors);
