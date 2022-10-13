@@ -1,24 +1,66 @@
-import { useState } from 'react';
-import { MessageType } from '../../types';
+import { ChangeEvent, useEffect, useState } from 'react';
+import {
+  arrayToCommaSeparatedStr,
+  parseCommaSeparatedNumbers,
+} from '../../plugin/utils';
+import { LintSettings, MessageType } from '../../types';
 
-function SettingsForm(props) {
-  const [radiusValue, setRadiusValue] = useState('');
-  const [cdsLintStyles, setCdsLintStyles] = useState(true);
+const serializers: Partial<Record<keyof LintSettings, Function>> = {
+  borderRadius: parseCommaSeparatedNumbers,
+};
 
-  const handleSubmit = (event) => {
+const deserializeValues = (settings: LintSettings) => {
+  return {
+    lintFillStyles: settings.lintFillStyles,
+    lintStrokeStyles: settings.lintStrokeStyles,
+    lintEffectStyles: settings.lintEffectStyles,
+    lintTypoStyles: settings.lintTypoStyles,
+    borderRadius: settings.borderRadius
+      ? arrayToCommaSeparatedStr(settings.borderRadius)
+      : '',
+  };
+};
+
+export type SettingsFormProps = {
+  defaultSettings: LintSettings;
+};
+
+function SettingsForm(props: SettingsFormProps) {
+  const { defaultSettings } = props;
+
+  const [values, setValues] = useState(() =>
+    deserializeValues(defaultSettings)
+  );
+
+  console.log('Render SettingsForm', values);
+
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const target = event.target;
+    let value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    setValues({ ...values, [name]: value });
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (radiusValue.length) {
-      parent.postMessage(
-        {
-          pluginMessage: {
-            type: MessageType.UPDATE_BORDER_RADIUS,
-            radiusValues: radiusValue,
-          },
-        },
-        '*'
-      );
+    const newSettings: LintSettings = {};
+
+    for (const [key, value] of Object.entries(values)) {
+      const serializer = serializers[key];
+      newSettings[key] = serializer ? serializer(value) : value;
     }
+
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: MessageType.UPDATE_SETTINGS,
+          settings: newSettings,
+        },
+      },
+      '*'
+    );
   };
 
   function handleClear() {
@@ -32,9 +74,16 @@ function SettingsForm(props) {
     );
   }
 
+  useEffect(
+    function syncValues() {
+      setValues(deserializeValues(defaultSettings));
+    },
+    [defaultSettings]
+  );
+
   return (
-    <div className="settings-row">
-      <div className="settings-form" onSubmit={handleSubmit}>
+    <form className="settings-form" onSubmit={handleSubmit}>
+      <div className="settings-row">
         <h3 className="settings-title">Border radius</h3>
         <div className="settings-label">
           Set your preferred border radius values separated by commas (ex: "2,
@@ -47,32 +96,85 @@ function SettingsForm(props) {
           </div>
           <input
             type="input"
+            name="borderRadius"
             className="input-icon__input"
-            value={radiusValue}
-            onChange={(e) => setRadiusValue(e.target.value)}
-            placeholder={props.borderRadiusValues}
+            onChange={handleInputChange}
+            value={values.borderRadius}
           />
         </div>
-
+      </div>
+      <div className="settings-row">
+        <div className="settings-title">CDS Lint Settings</div>
         <div className="settings-checkbox-group">
-          <input
-            name="vectorsCheckbox"
-            type="checkbox"
-            onChange={(e) => setCdsLintStyles(e.target.checked)}
-            checked={cdsLintStyles}
-          />
-          <label>Lint CDS Styles</label>
+          <div className="switch">
+            <input
+              className="switch__toggle"
+              onChange={handleInputChange}
+              checked={values.lintFillStyles}
+              type="checkbox"
+              name="lintFillStyles"
+              id="lintFillStyles"
+            />
+            <label className="switch__label" htmlFor="lintFillStyles">
+              Lint CDS Fill styles {}
+            </label>
+          </div>
+        </div>
+        <div className="settings-checkbox-group">
+          <div className="switch">
+            <input
+              onChange={handleInputChange}
+              checked={values.lintStrokeStyles}
+              className="switch__toggle"
+              type="checkbox"
+              name="lintStrokeStyles"
+              id="lintStrokeStyles"
+            />
+            <label className="switch__label" htmlFor="lintStrokeStyles">
+              Lint CDS Stroke styles
+            </label>
+          </div>
+        </div>
+        <div className="settings-checkbox-group">
+          <div className="switch">
+            <input
+              onChange={handleInputChange}
+              checked={values.lintEffectStyles}
+              className="switch__toggle"
+              type="checkbox"
+              name="lintEffectStyles"
+              id="lintEffectStyles"
+            />
+            <label className="switch__label" htmlFor="lintEffectStyles">
+              Lint CDS Effect styles
+            </label>
+          </div>
+        </div>
+        <div className="settings-checkbox-group">
+          <div className="switch">
+            <input
+              onChange={handleInputChange}
+              checked={values.lintTypoStyles}
+              className="switch__toggle"
+              type="checkbox"
+              name="lintTypoStyles"
+              id="lintTypoStyles"
+            />
+            <label className="switch__label" htmlFor="lintTypoStyles">
+              Lint CDS Typography styles
+            </label>
+          </div>
+        </div>
+        <div className="form-button-group">
+          <button className="button button--primary" type="submit">
+            Save
+          </button>
+          <button className="button button--secondary" onClick={handleClear}>
+            Reset
+          </button>
         </div>
       </div>
-      <div className="form-button-group">
-        <button className="button button--primary" onClick={handleSubmit}>
-          Save
-        </button>
-        <button className="button button--secondary" onClick={handleClear}>
-          Reset
-        </button>
-      </div>
-    </div>
+    </form>
   );
 }
 

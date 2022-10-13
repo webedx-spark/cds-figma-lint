@@ -20,11 +20,21 @@ type NodeErrors = {
 type LintOptions = {
   lintVectors?: boolean;
   borderRadiusArray?: Array<number>;
+  lintCdsFillStyles?: boolean;
+  lintCdsStrokeStyles?: boolean;
+  lintCdsEffectStyles?: boolean;
+  lintCdsTypoStyles?: boolean;
+  lintCdsBorderRadius?: boolean;
 };
 
 const defaultOptions: LintOptions = {
   lintVectors: false,
   borderRadiusArray: [0, 2, 4, 8, 16, 24, 32],
+  lintCdsFillStyles: true,
+  lintCdsStrokeStyles: true,
+  lintCdsBorderRadius: true,
+  lintCdsEffectStyles: true,
+  lintCdsTypoStyles: true,
 };
 
 const normalizedStyles = styles.styles.reduce((stylesMap, style) => {

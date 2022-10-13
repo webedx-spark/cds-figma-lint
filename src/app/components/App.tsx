@@ -11,7 +11,15 @@ import BulkErrorList from './BulkErrorList';
 import '../styles/figma.ds.css';
 import '../styles/ui.css';
 import '../styles/empty-state.css';
-import { MessageType } from '../../types';
+import { LintSettings, MessageType } from '../../types';
+
+const defaultSettings: LintSettings = {
+  lintFillStyles: true,
+  lintStrokeStyles: true,
+  lintEffectStyles: true,
+  lintTypoStyles: true,
+  borderRadius: [0, 2, 4, 8, 16, 24, 32],
+};
 
 const App = ({}) => {
   const [errorArray, setErrorArray] = useState([]);
@@ -23,9 +31,7 @@ const App = ({}) => {
   const [nodeArray, setNodeArray] = useState<SceneNode[]>([]);
   const [selectedListItems, setSelectedListItem] = React.useState([]);
   const [activeNodeIds, setActiveNodeIds] = React.useState([]);
-  const [borderRadiusValues, setBorderRadiusValues] = useState([
-    0, 2, 4, 8, 16, 24, 32,
-  ]);
+  const [settings, setSettings] = useState(defaultSettings);
   const [lintVectors, setLintVectors] = useState(false);
   const [initialLoad, setInitialLoad] = React.useState(false);
   const [timedLoad, setTimeLoad] = React.useState(false);
@@ -255,6 +261,7 @@ const App = ({}) => {
           '*'
         );
       } else if (type === 'fetched storage') {
+        console.log('fetched storage');
         let clientStorage = JSON.parse(storage);
 
         setIgnoreErrorArray((ignoredErrorArray) => [
@@ -262,12 +269,20 @@ const App = ({}) => {
           ...clientStorage,
         ]);
       } else if (type === 'fetched active page') {
+        console.log('fetched active page');
         let clientStorage = JSON.parse(storage);
         setActivePage(clientStorage);
-      } else if (type === 'fetched border radius') {
-        // Update border radius values from storage
+      } else if (type === MessageType.SAVED_SETTINGS) {
+        console.log(MessageType.SAVED_SETTINGS, storage);
+        // Update setting from storage
         let clientStorage = JSON.parse(storage);
-        setBorderRadiusValues([...clientStorage]);
+
+        console.log('Parsed settings from storage', clientStorage);
+        // update only if not empty
+        if (clientStorage && Object.keys(clientStorage).length !== 0) {
+          console.log('set settings');
+          setSettings(clientStorage);
+        }
       } else if (type === 'reset storage') {
         let clientStorage = JSON.parse(storage);
         setIgnoreErrorArray([...clientStorage]);
@@ -298,7 +313,7 @@ const App = ({}) => {
         activePage={activePage}
         updateLintRules={updateLintRules}
         ignoredErrorArray={ignoredErrorArray}
-        borderRadiusValues={borderRadiusValues}
+        defaultSettings={settings}
         lintVectors={lintVectors}
         onRefreshSelection={onRunApp}
       />

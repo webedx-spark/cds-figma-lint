@@ -40,3 +40,15 @@ export const serializeNodes = (nodes: Readonly<Array<SceneNode>>) => {
 
   return serializedNodes;
 };
+
+export const parseCommaSeparatedNumbers = (str: string): Array<number> => {
+  let newString = str.replace(/\s+/g, '');
+  let newRadiusArray = newString.split(',');
+  return newRadiusArray
+    .filter((x) => x.trim().length && !isNaN(parseInt(x, 10)))
+    .map(Number);
+};
+
+export const arrayToCommaSeparatedStr = (arr: Array<number>): string => {
+  return arr.join(', ');
+};

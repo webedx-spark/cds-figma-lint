@@ -1,22 +1,36 @@
 import * as React from 'react';
 import SettingsPanel from './SettingsPanel';
+import type { SettingsPanelProps } from './SettingsPanel';
 
 import { ReactComponent as RefreshIcon } from '../assets/refresh.svg';
 
-function Navigation(props) {
+type NavigationProps = {
+  activePage: string;
+  onPageSelection: (page: string) => void;
+  onRefreshSelection: () => void;
+} & Pick<
+  SettingsPanelProps,
+  'defaultSettings' | 'lintVectors' | 'ignoredErrorArray' | 'updateLintRules'
+>;
+
+function Navigation(props: NavigationProps) {
+  const {
+    onPageSelection,
+    onRefreshSelection,
+    activePage,
+    defaultSettings,
+    lintVectors,
+    ignoredErrorArray,
+    updateLintRules,
+  } = props;
   const [panelVisible, setPanelVisible] = React.useState(false);
-  let activePage = props.activePage;
 
   const layersClick = () => {
-    props.onPageSelection('layers');
+    onPageSelection('layers');
   };
 
   const bulkListClick = () => {
-    props.onPageSelection('bulk');
-  };
-
-  const handleLintRulesChange = (boolean) => {
-    props.updateLintRules(boolean);
+    onPageSelection('bulk');
   };
 
   const handlePanelVisible = (boolean) => {
@@ -24,7 +38,7 @@ function Navigation(props) {
   };
 
   const handleRefreshSelection = () => {
-    props.onRefreshSelection();
+    onRefreshSelection();
   };
 
   return (
@@ -66,10 +80,10 @@ function Navigation(props) {
       <SettingsPanel
         panelVisible={panelVisible}
         onHandlePanelVisible={handlePanelVisible}
-        ignoredErrorArray={props.ignoredErrorArray}
-        borderRadiusValues={props.borderRadiusValues}
-        updateLintRules={handleLintRulesChange}
-        lintVectors={props.lintVectors}
+        ignoredErrorArray={ignoredErrorArray}
+        defaultSettings={defaultSettings}
+        updateLintRules={updateLintRules}
+        lintVectors={lintVectors}
       />
     </div>
   );

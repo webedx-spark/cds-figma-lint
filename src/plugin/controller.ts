@@ -1,4 +1,4 @@
-import { MessageType } from '../types';
+import { LintSettings, MessageType, StorageKeys } from '../types';
 import { lint } from './lint';
 import { serializeNodes } from './utils';
 
@@ -97,32 +97,30 @@ figma.ui.onmessage = (msg) => {
     lintVectors = msg.boolean;
   }
 
-  // For when the user updates the border radius values to lint from the settings menu.
-  if (msg.type === MessageType.UPDATE_BORDER_RADIUS) {
-    let newString = msg.radiusValues.replace(/\s+/g, '');
-    let newRadiusArray = newString.split(',');
-    newRadiusArray = newRadiusArray
-      .filter((x) => x.trim().length && !isNaN(x))
-      .map(Number);
+  if (msg.type === MessageType.UPDATE_SETTINGS) {
+    const settings: LintSettings = msg.settings;
 
-    // Most users won't add 0 to the array of border radius so let's add it in for them.
-    if (newRadiusArray.indexOf(0) === -1) {
-      newRadiusArray.unshift(0);
+    if (settings.borderRadius) {
+      // Most users won't add 0 to the array of border radius so let's add it in for them.
+      if (settings.borderRadius.indexOf(0) === -1) {
+        settings.borderRadius.unshift(0);
+      }
     }
 
-    // Update the array we pass into checkRadius for linting.
-    borderRadiusArray = newRadiusArray;
-
     // Save this value in client storage.
-    let radiusToBeStored = JSON.stringify(borderRadiusArray);
-    figma.clientStorage.setAsync('storedRadiusValues', radiusToBeStored);
+    let settingsJSON = JSON.stringify(Object.assign(settings));
+
+    figma.clientStorage.setAsync(StorageKeys.SETTINGS, settingsJSON);
 
     figma.ui.postMessage({
-      type: 'fetched border radius',
-      storage: JSON.stringify(borderRadiusArray),
+      type: MessageType.SAVED_SETTINGS,
+      storage: settingsJSON,
     });
 
-    figma.notify('Saved new border radius values', { timeout: 1000 });
+    figma.notify('Settings updated', { timeout: 1000 });
+  }
+
+  if (msg.type === MessageType.RESET_SETTINGS) {
   }
 
   if (msg.type === MessageType.RESET_BORDER_RADIUS) {
@@ -205,15 +203,11 @@ figma.ui.onmessage = (msg) => {
         });
       });
 
-      figma.clientStorage.getAsync('storedRadiusValues').then((result) => {
-        if (result.length) {
-          borderRadiusArray = JSON.parse(result);
-
-          figma.ui.postMessage({
-            type: 'fetched border radius',
-            storage: result,
-          });
-        }
+      figma.clientStorage.getAsync(StorageKeys.SETTINGS).then((result) => {
+        figma.ui.postMessage({
+          type: MessageType.SAVED_SETTINGS,
+          storage: result,
+        });
       });
     }
   }

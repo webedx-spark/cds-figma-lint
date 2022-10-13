@@ -2,11 +2,29 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import PanelHeader from './PanelHeader';
 import SettingsForm from './SettingsForm';
+import type { SettingsFormProps } from './SettingsForm';
 import '../styles/panel.css';
-import { MessageType } from '../../types';
+import { LintSettings, MessageType } from '../../types';
 
-function SettingsPanel(props) {
-  const isVisible = props.panelVisible;
+export type SettingsPanelProps = {
+  panelVisible: boolean;
+  lintVectors: boolean;
+  onHandlePanelVisible: (arg: boolean) => void;
+  updateLintRules: (arg: boolean) => void;
+  ignoredErrorArray: Array<any>;
+} & SettingsFormProps;
+
+function SettingsPanel(props: SettingsPanelProps) {
+  const {
+    panelVisible,
+    defaultSettings,
+    lintVectors,
+    onHandlePanelVisible,
+    updateLintRules,
+    ignoredErrorArray,
+  } = props;
+
+  const isVisible = panelVisible;
 
   const variants = {
     open: { opacity: 1, x: 0 },
@@ -14,15 +32,7 @@ function SettingsPanel(props) {
   };
 
   function handleHide() {
-    props.onHandlePanelVisible(false);
-  }
-
-  function handleCheckbox() {
-    if (props.lintVectors === false) {
-      props.updateLintRules(true);
-    } else if (props.lintVectors === true) {
-      props.updateLintRules(false);
-    }
+    onHandlePanelVisible(false);
   }
 
   function clearIgnoredErrors() {
@@ -35,7 +45,7 @@ function SettingsPanel(props) {
       },
       '*'
     );
-    props.onHandlePanelVisible(false);
+    onHandlePanelVisible(false);
   }
 
   return (
@@ -58,8 +68,8 @@ function SettingsPanel(props) {
               to ignore, lock them in the Figma layer list.
             </div>
           </div>
-          <SettingsForm borderRadiusValues={props.borderRadiusValues} />
-          <div className="settings-row">
+          <SettingsForm defaultSettings={defaultSettings} />
+          {/* <div className="settings-row">
             <h3 className="settings-title">Lint Vectors (Default Off)</h3>
             <div className="settings-label">
               Illustrations, vectors, and boolean shapes often throw a lot of
@@ -69,19 +79,19 @@ function SettingsPanel(props) {
                 <input
                   name="vectorsCheckbox"
                   type="checkbox"
-                  checked={props.lintVectors}
+                  checked={lintVectors}
                   onChange={handleCheckbox}
                 />
                 <label>Lint Vectors and Boolean Shapes</label>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="settings-row">
             <h3 className="settings-title">Ignored errors</h3>
-            {props.ignoredErrorArray.length > 0 ? (
+            {ignoredErrorArray.length > 0 ? (
               <React.Fragment>
                 <div className="settings-label">
-                  {props.ignoredErrorArray.length} errors are being ignored in
+                  {ignoredErrorArray.length} errors are being ignored in
                   selection.
                 </div>
                 <button
