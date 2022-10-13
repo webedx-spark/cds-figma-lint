@@ -11,15 +11,8 @@ import BulkErrorList from './BulkErrorList';
 import '../styles/figma.ds.css';
 import '../styles/ui.css';
 import '../styles/empty-state.css';
-import { LintSettings, MessageType } from '../../types';
-
-const defaultSettings: LintSettings = {
-  lintFillStyles: true,
-  lintStrokeStyles: true,
-  lintEffectStyles: true,
-  lintTypoStyles: true,
-  borderRadius: [0, 2, 4, 8, 16, 24, 32],
-};
+import { MessageType } from '../../types';
+import { defaultSettings } from '../../constants';
 
 const App = ({}) => {
   const [errorArray, setErrorArray] = useState([]);
@@ -273,14 +266,9 @@ const App = ({}) => {
         let clientStorage = JSON.parse(storage);
         setActivePage(clientStorage);
       } else if (type === MessageType.SAVED_SETTINGS) {
-        console.log(MessageType.SAVED_SETTINGS, storage);
-        // Update setting from storage
         let clientStorage = JSON.parse(storage);
-
-        console.log('Parsed settings from storage', clientStorage);
         // update only if not empty
         if (clientStorage && Object.keys(clientStorage).length !== 0) {
-          console.log('set settings');
           setSettings(clientStorage);
         }
       } else if (type === 'reset storage') {

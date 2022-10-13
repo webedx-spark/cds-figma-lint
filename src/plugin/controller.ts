@@ -1,3 +1,4 @@
+import { defaultSettings } from '../constants';
 import { LintSettings, MessageType, StorageKeys } from '../types';
 import { lint } from './lint';
 import { serializeNodes } from './utils';
@@ -108,7 +109,7 @@ figma.ui.onmessage = (msg) => {
     }
 
     // Save this value in client storage.
-    let settingsJSON = JSON.stringify(Object.assign(settings));
+    let settingsJSON = JSON.stringify(settings);
 
     figma.clientStorage.setAsync(StorageKeys.SETTINGS, settingsJSON);
 
@@ -121,6 +122,16 @@ figma.ui.onmessage = (msg) => {
   }
 
   if (msg.type === MessageType.RESET_SETTINGS) {
+    let settingsJSON = JSON.stringify(defaultSettings);
+
+    figma.clientStorage.setAsync(StorageKeys.SETTINGS, settingsJSON);
+
+    figma.ui.postMessage({
+      type: MessageType.SAVED_SETTINGS,
+      storage: settingsJSON,
+    });
+
+    figma.notify('Reset settings', { timeout: 1000 });
   }
 
   if (msg.type === MessageType.RESET_BORDER_RADIUS) {

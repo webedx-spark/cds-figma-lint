@@ -63,16 +63,18 @@ function SettingsForm(props: SettingsFormProps) {
     );
   };
 
-  function handleClear() {
+  const handleClear = (e: React.MouseEvent) => {
+    e.preventDefault();
+
     parent.postMessage(
       {
         pluginMessage: {
-          type: MessageType.RESET_BORDER_RADIUS,
+          type: MessageType.RESET_SETTINGS,
         },
       },
       '*'
     );
-  }
+  };
 
   useEffect(
     function syncValues() {
