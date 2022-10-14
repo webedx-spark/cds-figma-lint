@@ -12,10 +12,10 @@ import { ReactComponent as ComponentSetIcon } from '../assets/component_set.svg'
 import { ReactComponent as EllipseIcon } from '../assets/ellipse.svg';
 import { ReactComponent as GroupIcon } from '../assets/group.svg';
 import { ReactComponent as PolygonIcon } from '../assets/polygon.svg';
-import { ReactComponent as RectangleIcon } from '../assets/line.svg';
-import { ReactComponent as SliceIcon } from '../assets/line.svg';
-import { ReactComponent as StarIcon } from '../assets/line.svg';
-import { ReactComponent as VectorIcon } from '../assets/line.svg';
+import { ReactComponent as RectangleIcon } from '../assets/rectangle.svg';
+import { ReactComponent as SliceIcon } from '../assets/slice.svg';
+import { ReactComponent as StarIcon } from '../assets/star.svg';
+import { ReactComponent as VectorIcon } from '../assets/vector.svg';
 
 type NodeType =
   | 'BOOLEAN_OPERATION'

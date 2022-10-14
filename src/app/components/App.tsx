@@ -12,7 +12,6 @@ import '../styles/figma.ds.css';
 import '../styles/ui.css';
 import '../styles/empty-state.css';
 import { MessageType } from '../../types';
-import { defaultSettings } from '../../constants';
 
 const App = ({}) => {
   const [errorArray, setErrorArray] = useState([]);
@@ -24,7 +23,6 @@ const App = ({}) => {
   const [nodeArray, setNodeArray] = useState<SceneNode[]>([]);
   const [selectedListItems, setSelectedListItem] = React.useState([]);
   const [activeNodeIds, setActiveNodeIds] = React.useState([]);
-  const [settings, setSettings] = useState(defaultSettings);
   const [lintVectors, setLintVectors] = useState(false);
   const [initialLoad, setInitialLoad] = React.useState(false);
   const [timedLoad, setTimeLoad] = React.useState(false);
@@ -265,12 +263,6 @@ const App = ({}) => {
         console.log('fetched active page');
         let clientStorage = JSON.parse(storage);
         setActivePage(clientStorage);
-      } else if (type === MessageType.SAVED_SETTINGS) {
-        let clientStorage = JSON.parse(storage);
-        // update only if not empty
-        if (clientStorage && Object.keys(clientStorage).length !== 0) {
-          setSettings(clientStorage);
-        }
       } else if (type === 'reset storage') {
         let clientStorage = JSON.parse(storage);
         setIgnoreErrorArray([...clientStorage]);
@@ -301,7 +293,6 @@ const App = ({}) => {
         activePage={activePage}
         updateLintRules={updateLintRules}
         ignoredErrorArray={ignoredErrorArray}
-        defaultSettings={settings}
         lintVectors={lintVectors}
         onRefreshSelection={onRunApp}
       />

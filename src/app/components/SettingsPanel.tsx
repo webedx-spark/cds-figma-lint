@@ -2,9 +2,8 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import PanelHeader from './PanelHeader';
 import SettingsForm from './SettingsForm';
-import type { SettingsFormProps } from './SettingsForm';
 import '../styles/panel.css';
-import { LintSettings, MessageType } from '../../types';
+import { MessageType } from '../../types';
 
 export type SettingsPanelProps = {
   panelVisible: boolean;
@@ -12,12 +11,11 @@ export type SettingsPanelProps = {
   onHandlePanelVisible: (arg: boolean) => void;
   updateLintRules: (arg: boolean) => void;
   ignoredErrorArray: Array<any>;
-} & SettingsFormProps;
+};
 
 function SettingsPanel(props: SettingsPanelProps) {
   const {
     panelVisible,
-    defaultSettings,
     lintVectors,
     onHandlePanelVisible,
     updateLintRules,
@@ -68,7 +66,7 @@ function SettingsPanel(props: SettingsPanelProps) {
               to ignore, lock them in the Figma layer list.
             </div>
           </div>
-          <SettingsForm defaultSettings={defaultSettings} />
+          <SettingsForm />
           {/* <div className="settings-row">
             <h3 className="settings-title">Lint Vectors (Default Off)</h3>
             <div className="settings-label">

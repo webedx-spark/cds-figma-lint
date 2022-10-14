@@ -15,7 +15,7 @@ let lintVectors = false;
 
 figma.skipInvisibleInstanceChildren = true;
 
-figma.ui.onmessage = (msg) => {
+figma.ui.onmessage = async (msg) => {
   if (msg.type === 'close') {
     figma.closePlugin();
   }
@@ -59,9 +59,11 @@ figma.ui.onmessage = (msg) => {
 
   // Could this be made less expensive?
   if (msg.type === MessageType.UPDATE_ERRORS) {
+    const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+
     figma.ui.postMessage({
       type: 'updated errors',
-      errors: lint(originalNodeTree, false, { lintVectors, borderRadiusArray }),
+      errors: lint(originalNodeTree, false, JSON.parse(settings)),
     });
   }
 
@@ -121,6 +123,15 @@ figma.ui.onmessage = (msg) => {
     figma.notify('Settings updated', { timeout: 1000 });
   }
 
+  if (msg.type == MessageType.FETCH_SETTINGS) {
+    const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+
+    figma.ui.postMessage({
+      type: MessageType.SAVED_SETTINGS,
+      storage: settings,
+    });
+  }
+
   if (msg.type === MessageType.RESET_SETTINGS) {
     let settingsJSON = JSON.stringify(defaultSettings);
 
@@ -165,10 +176,12 @@ figma.ui.onmessage = (msg) => {
   }
 
   if (msg.type === MessageType.LINT_ALL) {
+    const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+
     // Pass the array back to the UI to be displayed.
     figma.ui.postMessage({
       type: 'complete',
-      errors: lint(originalNodeTree, false, { lintVectors, borderRadiusArray }),
+      errors: lint(originalNodeTree, false, JSON.parse(settings)),
       message: serializeNodes(msg.nodes),
     });
 
@@ -186,6 +199,8 @@ figma.ui.onmessage = (msg) => {
       let nodes = figma.currentPage.selection;
       let firstNode: Array<SceneNode> = [];
 
+      const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+
       firstNode.push(figma.currentPage.selection[0]);
 
       // Maintain the original tree structure so we can enable
@@ -197,7 +212,7 @@ figma.ui.onmessage = (msg) => {
       figma.ui.postMessage({
         type: 'first node',
         message: serializeNodes(nodes),
-        errors: lint(firstNode, false, { lintVectors, borderRadiusArray }),
+        errors: lint(firstNode, false, JSON.parse(settings)),
       });
 
       figma.clientStorage.getAsync('storedErrorsToIgnore').then((result) => {
@@ -210,13 +225,6 @@ figma.ui.onmessage = (msg) => {
       figma.clientStorage.getAsync('storedActivePage').then((result) => {
         figma.ui.postMessage({
           type: 'fetched active page',
-          storage: result,
-        });
-      });
-
-      figma.clientStorage.getAsync(StorageKeys.SETTINGS).then((result) => {
-        figma.ui.postMessage({
-          type: MessageType.SAVED_SETTINGS,
           storage: result,
         });
       });

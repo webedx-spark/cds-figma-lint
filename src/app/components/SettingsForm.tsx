@@ -1,4 +1,5 @@
 import { ChangeEvent, useEffect, useState } from 'react';
+import { defaultSettings } from '../../constants';
 import {
   arrayToCommaSeparatedStr,
   parseCommaSeparatedNumbers,
@@ -21,18 +22,10 @@ const deserializeValues = (settings: LintSettings) => {
   };
 };
 
-export type SettingsFormProps = {
-  defaultSettings: LintSettings;
-};
-
-function SettingsForm(props: SettingsFormProps) {
-  const { defaultSettings } = props;
-
+function SettingsForm() {
   const [values, setValues] = useState(() =>
     deserializeValues(defaultSettings)
   );
-
-  console.log('Render SettingsForm', values);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const target = event.target;
@@ -76,12 +69,34 @@ function SettingsForm(props: SettingsFormProps) {
     );
   };
 
-  useEffect(
-    function syncValues() {
-      setValues(deserializeValues(defaultSettings));
-    },
-    [defaultSettings]
-  );
+  const handleWindowMessage = (event) => {
+    const { type, message, errors, storage } = event.data.pluginMessage;
+
+    if (type === MessageType.SAVED_SETTINGS) {
+      let clientStorage = JSON.parse(storage);
+      // update only if not empty
+      if (clientStorage && Object.keys(clientStorage).length !== 0) {
+        setValues(deserializeValues(clientStorage));
+      }
+    }
+  };
+
+  useEffect(function syncValues() {
+    window.addEventListener('message', handleWindowMessage);
+
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: MessageType.FETCH_SETTINGS,
+        },
+      },
+      '*'
+    );
+
+    return () => {
+      window.removeEventListener('message', handleWindowMessage);
+    };
+  }, []);
 
   return (
     <form className="settings-form" onSubmit={handleSubmit}>

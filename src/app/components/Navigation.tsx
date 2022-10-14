@@ -10,7 +10,7 @@ type NavigationProps = {
   onRefreshSelection: () => void;
 } & Pick<
   SettingsPanelProps,
-  'defaultSettings' | 'lintVectors' | 'ignoredErrorArray' | 'updateLintRules'
+  'lintVectors' | 'ignoredErrorArray' | 'updateLintRules'
 >;
 
 function Navigation(props: NavigationProps) {
@@ -18,7 +18,6 @@ function Navigation(props: NavigationProps) {
     onPageSelection,
     onRefreshSelection,
     activePage,
-    defaultSettings,
     lintVectors,
     ignoredErrorArray,
     updateLintRules,
@@ -81,7 +80,6 @@ function Navigation(props: NavigationProps) {
         panelVisible={panelVisible}
         onHandlePanelVisible={handlePanelVisible}
         ignoredErrorArray={ignoredErrorArray}
-        defaultSettings={defaultSettings}
         updateLintRules={updateLintRules}
         lintVectors={lintVectors}
       />

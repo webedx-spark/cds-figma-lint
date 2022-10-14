@@ -10,31 +10,13 @@ import {
   // customCheckTextFills,
   // uncomment this as an example of a custom lint function ^
 } from './lintingFunctions';
+import { LintSettings, StorageKeys } from '../types';
+import { defaultSettings } from '../constants';
 
 type NodeErrors = {
   id: string;
   errors?: Array<LintError>;
   children?: Array<string>;
-};
-
-type LintOptions = {
-  lintVectors?: boolean;
-  borderRadiusArray?: Array<number>;
-  lintCdsFillStyles?: boolean;
-  lintCdsStrokeStyles?: boolean;
-  lintCdsEffectStyles?: boolean;
-  lintCdsTypoStyles?: boolean;
-  lintCdsBorderRadius?: boolean;
-};
-
-const defaultOptions: LintOptions = {
-  lintVectors: false,
-  borderRadiusArray: [0, 2, 4, 8, 16, 24, 32],
-  lintCdsFillStyles: true,
-  lintCdsStrokeStyles: true,
-  lintCdsBorderRadius: true,
-  lintCdsEffectStyles: true,
-  lintCdsTypoStyles: true,
 };
 
 const normalizedStyles = styles.styles.reduce((stylesMap, style) => {
@@ -51,12 +33,12 @@ const normalizedStyles = styles.styles.reduce((stylesMap, style) => {
 export function lint(
   nodes: Readonly<Array<SceneNode>>,
   lockedParentNode?,
-  options = defaultOptions
+  options = defaultSettings
 ) {
   let errorArray: Array<NodeErrors> = [];
   let childArray: Array<string> = [];
 
-  const lintOptions = Object.assign(defaultOptions, options);
+  const lintOptions = Object.assign(defaultSettings, options);
 
   nodes.forEach((node) => {
     let isLayerLocked;
@@ -113,7 +95,7 @@ export function lint(
   return errorArray;
 }
 
-function determineType(node: SceneNode, options: LintOptions) {
+function determineType(node: SceneNode, options: LintSettings) {
   switch (node.type) {
     case 'SLICE':
     case 'GROUP': {
@@ -121,10 +103,10 @@ function determineType(node: SceneNode, options: LintOptions) {
       let errors = [];
       return errors;
     }
-    case 'BOOLEAN_OPERATION':
-    case 'VECTOR': {
-      return lintVectorRules(node, options);
-    }
+    // case 'BOOLEAN_OPERATION':
+    // case 'VECTOR': {
+    //   return lintVectorRules(node, options);
+    // }
     case 'POLYGON':
     case 'STAR':
     case 'ELLIPSE': {
@@ -159,7 +141,7 @@ function determineType(node: SceneNode, options: LintOptions) {
   }
 }
 
-function lintComponentRules(node: ComponentNode, options: LintOptions) {
+function lintComponentRules(node: ComponentNode, options: LintSettings) {
   let errors = [];
 
   // Example of how we can make a custom rule specifically for components
@@ -170,7 +152,7 @@ function lintComponentRules(node: ComponentNode, options: LintOptions) {
   // }
 
   checkFills(node, errors);
-  checkRadius(node, errors, options.borderRadiusArray);
+  checkRadius(node, errors, options.borderRadius);
   checkEffects(node, errors);
   checkStrokes(node, errors);
 
@@ -195,12 +177,12 @@ function lintLineRules(node: LineNode) {
   return errors;
 }
 
-function lintFrameRules(node: FrameNode, options: LintOptions) {
+function lintFrameRules(node: FrameNode, options: LintSettings) {
   let errors = [];
 
   checkFills(node, errors);
   checkStrokes(node, errors);
-  checkRadius(node, errors, options.borderRadiusArray);
+  checkRadius(node, errors, options.borderRadius);
   checkEffects(node, errors);
 
   return errors;
@@ -223,31 +205,34 @@ function lintTextRules(node: TextNode) {
 
 function lintRectangleRules(
   node: RectangleNode | InstanceNode,
-  options: LintOptions
+  options: LintSettings
 ) {
   let errors = [];
 
-  checkCdsStyles(normalizedStyles)(node, errors);
+  if (options.lintFillStyles) {
+    checkCdsStyles(normalizedStyles)(node, errors);
+  }
+
   checkFills(node, errors);
-  checkRadius(node, errors, options.borderRadiusArray);
+  checkRadius(node, errors, options.borderRadius);
   checkStrokes(node, errors);
   checkEffects(node, errors);
 
   return errors;
 }
 
-function lintVectorRules(node: DefaultShapeMixin, options: LintOptions) {
-  let errors = [];
+// function lintVectorRules(node: DefaultShapeMixin, options: LintOptions) {
+//   let errors = [];
 
-  // This can be enabled by the user in settings.
-  if (options.lintVectors === true) {
-    checkFills(node, errors);
-    checkStrokes(node, errors);
-    checkEffects(node, errors);
-  }
+//   // This can be enabled by the user in settings.
+//   if (options.lintVectors === true) {
+//     checkFills(node, errors);
+//     checkStrokes(node, errors);
+//     checkEffects(node, errors);
+//   }
 
-  return errors;
-}
+//   return errors;
+// }
 
 function lintShapeRules(node: DefaultShapeMixin) {
   let errors = [];
