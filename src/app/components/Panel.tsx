@@ -17,7 +17,7 @@ function Panel(props) {
   // Reduce the size of our array of errors by removing
   // nodes with no errors on them.
   let filteredErrorArray = props.errorArray.filter(
-    (item) => item.errors.length >= 1
+    (item) => item.errors && item.errors.length >= 1
   );
 
   filteredErrorArray.forEach((item) => {
