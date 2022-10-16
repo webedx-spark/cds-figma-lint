@@ -26,7 +26,7 @@ export const RGBToHex = (r: string, g: string, b: string) => {
   if (g.length == 1) g = '0' + g;
   if (b.length == 1) b = '0' + b;
 
-  return '#' + r + g + b;
+  return `#${r}${g}${b}`.toUpperCase();
 };
 
 // Serialize nodes to pass back to the UI.
@@ -52,3 +52,33 @@ export const parseCommaSeparatedNumbers = (str: string): Array<number> => {
 export const arrayToCommaSeparatedStr = (arr: Array<number>): string => {
   return arr.join(', ');
 };
+
+export function determineFill(fills) {
+  let fillValues: Array<string> = [];
+
+  fills.forEach((fill) => {
+    if (fill.type === 'SOLID') {
+      let rgbObj = convertColor(fill.color);
+
+      fillValues.push(RGBToHex(rgbObj['r'], rgbObj['g'], rgbObj['b']));
+    } else if (fill.type === 'IMAGE') {
+      fillValues.push('Image - ' + fill.imageHash);
+    } else {
+      const gradientValues: Array<string> = [];
+      fill.gradientStops.forEach((gradientStops) => {
+        let gradientColorObject = convertColor(gradientStops.color);
+        gradientValues.push(
+          RGBToHex(
+            gradientColorObject['r'],
+            gradientColorObject['g'],
+            gradientColorObject['b']
+          )
+        );
+      });
+      let gradientValueString = gradientValues.toString();
+      fillValues.push(`${fill.type} ${gradientValueString}`);
+    }
+  });
+
+  return fillValues[0];
+}

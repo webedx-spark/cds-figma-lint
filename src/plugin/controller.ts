@@ -1,6 +1,8 @@
 import { defaultSettings } from '../constants';
 import { LintSettings, MessageType, StorageKeys } from '../types';
+import { LintError } from './errors';
 import { lint } from './lint';
+import { suggestionFix } from './suggestion';
 import { serializeNodes } from './utils';
 
 function isSceneNode(node: BaseNode): node is SceneNode {
@@ -61,9 +63,11 @@ figma.ui.onmessage = async (msg) => {
   if (msg.type === MessageType.UPDATE_ERRORS) {
     const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
 
+    const errors = lint(originalNodeTree, false, JSON.parse(settings));
+
     figma.ui.postMessage({
       type: 'updated errors',
-      errors: lint(originalNodeTree, false, JSON.parse(settings)),
+      errors,
     });
   }
 
@@ -227,6 +231,30 @@ figma.ui.onmessage = async (msg) => {
           type: 'fetched active page',
           storage: result,
         });
+      });
+    }
+  }
+
+  if (msg.type === MessageType.AUTOFIX) {
+    const error: LintError = msg.error;
+
+    console.log(error);
+
+    if (error) {
+      await suggestionFix(error);
+
+      const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+
+      // Pass the array back to the UI to be displayed.
+      const errors = lint(originalNodeTree, false, JSON.parse(settings));
+
+      figma.ui.postMessage({
+        type: 'updated errors',
+        errors,
+      });
+
+      figma.notify(`Fixed: ${error.message}`, {
+        timeout: 1000,
       });
     }
   }

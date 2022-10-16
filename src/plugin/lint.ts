@@ -6,20 +6,24 @@ import {
   checkFills,
   checkStrokes,
   checkType,
-  checkCdsStyles,
+  checkLibraryEffectsStyles,
+  checkLibraryFillStyles,
+  checkLibraryStrokeStyles,
+  checkLibraryTypeStyles,
   // customCheckTextFills,
   // uncomment this as an example of a custom lint function ^
 } from './lintingFunctions';
+import type { LintStyleType } from './lintingFunctions';
 import { LintSettings, StorageKeys } from '../types';
 import { defaultSettings } from '../constants';
 
-type NodeErrors = {
+export type NodeErrors = {
   id: string;
   errors?: Array<LintError>;
   children?: Array<string>;
 };
 
-const normalizedStyles = styles.styles.reduce((stylesMap, style) => {
+export const normalizedStyles = styles.styles.reduce((stylesMap, style) => {
   if (stylesMap[style.style_type]) {
     stylesMap[style.style_type][style.key] = style;
   } else {
@@ -28,14 +32,14 @@ const normalizedStyles = styles.styles.reduce((stylesMap, style) => {
   }
 
   return stylesMap;
-}, {} as Record<StyleType, Record<string, BaseStyle>>);
+}, {} as Record<LintStyleType, Record<string, BaseStyle>>);
 
 export function lint(
   nodes: Readonly<Array<SceneNode>>,
   lockedParentNode?,
   options = defaultSettings
 ) {
-  let errorArray: Array<NodeErrors> = [];
+  let nodeErrorArray: Array<NodeErrors> = [];
   let childArray: Array<string> = [];
 
   const lintOptions = Object.assign(defaultSettings, options);
@@ -69,7 +73,7 @@ export function lint(
       let children = node.children;
 
       if (!children) {
-        errorArray.push(newObject);
+        nodeErrorArray.push(newObject);
         return;
       } else if (children) {
         // Recursively run this function to flatten out children and grandchildren nodes
@@ -82,17 +86,17 @@ export function lint(
         // If the layer is locked, pass the optional parameter to the recursive Lint
         // function to indicate this layer is locked.
         if (isLayerLocked === true) {
-          errorArray.push(...lint(node['children'], true, lintOptions));
+          nodeErrorArray.push(...lint(node['children'], true, lintOptions));
         } else {
-          errorArray.push(...lint(node['children'], false, lintOptions));
+          nodeErrorArray.push(...lint(node['children'], false, lintOptions));
         }
       }
     }
 
-    errorArray.push(newObject);
+    nodeErrorArray.push(newObject);
   });
 
-  return errorArray;
+  return nodeErrorArray;
 }
 
 function determineType(node: SceneNode, options: LintSettings) {
@@ -110,7 +114,7 @@ function determineType(node: SceneNode, options: LintSettings) {
     case 'POLYGON':
     case 'STAR':
     case 'ELLIPSE': {
-      return lintShapeRules(node);
+      return lintShapeRules(node, options);
     }
     case 'FRAME': {
       return lintFrameRules(node, options);
@@ -130,10 +134,10 @@ function determineType(node: SceneNode, options: LintSettings) {
       return lintVariantWrapperRules(node);
     }
     case 'TEXT': {
-      return lintTextRules(node);
+      return lintTextRules(node, options);
     }
     case 'LINE': {
-      return lintLineRules(node);
+      return lintLineRules(node, options);
     }
     default: {
       // Do nothing
@@ -144,17 +148,25 @@ function determineType(node: SceneNode, options: LintSettings) {
 function lintComponentRules(node: ComponentNode, options: LintSettings) {
   let errors = [];
 
-  // Example of how we can make a custom rule specifically for components
-  // if (node.remote === false) {
-  //   errors.push(
-  //     createErrorObject(node, "component", "Component isn't from library")
-  //   );
-  // }
+  if (options.lintFillStyles) {
+    checkLibraryFillStyles(normalizedStyles, node, errors);
+  } else {
+    checkFills(node, errors);
+  }
 
-  checkFills(node, errors);
+  if (options.lintEffectStyles) {
+    checkLibraryEffectsStyles(normalizedStyles, node, errors);
+  } else {
+    checkEffects(node, errors);
+  }
+
+  if (options.lintStrokeStyles) {
+    checkLibraryStrokeStyles(normalizedStyles, node, errors);
+  } else {
+    checkStrokes(node, errors);
+  }
+
   checkRadius(node, errors, options.borderRadius);
-  checkEffects(node, errors);
-  checkStrokes(node, errors);
 
   return errors;
 }
@@ -168,11 +180,20 @@ function lintVariantWrapperRules(node: ComponentSetNode) {
   return errors;
 }
 
-function lintLineRules(node: LineNode) {
+function lintLineRules(node: LineNode, options: LintSettings) {
   let errors = [];
 
-  checkStrokes(node, errors);
-  checkEffects(node, errors);
+  if (options.lintEffectStyles) {
+    checkLibraryEffectsStyles(normalizedStyles, node, errors);
+  } else {
+    checkEffects(node, errors);
+  }
+
+  if (options.lintStrokeStyles) {
+    checkLibraryStrokeStyles(normalizedStyles, node, errors);
+  } else {
+    checkStrokes(node, errors);
+  }
 
   return errors;
 }
@@ -188,17 +209,32 @@ function lintFrameRules(node: FrameNode, options: LintSettings) {
   return errors;
 }
 
-function lintTextRules(node: TextNode) {
+function lintTextRules(node: TextNode, options: LintSettings) {
   let errors = [];
 
-  checkType(node, errors);
-  checkFills(node, errors);
+  if (options.lintFillStyles) {
+    checkLibraryFillStyles(normalizedStyles, node, errors);
+  } else {
+    checkFills(node, errors);
+  }
 
-  // We could also comment out checkFills and use a custom function instead
-  // Take a look at line 122 in lintingFunction.ts for an example.
-  // customCheckTextFills(node, errors);
-  checkEffects(node, errors);
-  checkStrokes(node, errors);
+  if (options.lintEffectStyles) {
+    checkLibraryEffectsStyles(normalizedStyles, node, errors);
+  } else {
+    checkEffects(node, errors);
+  }
+
+  if (options.lintStrokeStyles) {
+    checkLibraryStrokeStyles(normalizedStyles, node, errors);
+  } else {
+    checkStrokes(node, errors);
+  }
+
+  if (options.lintTypoStyles) {
+    checkLibraryTypeStyles(normalizedStyles, node, errors);
+  } else {
+    checkType(node, errors);
+  }
 
   return errors;
 }
@@ -210,13 +246,24 @@ function lintRectangleRules(
   let errors = [];
 
   if (options.lintFillStyles) {
-    checkCdsStyles(normalizedStyles)(node, errors);
+    checkLibraryFillStyles(normalizedStyles, node, errors);
+  } else {
+    checkFills(node, errors);
   }
 
-  checkFills(node, errors);
+  if (options.lintEffectStyles) {
+    checkLibraryEffectsStyles(normalizedStyles, node, errors);
+  } else {
+    checkEffects(node, errors);
+  }
+
+  if (options.lintStrokeStyles) {
+    checkLibraryStrokeStyles(normalizedStyles, node, errors);
+  } else {
+    checkStrokes(node, errors);
+  }
+
   checkRadius(node, errors, options.borderRadius);
-  checkStrokes(node, errors);
-  checkEffects(node, errors);
 
   return errors;
 }
@@ -234,12 +281,29 @@ function lintRectangleRules(
 //   return errors;
 // }
 
-function lintShapeRules(node: DefaultShapeMixin) {
+function lintShapeRules(
+  node: PolygonNode | StarNode | EllipseNode,
+  options: LintSettings
+) {
   let errors = [];
 
-  checkFills(node, errors);
-  checkStrokes(node, errors);
-  checkEffects(node, errors);
+  if (options.lintFillStyles) {
+    checkLibraryFillStyles(normalizedStyles, node, errors);
+  } else {
+    checkFills(node, errors);
+  }
+
+  if (options.lintEffectStyles) {
+    checkLibraryEffectsStyles(normalizedStyles, node, errors);
+  } else {
+    checkEffects(node, errors);
+  }
+
+  if (options.lintStrokeStyles) {
+    checkLibraryStrokeStyles(normalizedStyles, node, errors);
+  } else {
+    checkStrokes(node, errors);
+  }
 
   return errors;
 }
