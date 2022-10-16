@@ -164,6 +164,18 @@ function Panel(props: PanelProps) {
     }
   }
 
+  function handleFixAll() {
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: MessageType.AUTOFIX,
+          errors,
+        },
+      },
+      '*'
+    );
+  }
+
   // We need an conditional statement for rendering in case the user deletes the selected layer.
   return (
     <React.Fragment>
@@ -177,7 +189,15 @@ function Panel(props: PanelProps) {
           <PanelHeader
             title={node.name}
             handleHide={handleChange}
-          ></PanelHeader>
+            actions={
+              <button
+                className="button button--secondary"
+                onClick={handleFixAll}
+              >
+                🛠 Fix all errors
+              </button>
+            }
+          />
 
           <div className="panel-body">
             {errors.length ? (

@@ -37,6 +37,10 @@
   text-overflow: ellipsis;
 }
 
+.panel-header__actions {
+  margin: auto 0 auto auto;
+}
+
 .panel-collapse-icon {
   width: 16px;
 }

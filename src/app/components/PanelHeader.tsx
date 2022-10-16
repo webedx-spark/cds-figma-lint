@@ -1,14 +1,22 @@
 import { ReactComponent as FastForwardIcon } from '../assets/forward-arrow.svg';
 
-function PanelHeader(props) {
+type PanelHeaderProps = {
+  title: string;
+  actions?: React.ReactNode;
+  handleHide?: React.MouseEventHandler<HTMLButtonElement>;
+};
+
+function PanelHeader(props: PanelHeaderProps) {
+  const { title, actions, handleHide } = props;
   return (
     <div className="panel-header">
       <div className="panel-header__action">
-        <button className="button--icon" onClick={props.handleHide}>
+        <button className="button--icon" onClick={handleHide}>
           <FastForwardIcon className="panel-collapse-icon" />
         </button>
       </div>
-      <div className="panel-header__title">{props.title}</div>
+      <div className="panel-header__title">{title}</div>
+      <div className="panel-header__actions">{actions}</div>
     </div>
   );
 }

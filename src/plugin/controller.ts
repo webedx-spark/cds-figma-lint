@@ -236,24 +236,28 @@ figma.ui.onmessage = async (msg) => {
   }
 
   if (msg.type === MessageType.AUTOFIX) {
-    const error: LintError = msg.error;
+    const errorsToFix: Array<LintError> = msg.errors;
 
-    console.log(error);
-
-    if (error) {
-      await suggestionFix(error);
+    if (errorsToFix && errorsToFix.length > 0) {
+      console.log(errorsToFix, 'autofix');
+      // Fix all errors
+      await Promise.all(
+        errorsToFix.map(async (errorToFix) => {
+          await suggestionFix(errorToFix);
+        })
+      );
 
       const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
 
       // Pass the array back to the UI to be displayed.
-      const errors = lint(originalNodeTree, false, JSON.parse(settings));
+      const newErrors = lint(originalNodeTree, false, JSON.parse(settings));
 
       figma.ui.postMessage({
         type: 'updated errors',
-        errors,
+        errors: newErrors,
       });
 
-      figma.notify(`Fixed: ${error.message}`, {
+      figma.notify(`Auto-fixed ${errorsToFix.length} errors`, {
         timeout: 1000,
       });
     }

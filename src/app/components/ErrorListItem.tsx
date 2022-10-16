@@ -50,7 +50,7 @@ function ErrorListItem(props: ErrorListItemProp) {
       {
         pluginMessage: {
           type: MessageType.AUTOFIX,
-          error,
+          errors: [error],
         },
       },
       '*'
