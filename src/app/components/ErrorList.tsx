@@ -1,25 +1,38 @@
-import * as React from "react";
-import ErrorListItem from "./ErrorListItem";
+import * as React from 'react';
+import type { LintError } from '../../plugin/errors';
+import type { NodeErrors } from '../../plugin/lint';
+import ErrorListItem from './ErrorListItem';
 
-function ErrorList(props) {
-  const handleIgnoreClick = error => {
-    props.onIgnoredUpdate(error);
+type ErrorListProps = {
+  errors: Array<LintError>;
+  onIgnoredUpdate: (error: any) => void;
+  onIgnoreAll: (error: any) => void;
+  onSelectAll: (error: any) => void;
+  allErrors: Array<NodeErrors>;
+};
+
+function ErrorList(props: ErrorListProps) {
+  const { errors, onIgnoredUpdate, onIgnoreAll, onSelectAll, allErrors } =
+    props;
+
+  const handleIgnoreClick = (error) => {
+    onIgnoredUpdate(error);
   };
 
-  const handleIgnoreAll = error => {
-    props.onIgnoreAll(error);
+  const handleIgnoreAll = (error) => {
+    onIgnoreAll(error);
   };
 
-  const handleSelectAll = error => {
-    props.onSelectAll(error);
+  const handleSelectAll = (error) => {
+    onSelectAll(error);
   };
 
   // Finds how many other nodes have this exact error.
   function countInstancesOfThisError(error) {
     let nodesToBeSelected = [];
 
-    props.allErrors.forEach(node => {
-      node.errors.forEach(item => {
+    allErrors.forEach((node) => {
+      node.errors.forEach((item) => {
         if (item.value === error.value) {
           if (item.type === error.type) {
             nodesToBeSelected.push(item.node.id);
@@ -33,11 +46,10 @@ function ErrorList(props) {
 
   // ErrorListItem and BulkErrorListItem are nearly indentical bar a
   // few differences in what information and context menu items they have.
-  const errorListItems = props.errors.map((error, index) => (
+  const errorListItems = errors.map((error, index) => (
     <ErrorListItem
       error={error}
       errorCount={countInstancesOfThisError(error)}
-      index={index}
       key={index}
       handleIgnoreChange={handleIgnoreClick}
       handleSelectAll={handleSelectAll}

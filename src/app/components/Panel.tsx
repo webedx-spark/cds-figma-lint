@@ -9,8 +9,21 @@ import '../styles/panel.css';
 
 import { ReactComponent as SmileIcon } from '../assets/smile.svg';
 import { MessageType } from '../../types';
+import type { NodeErrors } from '../../plugin/lint';
+import { LintError } from '../../plugin/errors';
 
-function Panel(props) {
+type PanelProps = {
+  visibility: boolean;
+  errorArray: Array<NodeErrors>;
+  node: SceneNode;
+  onIgnoredUpdate: (error: any) => void;
+  onIgnoreAll: (error: any) => void;
+  ignoredErrors: Array<never>;
+  onClick: () => void;
+  onSelectedListUpdate: (id: string) => void;
+};
+
+function Panel(props: PanelProps) {
   const isVisible = props.visibility;
   const node = props.node;
 
@@ -41,8 +54,8 @@ function Panel(props) {
   });
 
   let activeId = props.errorArray.find((e) => e.id === node.id);
-  let errors = [];
-  if (activeId !== undefined) {
+  let errors: Array<LintError> = [];
+  if (activeId !== undefined && activeId.errors) {
     errors = activeId.errors;
   }
 

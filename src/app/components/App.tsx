@@ -12,13 +12,14 @@ import '../styles/figma.ds.css';
 import '../styles/ui.css';
 import '../styles/empty-state.css';
 import { MessageType } from '../../types';
+import type { NodeErrors } from '../../plugin/lint';
 
 const App = ({}) => {
-  const [errorArray, setErrorArray] = useState([]);
+  const [errorArray, setErrorArray] = useState<Array<NodeErrors>>([]);
   const [activePage, setActivePage] = useState('page');
   const [ignoredErrorArray, setIgnoreErrorArray] = useState([]);
   const [activeError, setActiveError] = React.useState({});
-  const [selectedNode, setSelectedNode] = React.useState({});
+  const [selectedNode, setSelectedNode] = React.useState<SceneNode>();
   const [isVisible, setIsVisible] = React.useState(false);
   const [nodeArray, setNodeArray] = useState<SceneNode[]>([]);
   const [selectedListItems, setSelectedListItem] = React.useState([]);
@@ -95,7 +96,7 @@ const App = ({}) => {
     }
   };
 
-  const updateErrorArray = (errors) => {
+  const updateErrorArray = (errors: Array<NodeErrors>) => {
     setErrorArray(errors);
   };
 
@@ -197,8 +198,6 @@ const App = ({}) => {
       // for performance, then we lint the remaining layers.
       if (type === 'complete') {
         let nodeObject = JSON.parse(message);
-
-        // setNodeArray(nodeObject);
         updateErrorArray(errors);
 
         parent.postMessage(
@@ -328,7 +327,9 @@ const App = ({}) => {
         <EmptyState onHandleRunApp={onRunApp} />
       )}
 
-      {Object.keys(activeError).length !== 0 && errorArray.length ? (
+      {Object.keys(activeError).length !== 0 &&
+      errorArray.length &&
+      selectedNode ? (
         <Panel
           visibility={isVisible}
           node={selectedNode}

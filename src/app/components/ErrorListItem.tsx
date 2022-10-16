@@ -7,6 +7,8 @@ import { ReactComponent as radiusIcon } from '../assets/error-type/radius.svg';
 import { ReactComponent as strokeIcon } from '../assets/error-type/stroke.svg';
 import { ReactComponent as textIcon } from '../assets/error-type/text.svg';
 import { ReactComponent as ContextIcon } from '../assets/context.svg';
+import { LintError } from '../../plugin/errors';
+import { MessageType } from '../../types';
 
 const iconType = {
   effects: effectsIcon,
@@ -16,10 +18,18 @@ const iconType = {
   text: textIcon,
 };
 
-function ErrorListItem(props) {
+type ErrorListItemProp = {
+  error: LintError;
+  errorCount: number;
+  handleIgnoreChange: (error: LintError) => void;
+  handleSelectAll: (error: LintError) => void;
+  handleIgnoreAll: (error: LintError) => void;
+};
+
+function ErrorListItem(props: ErrorListItemProp) {
   const ref = useRef();
   const [menuState, setMenuState] = useState(false);
-  let error = props.error;
+  const { error, handleIgnoreChange, handleSelectAll, handleIgnoreAll } = props;
 
   const Icon = iconType[error.type.toLowerCase()];
 
@@ -33,17 +43,21 @@ function ErrorListItem(props) {
     setMenuState(false);
   };
 
-  function handleIgnoreChange(error) {
-    props.handleIgnoreChange(error);
-  }
+  const handleFix = (event: React.MouseEvent) => {
+    event.stopPropagation();
 
-  function handleSelectAll(error) {
-    props.handleSelectAll(error);
-  }
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: MessageType.AUTOFIX,
+          error,
+        },
+      },
+      '*'
+    );
 
-  function handleIgnoreAll(error) {
-    props.handleIgnoreAll(error);
-  }
+    hideMenu();
+  };
 
   return (
     <li className="error-list-item" ref={ref} onClick={showMenu}>
@@ -54,6 +68,10 @@ function ErrorListItem(props) {
           {error.value ? (
             <div className="current-value">{error.value}</div>
           ) : null}
+
+          <div className="current-value">
+            Autofix: {error.suggestion ? error.suggestion?.message : 'None'}
+          </div>
         </span>
         <span className="context-icon">
           <div className="menu" ref={ref}>
@@ -70,6 +88,15 @@ function ErrorListItem(props) {
               (menuState ? 'select-menu__list--active' : '')
             }
           >
+            {error.suggestion && (
+              <li
+                className="select-menu__list-item"
+                key="list-item-2"
+                onClick={handleFix}
+              >
+                Fix
+              </li>
+            )}
             <li
               className="select-menu__list-item"
               key="list-item-1"
@@ -111,6 +138,15 @@ function ErrorListItem(props) {
               (menuState ? 'select-menu__list--active' : '')
             }
           >
+            {error.suggestion && (
+              <li
+                className="select-menu__list-item"
+                key="list-item-2"
+                onClick={handleFix}
+              >
+                Fix
+              </li>
+            )}
             <li
               className="select-menu__list-item"
               key="list-item-2"
