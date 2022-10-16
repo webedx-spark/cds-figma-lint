@@ -14,6 +14,7 @@ export const MessageType = {
   SELECT_MULTIPLE_LAYERS: 'select-multiple-layers',
   LINT_ALL: 'lint-all',
   RUN_APP: 'run-app',
+  AUTOFIX: 'autofix',
 } as const;
 
 export const StorageKeys = {
@@ -28,3 +29,15 @@ export type LintSettings = {
 
   borderRadius?: Array<number>;
 };
+
+export type LintBaseNodes =
+  | ComponentNode
+  | EllipseNode
+  | StarNode
+  | RectangleNode
+  | InstanceNode
+  | TextNode
+  | PolygonNode
+  | FrameNode;
+
+export type LintNodes = LintBaseNodes | LineNode;
