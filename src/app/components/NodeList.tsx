@@ -4,13 +4,35 @@ import { motion } from 'framer-motion';
 import ListItem from './ListItem';
 import TotalErrorCount from './TotalErrorCount';
 import { MessageType } from '../../types';
+import type { NodeErrors } from '../../plugin/lint';
+import type { LintError } from '../../plugin/errors';
 
-function NodeList(props) {
+type NodeListProps = {
+  errorArray: Array<NodeErrors>;
+  ignoredErrorArray: any;
+  onErrorUpdate: (nodeId: NodeErrors) => void;
+  onVisibleUpdate: (val: boolean) => void;
+  onSelectedListUpdate: (id: string) => void;
+  visibility: boolean;
+  nodeArray: Array<SceneNode>;
+  selectedListItems: Array<any>;
+  activeNodeIds: Array<string>;
+};
+
+function NodeList(props: NodeListProps) {
   // Reduce the size of our array of errors by removing
   // nodes with no errors on them.
   let filteredErrorArray = props.errorArray.filter(
     (item) => item.errors && item.errors.length >= 1
   );
+
+  const allErrors = filteredErrorArray.reduce((prev, error) => {
+    if (error.errors) {
+      return [...prev, ...error.errors];
+    }
+
+    return prev;
+  }, [] as Array<LintError>);
 
   filteredErrorArray.forEach((item) => {
     // Check each layer/node to see if an error that matches it's layer id
@@ -21,10 +43,12 @@ function NodeList(props) {
         if (ignoredError.node.id === item.id) {
           // Loop over every error this layer/node until we find the
           // error that should be ignored, then remove it.
-          for (let i = 0; i < item.errors.length; i++) {
-            if (item.errors[i].value === ignoredError.value) {
-              item.errors.splice(i, 1);
-              i--;
+          if (item.errors) {
+            for (let i = 0; i < item.errors.length; i++) {
+              if (item.errors[i].value === ignoredError.value) {
+                item.errors.splice(i, 1);
+                i--;
+              }
             }
           }
         }
@@ -36,7 +60,7 @@ function NodeList(props) {
     // Opens the panel if theres an error.
     let activeId = props.errorArray.find((e) => e.id === id);
 
-    if (activeId.errors.length) {
+    if (activeId && activeId.errors && activeId.errors.length) {
       // Pass the plugin the ID of the layer we want to fetch.
       parent.postMessage(
         { pluginMessage: { type: MessageType.FETCH_LAYER_DATA, id: id } },
@@ -59,6 +83,18 @@ function NodeList(props) {
     const lastItem = filteredErrorArray[filteredErrorArray.length - 1];
     handleNodeClick(lastItem.id);
   };
+
+  function handleFixAll() {
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: MessageType.AUTOFIX,
+          errors: allErrors,
+        },
+      },
+      '*'
+    );
+  }
 
   if (props.nodeArray.length) {
     let nodes = props.nodeArray;
@@ -103,6 +139,13 @@ function NodeList(props) {
               }}
             >
               Jump to next error →
+            </button>
+            <button
+              className="button button--secondary button--flex"
+              disabled={filteredErrorArray.length === 0}
+              onClick={handleFixAll}
+            >
+              🛠 Fix all errors
             </button>
           </div>
         </div>

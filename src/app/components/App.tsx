@@ -251,7 +251,6 @@ const App = ({}) => {
           '*'
         );
       } else if (type === 'fetched storage') {
-        console.log('fetched storage');
         let clientStorage = JSON.parse(storage);
 
         setIgnoreErrorArray((ignoredErrorArray) => [
@@ -259,7 +258,6 @@ const App = ({}) => {
           ...clientStorage,
         ]);
       } else if (type === 'fetched active page') {
-        console.log('fetched active page');
         let clientStorage = JSON.parse(storage);
         setActivePage(clientStorage);
       } else if (type === 'reset storage') {

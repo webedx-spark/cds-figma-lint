@@ -239,7 +239,6 @@ figma.ui.onmessage = async (msg) => {
     const errorsToFix: Array<LintError> = msg.errors;
 
     if (errorsToFix && errorsToFix.length > 0) {
-      console.log(errorsToFix, 'autofix');
       // Fix all errors
       await Promise.all(
         errorsToFix.map(async (errorToFix) => {

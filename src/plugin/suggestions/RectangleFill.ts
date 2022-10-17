@@ -80,7 +80,6 @@ export const rectangleFillFix = async (error: LintError) => {
 
     if (node?.type === error.node.type) {
       node.fillStyleId = style.id;
-      console.log('rectangleFillFix', style.id);
     }
   }
 };
