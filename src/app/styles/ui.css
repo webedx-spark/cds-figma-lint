@@ -372,3 +372,38 @@ body {
 .menu-items .select-menu__list-item {
   padding-left: 12px;
 }
+
+/** Help Page **/
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 41px);
+  padding: 0 16px;
+}
+
+.textarea--full-width {
+  max-width: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.examples-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.example-button {
+  height: auto;
+  text-align: left;
+}
+
+.completion {
+  flex: 1;
+}
+
+.completion__overflow {
+  overflow: auto;
+}

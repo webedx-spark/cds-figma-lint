@@ -13,10 +13,11 @@ import { MessageType } from '../../types';
 import { LintError } from '../../plugin/errors';
 import ErrorDetails from './ErrorDetails';
 import TotalErrorCount from './TotalErrorCount';
+import HelpPage from './HelpPage';
 
 const App = ({}) => {
   const [errorArray, setErrorArray] = useState<Array<LintError>>([]);
-  const [activePage, setActivePage] = useState('page');
+  const [activePage, setActivePage] = useState('errors');
   const [ignoredErrorArray, setIgnoreErrorArray] = useState<Array<LintError>>(
     []
   );
@@ -261,6 +262,8 @@ const App = ({}) => {
     };
   }, []);
 
+  console.info('Navigation', activePage);
+
   return (
     <div className="container">
       <Navigation
@@ -271,48 +274,54 @@ const App = ({}) => {
         lintVectors={lintVectors}
         onRefreshSelection={onRunApp}
       />
-      {activeNodeIds.length !== 0 ? (
-        <div>
-          <ErrorList
-            errorArray={errorArray}
-            ignoredErrorArray={ignoredErrorArray}
-            onIgnoredUpdate={updateIgnoredErrors}
-            onIgnoreAll={ignoreAll}
-            ignoredErrors={ignoredErrorArray}
-            onSelect={updateActiveError}
-          />
-          <div className="footer sticky-footer">
-            <TotalErrorCount totalErrorNumber={errorArray.length} />
-            <div className="actions-row">
-              <button
-                className="button button--secondary"
-                onClick={() => onRunApp()}
-              >
-                Re-run
-              </button>
-              <button
-                className="button button--primary button--flex"
-                onClick={handleAutoFix}
-              >
-                Auto-fix {errorArray.length}{' '}
-                {errorArray.length === 1 ? 'error' : 'errors'}
-              </button>
+      {activePage === 'errors' && (
+        <>
+          {activeNodeIds.length !== 0 ? (
+            <div>
+              <ErrorList
+                errorArray={errorArray}
+                ignoredErrorArray={ignoredErrorArray}
+                onIgnoredUpdate={updateIgnoredErrors}
+                onIgnoreAll={ignoreAll}
+                ignoredErrors={ignoredErrorArray}
+                onSelect={updateActiveError}
+              />
+              <div className="footer sticky-footer">
+                <TotalErrorCount totalErrorNumber={errorArray.length} />
+                <div className="actions-row">
+                  <button
+                    className="button button--secondary"
+                    onClick={() => onRunApp()}
+                  >
+                    Re-run
+                  </button>
+                  <button
+                    className="button button--primary button--flex"
+                    onClick={handleAutoFix}
+                  >
+                    Auto-fix {errorArray.length}{' '}
+                    {errorArray.length === 1 ? 'error' : 'errors'}
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      ) : timedLoad === false ? (
-        <Preloader />
-      ) : (
-        <EmptyState onHandleRunApp={onRunApp} />
+          ) : timedLoad === false ? (
+            <Preloader />
+          ) : (
+            <EmptyState onHandleRunApp={onRunApp} />
+          )}
+
+          <ErrorDetails
+            isVisible={typeof activeError !== 'undefined'}
+            error={errorArray[activeError || 0]}
+            onClose={() => setActiveError(undefined)}
+            onNext={handleNextError}
+            onPrev={handlePrevError}
+          />
+        </>
       )}
 
-      <ErrorDetails
-        isVisible={typeof activeError !== 'undefined'}
-        error={errorArray[activeError || 0]}
-        onClose={() => setActiveError(undefined)}
-        onNext={handleNextError}
-        onPrev={handlePrevError}
-      />
+      {activePage === 'help' && <HelpPage />}
     </div>
   );
 };

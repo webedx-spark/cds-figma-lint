@@ -3,6 +3,7 @@ import SettingsPanel from './SettingsPanel';
 import type { SettingsPanelProps } from './SettingsPanel';
 
 import { ReactComponent as RefreshIcon } from '../assets/refresh.svg';
+import classNames from 'classnames';
 
 type NavigationProps = {
   activePage: string;
@@ -40,8 +41,21 @@ function Navigation(props: NavigationProps) {
     <div key="nav">
       <div className="navigation-wrapper">
         <nav className="nav">
-          <div className={`nav-item active`} onClick={errorsClick}>
+          <div
+            className={classNames('nav-item', {
+              active: activePage === 'errors',
+            })}
+            onClick={errorsClick}
+          >
             Errors
+          </div>
+          <div
+            className={classNames('nav-item', {
+              active: activePage === 'help',
+            })}
+            onClick={() => onPageSelection('help')}
+          >
+            Help
           </div>
           <div className="nav-icon-wrapper">
             <button
