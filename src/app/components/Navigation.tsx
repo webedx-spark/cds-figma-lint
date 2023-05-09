@@ -24,12 +24,8 @@ function Navigation(props: NavigationProps) {
   } = props;
   const [panelVisible, setPanelVisible] = React.useState(false);
 
-  const layersClick = () => {
-    onPageSelection('layers');
-  };
-
-  const bulkListClick = () => {
-    onPageSelection('bulk');
+  const errorsClick = () => {
+    onPageSelection('errors');
   };
 
   const handlePanelVisible = (boolean) => {
@@ -44,28 +40,10 @@ function Navigation(props: NavigationProps) {
     <div key="nav">
       <div className="navigation-wrapper">
         <nav className="nav">
-          <div
-            className={`nav-item ${activePage === 'layers' ? 'active' : ''}`}
-            onClick={layersClick}
-          >
-            Layers
-          </div>
-          <div
-            className={`nav-item ${activePage === 'bulk' ? 'active' : ''}`}
-            onClick={bulkListClick}
-          >
-            Errors by Category
+          <div className={`nav-item active`} onClick={errorsClick}>
+            Errors
           </div>
           <div className="nav-icon-wrapper">
-            <button
-              className="icon icon--refresh icon--button settings-button"
-              onClick={(event) => {
-                event.stopPropagation();
-                handleRefreshSelection();
-              }}
-            >
-              <RefreshIcon />
-            </button>
             <button
               className="icon icon--adjust icon--button settings-button"
               onClick={(event) => {

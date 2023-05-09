@@ -2,14 +2,14 @@
 
 import { convertColor, RGBToHex, determineFill } from './utils';
 
-import { createErrorObject } from './errors';
+import { createErrorObject, LintError } from './errors';
 import { LintBaseNodes } from '../types';
 import { suggestionForError } from './suggestion';
 
 // Lint border radius
 export function checkRadius(
   node: Exclude<LintBaseNodes, PolygonNode | StarNode | EllipseNode | TextNode>,
-  errors,
+  errors: Array<LintError>,
   radiusValues
 ) {
   let cornerType = node.cornerRadius;
@@ -23,7 +23,7 @@ export function checkRadius(
   // If the radius isn't even on all sides, check each corner.
   if (typeof cornerType === 'symbol') {
     if (radiusValues.indexOf(node.topLeftRadius) === -1) {
-      return errors.push(
+      errors.push(
         createErrorObject(
           node,
           'RADIUS',
@@ -32,7 +32,7 @@ export function checkRadius(
         )
       );
     } else if (radiusValues.indexOf(node.topRightRadius) === -1) {
-      return errors.push(
+      errors.push(
         createErrorObject(
           node,
           'RADIUS',
@@ -41,7 +41,7 @@ export function checkRadius(
         )
       );
     } else if (radiusValues.indexOf(node.bottomLeftRadius) === -1) {
-      return errors.push(
+      errors.push(
         createErrorObject(
           node,
           'RADIUS',
@@ -50,7 +50,7 @@ export function checkRadius(
         )
       );
     } else if (radiusValues.indexOf(node.bottomRightRadius) === -1) {
-      return errors.push(
+      errors.push(
         createErrorObject(
           node,
           'RADIUS',
@@ -63,7 +63,7 @@ export function checkRadius(
     }
   } else {
     if (radiusValues.indexOf(node.cornerRadius) === -1) {
-      return errors.push(
+      errors.push(
         createErrorObject(
           node,
           'RADIUS',
@@ -79,7 +79,7 @@ export function checkRadius(
 
 // Custom Lint rule that isn't being used yet!
 // that ensures our text fills aren't using styles (design tokens) meant for backgrounds.
-export function customCheckTextFills(node, errors) {
+export function customCheckTextFills(node, errors: Array<LintError>) {
   // Here we create an array of style keys (https://www.figma.com/plugin-docs/api/PaintStyle/#key)
   // that we want to make sure our text layers aren't using.
   const fillsToCheck = [
@@ -129,7 +129,10 @@ export function customCheckTextFills(node, errors) {
 }
 
 // Check for effects like shadows, blurs etc.
-export function checkEffects(node: LintBaseNodes | LineNode, errors) {
+export function checkEffects(
+  node: LintBaseNodes | LineNode,
+  errors: Array<LintError>
+) {
   if (node.effects.length && node.visible === true) {
     if (node.effectStyleId === '') {
       const effectsArray: Array<{
@@ -183,7 +186,7 @@ export function checkEffects(node: LintBaseNodes | LineNode, errors) {
 
       let currentStyle = effectsArray[0].value;
 
-      return errors.push(
+      errors.push(
         createErrorObject(node, 'EFFECT', 'Missing effects style', currentStyle)
       );
     } else {
@@ -192,7 +195,7 @@ export function checkEffects(node: LintBaseNodes | LineNode, errors) {
   }
 }
 
-export function checkFills(node: LintBaseNodes, errors) {
+export function checkFills(node: LintBaseNodes, errors: Array<LintError>) {
   if (
     (Array.isArray(node.fills) && node.fills.length && node.visible === true) ||
     typeof node.fills === 'symbol'
@@ -201,13 +204,13 @@ export function checkFills(node: LintBaseNodes, errors) {
     let fillStyleId = node.fillStyleId;
 
     if (typeof nodeFills === 'symbol') {
-      return errors.push(
+      errors.push(
         createErrorObject(node, 'FILL', 'Missing fill style', 'Mixed values')
       );
     }
 
     if (typeof fillStyleId === 'symbol') {
-      return errors.push(
+      errors.push(
         createErrorObject(node, 'FILL', 'Missing fill style', 'Mixed values')
       );
     }
@@ -218,7 +221,7 @@ export function checkFills(node: LintBaseNodes, errors) {
       node.fills[0].visible === true
     ) {
       // We may need an array to loop through fill types.
-      return errors.push(
+      errors.push(
         createErrorObject(
           node,
           'FILL',
@@ -232,7 +235,10 @@ export function checkFills(node: LintBaseNodes, errors) {
   }
 }
 
-export function checkStrokes(node: LintBaseNodes | LineNode, errors) {
+export function checkStrokes(
+  node: LintBaseNodes | LineNode,
+  errors: Array<LintError>
+) {
   if ('strokes' in node && node.strokes.length) {
     if (node.strokeStyleId === '' && node.visible === true) {
       let strokeObject = {
@@ -247,16 +253,14 @@ export function checkStrokes(node: LintBaseNodes | LineNode, errors) {
 
       let currentStyle = `${strokeObject.strokeFills} / ${strokeObject.strokeWeight} / ${strokeObject.strokeAlign}`;
 
-      return errors.push(
+      errors.push(
         createErrorObject(node, 'STROKE', 'Missing stroke style', currentStyle)
       );
-    } else {
-      return;
     }
   }
 }
 
-export function checkType(node: TextNode, errors) {
+export function checkType(node: TextNode, errors: Array<LintError>) {
   if (node.textStyleId === '' && node.visible === true) {
     let textObject = {
       font: '',
@@ -269,7 +273,7 @@ export function checkType(node: TextNode, errors) {
     let fontSize = node.fontName;
 
     if (typeof fontSize === 'symbol') {
-      return errors.push(
+      errors.push(
         createErrorObject(
           node,
           'TEXT',
@@ -280,7 +284,7 @@ export function checkType(node: TextNode, errors) {
     }
 
     if (typeof fontStyle === 'symbol') {
-      return errors.push(
+      errors.push(
         createErrorObject(
           node,
           'TEXT',
@@ -312,12 +316,12 @@ export function checkType(node: TextNode, errors) {
 
     let currentStyle = `${textObject.font} ${textObject.fontStyle} / ${textObject.fontSize} (${textObject.lineHeight} line-height)`;
 
-    return errors.push(
+    errors.push(
       createErrorObject(node, 'TEXT', 'Missing text style', currentStyle)
     );
-  } else {
-    return;
   }
+
+  return;
 }
 
 export type LintStyleType = StyleType | 'FILL';
@@ -342,7 +346,7 @@ const checkStyleId = (
 export function checkLibraryTypeStyles(
   cdsStyles: LibraryStyles,
   node: TextNode,
-  errors
+  errors: Array<LintError>
 ) {
   const hasStyles = checkStyleId(cdsStyles, 'TEXT', node.textStyleId);
 
@@ -356,18 +360,28 @@ export function checkLibraryTypeStyles(
 
     error.suggestion = suggestionForError(error);
 
-    return errors.push(error);
+    errors.push(error);
   }
+
+  return;
 }
 
 export function checkLibraryFillStyles(
   cdsStyles: LibraryStyles,
   node: LintBaseNodes,
-  errors
+  errors: Array<LintError>
 ) {
+  if (!node.visible) return;
+
+  let hasFills = false;
+
+  if (typeof node.fills !== 'symbol') {
+    hasFills = node.fills.filter((filter) => filter.visible).length > 0;
+  }
+
   const hasStyles = checkStyleId(cdsStyles, 'FILL', node.fillStyleId);
 
-  if (!hasStyles) {
+  if (!hasStyles && hasFills) {
     const error = createErrorObject(
       node,
       'FILL',
@@ -377,14 +391,16 @@ export function checkLibraryFillStyles(
 
     error.suggestion = suggestionForError(error);
 
-    return errors.push(error);
+    errors.push(error);
   }
+
+  return;
 }
 
 export function checkLibraryStrokeStyles(
   cdsStyles: LibraryStyles,
   node: LintBaseNodes | LineNode,
-  errors
+  errors: Array<LintError>
 ) {
   const hasStyles = checkStyleId(cdsStyles, 'FILL', node.strokeStyleId);
 
@@ -398,14 +414,16 @@ export function checkLibraryStrokeStyles(
 
     error.suggestion = suggestionForError(error);
 
-    return errors.push(error);
+    errors.push(error);
   }
+
+  return;
 }
 
 export function checkLibraryEffectsStyles(
   cdsStyles: LibraryStyles,
   node: LintBaseNodes | LineNode,
-  errors
+  errors: Array<LintError>
 ) {
   const hasStyles = checkStyleId(cdsStyles, 'EFFECT', node.strokeStyleId);
 
@@ -421,6 +439,8 @@ export function checkLibraryEffectsStyles(
 
     error.suggestion = suggestionForError(error);
 
-    return errors.push(error);
+    errors.push(error);
   }
+
+  return;
 }

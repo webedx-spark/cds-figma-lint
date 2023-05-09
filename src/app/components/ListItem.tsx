@@ -50,10 +50,26 @@ const listItemIcon: Record<Lowercase<NodeType>, React.ComponentType> = {
   vector: VectorIcon,
 };
 
-function ListItem(props) {
-  const { onClick } = props;
-  const node = props.node;
-  let childNodes = null;
+type Props = {
+  ignoredErrorArray: any;
+  activeNodeIds: any;
+  onClick: any;
+  selectedListItems: any;
+  errorArray: Array<any>;
+
+  node: SceneNode;
+};
+
+function ListItem(props: Props) {
+  const {
+    onClick,
+    ignoredErrorArray,
+    activeNodeIds,
+    selectedListItems,
+    errorArray,
+    node,
+  } = props;
+  let childNodes: Array<JSX.Element> = [];
   let errorObject = { errors: [] };
   let childErrorsCount = 0;
 
@@ -67,7 +83,7 @@ function ListItem(props) {
   }
 
   // The component calls itself if there are children
-  if (node.children && node.children.length) {
+  if ('children' in node && node.children.length) {
     // Find errors in this node's children.
     childErrorsCount = findNestedErrors(node);
 

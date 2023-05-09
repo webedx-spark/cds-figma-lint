@@ -34,7 +34,7 @@ export const normalizedStyles = styles.styles.reduce((stylesMap, style) => {
   return stylesMap;
 }, {} as Record<LintStyleType, Record<string, BaseStyle>>);
 
-export function lint(
+export function lintDeprecated(
   nodes: Readonly<Array<SceneNode>>,
   lockedParentNode?,
   options = defaultSettings
@@ -86,9 +86,13 @@ export function lint(
         // If the layer is locked, pass the optional parameter to the recursive Lint
         // function to indicate this layer is locked.
         if (isLayerLocked === true) {
-          nodeErrorArray.push(...lint(node['children'], true, lintOptions));
+          nodeErrorArray.push(
+            ...lintDeprecated(node['children'], true, lintOptions)
+          );
         } else {
-          nodeErrorArray.push(...lint(node['children'], false, lintOptions));
+          nodeErrorArray.push(
+            ...lintDeprecated(node['children'], false, lintOptions)
+          );
         }
       }
     }
@@ -99,12 +103,67 @@ export function lint(
   return nodeErrorArray;
 }
 
-function determineType(node: SceneNode, options: LintSettings) {
+/**
+ *
+ * TODO: it has to return a simplified data structure
+ * Array of errors
+ *
+ * @param nodes
+ * @param lockedParentNode
+ * @param options
+ * @returns
+ */
+export function lint(
+  nodes: Readonly<Array<SceneNode>>,
+  lockedParentNode?,
+  options = defaultSettings
+): Array<LintError> {
+  let nodeErrors: Array<LintError> = [];
+
+  const lintOptions = Object.assign(defaultSettings, options);
+
+  nodes.forEach((node) => {
+    let isLayerLocked;
+
+    // Don't lint locked layers or the children/grandchildren of locked layers.
+    if (lockedParentNode === undefined && node.locked === true) {
+      isLayerLocked = true;
+    } else if (lockedParentNode === undefined && node.locked === false) {
+      isLayerLocked = false;
+    } else if (lockedParentNode === false && node.locked === true) {
+      isLayerLocked = true;
+    } else {
+      isLayerLocked = lockedParentNode;
+    }
+
+    if (!isLayerLocked) {
+      const errors = determineType(node, lintOptions);
+      nodeErrors = nodeErrors.concat(errors);
+    }
+
+    if ('children' in node) {
+      const { children } = node;
+
+      if (children) {
+        nodeErrors = nodeErrors.concat(
+          lint(children, isLayerLocked, lintOptions)
+        );
+      }
+    }
+  });
+
+  return nodeErrors;
+}
+
+function determineType(
+  node: SceneNode,
+  options: LintSettings
+): Array<LintError> {
   switch (node.type) {
     case 'SLICE':
     case 'GROUP': {
       // Groups styles apply to their children so we can skip this node type.
-      let errors = [];
+      let errors: Array<LintError> = [];
       return errors;
     }
     // case 'BOOLEAN_OPERATION':
@@ -141,12 +200,13 @@ function determineType(node: SceneNode, options: LintSettings) {
     }
     default: {
       // Do nothing
+      return [];
     }
   }
 }
 
 function lintComponentRules(node: ComponentNode, options: LintSettings) {
-  let errors = [];
+  let errors: Array<LintError> = [];
 
   if (options.lintFillStyles) {
     checkLibraryFillStyles(normalizedStyles, node, errors);
@@ -172,7 +232,7 @@ function lintComponentRules(node: ComponentNode, options: LintSettings) {
 }
 
 function lintVariantWrapperRules(node: ComponentSetNode) {
-  let errors = [];
+  let errors: Array<LintError> = [];
 
   // checkFills(node, errors);
   console.log(`Skip linting: ${node.toString()}`);
@@ -181,7 +241,7 @@ function lintVariantWrapperRules(node: ComponentSetNode) {
 }
 
 function lintLineRules(node: LineNode, options: LintSettings) {
-  let errors = [];
+  let errors: Array<LintError> = [];
 
   if (options.lintEffectStyles) {
     checkLibraryEffectsStyles(normalizedStyles, node, errors);
@@ -199,7 +259,7 @@ function lintLineRules(node: LineNode, options: LintSettings) {
 }
 
 function lintFrameRules(node: FrameNode, options: LintSettings) {
-  let errors = [];
+  let errors: Array<LintError> = [];
 
   checkFills(node, errors);
   checkStrokes(node, errors);
@@ -210,7 +270,7 @@ function lintFrameRules(node: FrameNode, options: LintSettings) {
 }
 
 function lintTextRules(node: TextNode, options: LintSettings) {
-  let errors = [];
+  let errors: Array<LintError> = [];
 
   if (options.lintFillStyles) {
     checkLibraryFillStyles(normalizedStyles, node, errors);
@@ -243,7 +303,7 @@ function lintRectangleRules(
   node: RectangleNode | InstanceNode,
   options: LintSettings
 ) {
-  let errors = [];
+  let errors: Array<LintError> = [];
 
   if (options.lintFillStyles) {
     checkLibraryFillStyles(normalizedStyles, node, errors);
@@ -285,7 +345,7 @@ function lintShapeRules(
   node: PolygonNode | StarNode | EllipseNode,
   options: LintSettings
 ) {
-  let errors = [];
+  let errors: Array<LintError> = [];
 
   if (options.lintFillStyles) {
     checkLibraryFillStyles(normalizedStyles, node, errors);

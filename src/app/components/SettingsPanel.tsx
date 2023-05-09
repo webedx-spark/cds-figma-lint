@@ -56,7 +56,7 @@ function SettingsPanel(props: SettingsPanelProps) {
         variants={variants}
         key="settings-panel"
       >
-        <PanelHeader title={'Settings'} handleHide={handleHide}></PanelHeader>
+        <PanelHeader title="Settings" handleHide={handleHide}></PanelHeader>
 
         <div className="settings-wrapper">
           <div className="settings-row">

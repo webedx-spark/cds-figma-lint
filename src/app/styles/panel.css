@@ -1,6 +1,6 @@
 .panel {
   height: 100%;
-  width: 320px;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -41,10 +41,6 @@
   margin: auto 0 auto auto;
 }
 
-.panel-collapse-icon {
-  width: 16px;
-}
-
 .panel-body {
   flex: 1;
   overflow-y: auto;
@@ -52,7 +48,7 @@
 
 .panel-body-errors {
   padding-top: 16px;
-  height: 100%;
+  height: calc(100% - 100px);
 }
 
 .panel-footer {
@@ -275,4 +271,29 @@
 .settings-input:focus {
   border: 1px solid #18a0fb;
   border-radius: 2px;
+}
+
+.details {
+  padding: 0 16px;
+}
+
+.details__row {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details__row:last-of-type {
+  margin-bottom: 0;
+}
+
+.details__label {
+  margin-bottom: 8px;
+  color: #757575;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.panel-container {
+  padding: 0 16px;
 }

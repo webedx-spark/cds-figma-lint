@@ -1,13 +1,13 @@
 import type { LintError } from '../errors';
 import type { Suggestion } from '../suggestion';
 
-const defaultFontName = 'Source Sans Pro';
-const defaultWeight = 'Regular';
+const defaultFontFamily = 'Source Sans Pro';
+const defaultFontStyle = 'Regular';
 const defaultSize = '16';
 
 // Partial font styles map
 const FONT_MAP = {
-  [defaultFontName]: {
+  'Source Sans Pro': {
     Regular: {
       '28': {
         key: '24c392250c9ed967ff55eba9d8be2ec6a728f2eb',
@@ -40,7 +40,7 @@ const FONT_MAP = {
         name: 'H3 - Heading3/Bold',
       },
     },
-    Semibold: {
+    SemiBold: {
       '28': {
         key: '24c392250c9ed967ff55eba9d8be2ec6a728f2eb',
         name: 'H1 - Heading1/LG & MD - SemiBold',
@@ -69,7 +69,7 @@ export const text = (error: LintError): Suggestion | undefined => {
   if (!originalNode) return;
 
   let style: { name: string; key: string } =
-    FONT_MAP[defaultFontName][defaultWeight][defaultSize];
+    FONT_MAP[defaultFontFamily][defaultFontStyle][defaultSize];
 
   const { fontName, fontSize } = originalNode;
 
@@ -77,10 +77,10 @@ export const text = (error: LintError): Suggestion | undefined => {
     const { family, style: fontStyle } = fontName;
 
     // try to find style by font name and style (Regular|Bold etc)
-    const fontSizeMap = FONT_MAP[family][fontStyle];
+    const fontSizeMap = FONT_MAP[family]?.[fontStyle];
     if (fontSizeMap) {
       if (fontSize && typeof fontSize !== 'symbol') {
-        let style = fontSizeMap[fontSize.toString()];
+        style = fontSizeMap[fontSize.toString()];
 
         if (style) {
           return {
@@ -89,7 +89,7 @@ export const text = (error: LintError): Suggestion | undefined => {
             reason: 'Found exact match',
           };
         } else {
-          style = fontSizeMap['16'];
+          style = fontSizeMap[defaultSize];
 
           return {
             message: style.name,
@@ -100,7 +100,7 @@ export const text = (error: LintError): Suggestion | undefined => {
       }
     } else {
       // use default font name and maybe suggest style with same weight/size
-      let fontSizeMap = FONT_MAP[defaultFontName][fontStyle];
+      let fontSizeMap = FONT_MAP[defaultFontFamily][fontStyle];
 
       if (fontSizeMap) {
         style = fontSizeMap[fontSize];
@@ -114,7 +114,7 @@ export const text = (error: LintError): Suggestion | undefined => {
         }
       } else {
         // suggest by font size of default style and default weight
-        let fontSizeMap = FONT_MAP[defaultFontName][defaultWeight];
+        let fontSizeMap = FONT_MAP[defaultFontFamily][defaultFontStyle];
         if (fontSizeMap[fontSize]) {
           // font font size
           style = fontSizeMap[fontSize];

@@ -1,4 +1,4 @@
-import { ReactComponent as FastForwardIcon } from '../assets/forward-arrow.svg';
+import { ReactComponent as BackIcon } from '../assets/back.svg';
 
 type PanelHeaderProps = {
   title: string;
@@ -7,12 +7,12 @@ type PanelHeaderProps = {
 };
 
 function PanelHeader(props: PanelHeaderProps) {
-  const { title, actions, handleHide } = props;
+  const { actions, handleHide, title } = props;
   return (
     <div className="panel-header">
       <div className="panel-header__action">
         <button className="button--icon" onClick={handleHide}>
-          <FastForwardIcon className="panel-collapse-icon" />
+          <BackIcon className="panel-collapse-icon" />
         </button>
       </div>
       <div className="panel-header__title">{title}</div>

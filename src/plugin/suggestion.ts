@@ -23,6 +23,10 @@ const SuggestionsMap: Partial<
     }
   >
 > = {
+  INSTANCEFILL: {
+    suggestion: suggestions.rectangleFill,
+    fix: suggestions.rectangleFillFix,
+  },
   RECTANGLEFILL: {
     suggestion: suggestions.rectangleFill,
     fix: suggestions.rectangleFillFix,
@@ -45,8 +49,9 @@ export const suggestionForError = (
   error: LintError
 ): Suggestion | undefined => {
   const suggestionFunc = SuggestionsMap[`${error.node.type}${error.type}`];
+  const suggestion = suggestionFunc?.suggestion(error);
 
-  return suggestionFunc?.suggestion(error);
+  return suggestion;
 };
 
 export const suggestionFix = async (error: LintError) => {

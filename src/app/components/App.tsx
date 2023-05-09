@@ -2,27 +2,25 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import Navigation from './Navigation';
-import NodeList from './NodeList';
 import Preloader from './Preloader';
 import EmptyState from './EmptyState';
-import Panel from './Panel';
-import BulkErrorList from './BulkErrorList';
+import ErrorList from './ErrorList';
 
 import '../styles/figma.ds.css';
 import '../styles/ui.css';
 import '../styles/empty-state.css';
 import { MessageType } from '../../types';
-import type { NodeErrors } from '../../plugin/lint';
+import { LintError } from '../../plugin/errors';
+import ErrorDetails from './ErrorDetails';
+import TotalErrorCount from './TotalErrorCount';
 
 const App = ({}) => {
-  const [errorArray, setErrorArray] = useState<Array<NodeErrors>>([]);
+  const [errorArray, setErrorArray] = useState<Array<LintError>>([]);
   const [activePage, setActivePage] = useState('page');
-  const [ignoredErrorArray, setIgnoreErrorArray] = useState([]);
-  const [activeError, setActiveError] = React.useState({});
-  const [selectedNode, setSelectedNode] = React.useState<SceneNode>();
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [nodeArray, setNodeArray] = useState<SceneNode[]>([]);
-  const [selectedListItems, setSelectedListItem] = React.useState([]);
+  const [ignoredErrorArray, setIgnoreErrorArray] = useState<Array<LintError>>(
+    []
+  );
+  const [activeError, setActiveError] = React.useState<number>();
   const [activeNodeIds, setActiveNodeIds] = React.useState([]);
   const [lintVectors, setLintVectors] = useState(false);
   const [initialLoad, setInitialLoad] = React.useState(false);
@@ -38,26 +36,26 @@ const App = ({}) => {
     }
   });
 
-  const updateSelectedList = (id) => {
-    setSelectedListItem((selectedListItems) => {
-      selectedListItems.splice(0, selectedListItems.length);
-      return selectedListItems.concat(id);
-    });
+  // const updateSelectedList = (id) => {
+  //   setSelectedListItem((selectedListItems) => {
+  //     selectedListItems.splice(0, selectedListItems.length);
+  //     return selectedListItems.concat(id);
+  //   });
 
-    setActiveNodeIds((activeNodeIds) => {
-      if (activeNodeIds.includes(id)) {
-        // Remove this node if it exists in the array already from intial run.
-        // Don't ignore it if there's only one layer total.
-        if (activeNodeIds.length !== 1) {
-          return activeNodeIds.filter((activeNodeId) => activeNodeId !== id);
-        } else {
-          return activeNodeIds;
-        }
-      }
-      // Since the ID is not already in the list, we want to add it
-      return activeNodeIds.concat(id);
-    });
-  };
+  //   setActiveNodeIds((activeNodeIds) => {
+  //     if (activeNodeIds.includes(id)) {
+  //       // Remove this node if it exists in the array already from intial run.
+  //       // Don't ignore it if there's only one layer total.
+  //       if (activeNodeIds.length !== 1) {
+  //         return activeNodeIds.filter((activeNodeId) => activeNodeId !== id);
+  //       } else {
+  //         return activeNodeIds;
+  //       }
+  //     }
+  //     // Since the ID is not already in the list, we want to add it
+  //     return activeNodeIds.concat(id);
+  //   });
+  // };
 
   const updateNavigation = (page) => {
     setActivePage(page);
@@ -73,8 +71,8 @@ const App = ({}) => {
     );
   };
 
-  const updateActiveError = (error) => {
-    setActiveError(error);
+  const updateActiveError = (error: LintError, index: number) => {
+    setActiveError(index);
   };
 
   const ignoreAll = (errors) => {
@@ -96,12 +94,8 @@ const App = ({}) => {
     }
   };
 
-  const updateErrorArray = (errors: Array<NodeErrors>) => {
+  const updateErrorArray = (errors: Array<LintError>) => {
     setErrorArray(errors);
-  };
-
-  const updateVisible = (val) => {
-    setIsVisible(val);
   };
 
   const updateLintRules = (boolean) => {
@@ -156,13 +150,27 @@ const App = ({}) => {
     }
   }
 
-  function updateVisibility() {
-    if (isVisible === true) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  }
+  const handleNextError = () => {
+    setActiveError((prev = 0) => (prev + 1) % errorArray.length);
+  };
+
+  const handlePrevError = () => {
+    setActiveError((prev = 0) => {
+      return prev - 1 > 0 ? prev - 1 : errorArray.length - 1;
+    });
+  };
+
+  const handleAutoFix = () => {
+    parent.postMessage(
+      {
+        pluginMessage: {
+          type: MessageType.AUTOFIX,
+          errors: errorArray,
+        },
+      },
+      '*'
+    );
+  };
 
   // If no layer is selected after 3 seconds, show the empty state.
   setTimeout(function () {
@@ -193,36 +201,18 @@ const App = ({}) => {
 
     window.onmessage = (event) => {
       const { type, message, errors, storage } = event.data.pluginMessage;
+      console.log('onmessage', type);
 
       // Plugin code returns this message after we return the first node
       // for performance, then we lint the remaining layers.
       if (type === 'complete') {
-        let nodeObject = JSON.parse(message);
         updateErrorArray(errors);
-
-        parent.postMessage(
-          {
-            pluginMessage: {
-              type: MessageType.FETCH_LAYER_DATA,
-              id: nodeObject[0].id,
-              nodeArray: nodeObject,
-            },
-          },
-          '*'
-        );
 
         setInitialLoad(true);
       } else if (type === 'first node') {
         let nodeObject = JSON.parse(message);
 
-        setNodeArray(nodeObject);
         updateErrorArray(errors);
-
-        // Set this node as selected in the side menu
-        setSelectedListItem((selectedListItems) => {
-          selectedListItems.splice(0, selectedListItems.length);
-          return selectedListItems.concat(nodeObject[0].id);
-        });
 
         setActiveNodeIds((activeNodeIds) => {
           return activeNodeIds.concat(nodeObject[0].id);
@@ -235,17 +225,6 @@ const App = ({}) => {
             pluginMessage: {
               type: MessageType.LINT_ALL,
               nodes: nodeObject,
-            },
-          },
-          '*'
-        );
-
-        parent.postMessage(
-          {
-            pluginMessage: {
-              type: MessageType.FETCH_LAYER_DATA,
-              id: nodeObject[0].id,
-              nodeArray: nodeObject,
             },
           },
           '*'
@@ -269,13 +248,12 @@ const App = ({}) => {
         );
       } else if (type === 'fetched layer') {
         // Grabs the properties of the first layer.
-        setSelectedNode(() => JSON.parse(message));
-
+        // setSelectedNode(() => JSON.parse(message));
         // Ask the controller to lint the layers for errors.
-        parent.postMessage(
-          { pluginMessage: { type: MessageType.UPDATE_ERRORS } },
-          '*'
-        );
+        // parent.postMessage(
+        //   { pluginMessage: { type: MessageType.UPDATE_ERRORS } },
+        //   '*'
+        // );
       } else if (type === 'updated errors') {
         // Once the errors are returned, update the error array.
         updateErrorArray(errors);
@@ -295,29 +273,32 @@ const App = ({}) => {
       />
       {activeNodeIds.length !== 0 ? (
         <div>
-          {activePage === 'layers' ? (
-            <NodeList
-              onErrorUpdate={updateActiveError}
-              onVisibleUpdate={updateVisible}
-              onSelectedListUpdate={updateSelectedList}
-              visibility={isVisible}
-              nodeArray={nodeArray}
-              errorArray={errorArray}
-              ignoredErrorArray={ignoredErrorArray}
-              selectedListItems={selectedListItems}
-              activeNodeIds={activeNodeIds}
-            />
-          ) : (
-            <BulkErrorList
-              errorArray={errorArray}
-              ignoredErrorArray={ignoredErrorArray}
-              onIgnoredUpdate={updateIgnoredErrors}
-              onIgnoreAll={ignoreAll}
-              ignoredErrors={ignoredErrorArray}
-              onClick={updateVisibility}
-              onSelectedListUpdate={updateSelectedList}
-            />
-          )}
+          <ErrorList
+            errorArray={errorArray}
+            ignoredErrorArray={ignoredErrorArray}
+            onIgnoredUpdate={updateIgnoredErrors}
+            onIgnoreAll={ignoreAll}
+            ignoredErrors={ignoredErrorArray}
+            onSelect={updateActiveError}
+          />
+          <div className="footer sticky-footer">
+            <TotalErrorCount totalErrorNumber={errorArray.length} />
+            <div className="actions-row">
+              <button
+                className="button button--secondary"
+                onClick={() => onRunApp()}
+              >
+                Re-run
+              </button>
+              <button
+                className="button button--primary button--flex"
+                onClick={handleAutoFix}
+              >
+                Auto-fix {errorArray.length}{' '}
+                {errorArray.length === 1 ? 'error' : 'errors'}
+              </button>
+            </div>
+          </div>
         </div>
       ) : timedLoad === false ? (
         <Preloader />
@@ -325,20 +306,13 @@ const App = ({}) => {
         <EmptyState onHandleRunApp={onRunApp} />
       )}
 
-      {Object.keys(activeError).length !== 0 &&
-      errorArray.length &&
-      selectedNode ? (
-        <Panel
-          visibility={isVisible}
-          node={selectedNode}
-          errorArray={errorArray}
-          onIgnoredUpdate={updateIgnoredErrors}
-          onIgnoreAll={ignoreAll}
-          ignoredErrors={ignoredErrorArray}
-          onClick={updateVisibility}
-          onSelectedListUpdate={updateSelectedList}
-        />
-      ) : null}
+      <ErrorDetails
+        isVisible={typeof activeError !== 'undefined'}
+        error={errorArray[activeError || 0]}
+        onClose={() => setActiveError(undefined)}
+        onNext={handleNextError}
+        onPrev={handlePrevError}
+      />
     </div>
   );
 };

@@ -121,10 +121,9 @@ body {
 }
 
 .bulk-errors-list {
-  height: calc(100vh - 46px);
+  height: calc(100vh - 41px);
   flex: 1;
   margin: 0;
-  padding: 0 0 24px;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;

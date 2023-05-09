@@ -4,6 +4,7 @@ import type { Suggestion } from './suggestion';
 type SerializedNode = {
   id: LintNodes['id'];
   type: LintNodes['type'];
+  name: LintNodes['name'];
 };
 
 export type LintError = {
@@ -31,6 +32,7 @@ export const createErrorObject = (
     node: {
       id: node.id,
       type: node.type,
+      name: node.name,
     },
   };
 

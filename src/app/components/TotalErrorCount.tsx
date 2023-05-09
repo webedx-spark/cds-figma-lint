@@ -1,31 +1,23 @@
-import * as React from "react";
+import * as React from 'react';
 
-function TotalErrorCount(props) {
-  let totalErrorCount = determineCount(props.errorArray);
+type Props = {
+  totalErrorNumber: number;
+};
 
-  function determineCount(array) {
-    let count = 0;
-
-    array.forEach(arrayItem => {
-      if (arrayItem.errors) {
-        count = count + arrayItem.errors.length;
-      }
-    });
-
-    return count;
-  }
+function TotalErrorCount(props: Props) {
+  const { totalErrorNumber } = props;
 
   return (
     <React.Fragment>
-      {totalErrorCount > 0 ? (
+      {totalErrorNumber > 0 ? (
         <div className="totals-row">
           <div className="section-title">Total Errors</div>
-          <span className="error-count">{totalErrorCount}</span>
+          <span className="error-count">{totalErrorNumber}</span>
         </div>
       ) : (
         <div className="totals-row totals-row--success">
           <div className="section-title">
-            {" "}
+            {' '}
             🎉 Yay! No errors in the selection.
           </div>
           <span className="error-count success">
