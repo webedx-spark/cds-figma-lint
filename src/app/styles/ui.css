@@ -406,4 +406,5 @@ body {
 
 .completion__overflow {
   overflow: auto;
+  max-height: 67vh;
 }
