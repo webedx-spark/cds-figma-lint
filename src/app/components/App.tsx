@@ -231,22 +231,28 @@ const App = ({}) => {
           '*'
         );
       } else if (type === 'fetched storage') {
-        let clientStorage = JSON.parse(storage);
+        if (storage) {
+          let clientStorage = JSON.parse(storage);
 
-        setIgnoreErrorArray((ignoredErrorArray) => [
-          ...ignoredErrorArray,
-          ...clientStorage,
-        ]);
+          setIgnoreErrorArray((ignoredErrorArray) => [
+            ...ignoredErrorArray,
+            ...clientStorage,
+          ]);
+        }
       } else if (type === 'fetched active page') {
-        let clientStorage = JSON.parse(storage);
-        setActivePage(clientStorage);
+        if (storage) {
+          let clientStorage = JSON.parse(storage);
+          setActivePage(clientStorage);
+        }
       } else if (type === 'reset storage') {
-        let clientStorage = JSON.parse(storage);
-        setIgnoreErrorArray([...clientStorage]);
-        parent.postMessage(
-          { pluginMessage: { type: MessageType.UPDATE_ERRORS } },
-          '*'
-        );
+        if (storage) {
+          let clientStorage = JSON.parse(storage);
+          setIgnoreErrorArray([...clientStorage]);
+          parent.postMessage(
+            { pluginMessage: { type: MessageType.UPDATE_ERRORS } },
+            '*'
+          );
+        }
       } else if (type === 'fetched layer') {
         // Grabs the properties of the first layer.
         // setSelectedNode(() => JSON.parse(message));

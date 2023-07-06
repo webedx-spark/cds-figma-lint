@@ -73,10 +73,12 @@ function SettingsForm() {
     const { type, message, errors, storage } = event.data.pluginMessage;
 
     if (type === MessageType.SAVED_SETTINGS) {
-      let clientStorage = JSON.parse(storage);
-      // update only if not empty
-      if (clientStorage && Object.keys(clientStorage).length !== 0) {
-        setValues(deserializeValues(clientStorage));
+      if (storage) {
+        let clientStorage = JSON.parse(storage);
+        // update only if not empty
+        if (clientStorage && Object.keys(clientStorage).length !== 0) {
+          setValues(deserializeValues(clientStorage));
+        }
       }
     }
   };

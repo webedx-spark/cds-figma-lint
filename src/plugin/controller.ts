@@ -63,7 +63,11 @@ figma.ui.onmessage = async (msg) => {
   if (msg.type === MessageType.UPDATE_ERRORS) {
     const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
 
-    const errors = lint(originalNodeTree, false, JSON.parse(settings));
+    const errors = lint(
+      originalNodeTree,
+      false,
+      settings && JSON.parse(settings)
+    );
 
     figma.ui.postMessage({
       type: 'updated errors',
@@ -128,11 +132,21 @@ figma.ui.onmessage = async (msg) => {
   }
 
   if (msg.type == MessageType.FETCH_SETTINGS) {
-    const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+    let settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+
+    // if no settings found save default setting to the storage
+    if (!settings) {
+      await figma.clientStorage.setAsync(
+        StorageKeys.SETTINGS,
+        JSON.stringify(defaultSettings)
+      );
+
+      settings = defaultSettings;
+    }
 
     figma.ui.postMessage({
       type: MessageType.SAVED_SETTINGS,
-      storage: settings,
+      storage: JSON.stringify(settings),
     });
   }
 
@@ -185,7 +199,7 @@ figma.ui.onmessage = async (msg) => {
     // Pass the array back to the UI to be displayed.
     figma.ui.postMessage({
       type: 'complete',
-      errors: lint(originalNodeTree, false, JSON.parse(settings)),
+      errors: lint(originalNodeTree, false, settings && JSON.parse(settings)),
       message: serializeNodes(msg.nodes),
     });
 
@@ -216,7 +230,7 @@ figma.ui.onmessage = async (msg) => {
       figma.ui.postMessage({
         type: 'first node',
         message: serializeNodes(nodes),
-        errors: lint(firstNode, false, JSON.parse(settings)),
+        errors: lint(firstNode, false, settings && JSON.parse(settings)),
       });
 
       figma.clientStorage.getAsync('storedErrorsToIgnore').then((result) => {
@@ -249,7 +263,11 @@ figma.ui.onmessage = async (msg) => {
       const settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
 
       // Pass the array back to the UI to be displayed.
-      const newErrors = lint(originalNodeTree, false, JSON.parse(settings));
+      const newErrors = lint(
+        originalNodeTree,
+        false,
+        settings && JSON.parse(settings)
+      );
 
       figma.ui.postMessage({
         type: 'updated errors',
