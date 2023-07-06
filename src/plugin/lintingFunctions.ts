@@ -350,7 +350,7 @@ export function checkLibraryTypeStyles(
 ) {
   const hasStyles = checkStyleId(cdsStyles, 'TEXT', node.textStyleId);
 
-  if (!hasStyles) {
+  if (node.textStyleId && !hasStyles) {
     const error = createErrorObject(
       node,
       'TEXT',
@@ -404,7 +404,7 @@ export function checkLibraryStrokeStyles(
 ) {
   const hasStyles = checkStyleId(cdsStyles, 'FILL', node.strokeStyleId);
 
-  if (!hasStyles) {
+  if (node.strokeStyleId && !hasStyles) {
     const error = createErrorObject(
       node,
       'STROKE',
@@ -425,9 +425,9 @@ export function checkLibraryEffectsStyles(
   node: LintBaseNodes | LineNode,
   errors: Array<LintError>
 ) {
-  const hasStyles = checkStyleId(cdsStyles, 'EFFECT', node.strokeStyleId);
+  const hasStyles = checkStyleId(cdsStyles, 'EFFECT', node.effectStyleId);
 
-  if (!hasStyles) {
+  if (node.effectStyleId && !hasStyles) {
     const error = createErrorObject(
       node,
       'EFFECT',
