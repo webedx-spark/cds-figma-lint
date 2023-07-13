@@ -109,7 +109,7 @@ if (figma.editorType === 'dev' && figma.mode === 'codegen') {
   });
 }
 
-if (figma.editorType === 'figma' && figma.mode === 'inspect') {
+if (figma.editorType === 'figma' && figma.mode === 'default') {
   figma.showUI(__html__, { width: 360, height: 580 });
 }
 
