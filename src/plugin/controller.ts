@@ -20,22 +20,30 @@ const extractColorTokens = (node: SceneNode) => {
   const colorStyles: Array<{ name: string; property: string }> = [];
 
   if (isSceneNode(node)) {
-    if ('fillStyleId' in node && node.type === 'TEXT') {
+    if ('fillStyleId' in node) {
+      let property = '';
+
+      if (node.type === 'TEXT') {
+        property = 'color';
+      }
+
+      if (
+        node.type === 'RECTANGLE' ||
+        node.type === 'ELLIPSE' ||
+        node.type === 'POLYGON' ||
+        node.type === 'STAR' ||
+        node.type === 'VECTOR' ||
+        node.type === 'INSTANCE' ||
+        node.type === 'FRAME'
+      ) {
+        property = 'background-color';
+      }
+
       const colorStyle = figma.getStyleById(node.fillStyleId as string);
       if (colorStyle) {
         colorStyles.push({
           name: `${colorStyle.name.replace('/', '-')}`,
-          property: 'color',
-        });
-      }
-    }
-
-    if ('backgroundStyleId' in node) {
-      const bgStyle = figma.getStyleById(node.backgroundStyleId as string);
-      if (bgStyle) {
-        colorStyles.push({
-          name: bgStyle.name.replace('/', '-'),
-          property: 'background-color',
+          property: property,
         });
       }
     }
