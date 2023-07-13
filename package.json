@@ -13,12 +13,13 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "framer-motion": "^6.3.0",
+    "just-kebab-case": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7"
   },
   "devDependencies": {
-    "@figma/plugin-typings": "*",
+    "@figma/plugin-typings": "1.70",
     "@types/node": "^18.8.4",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",

@@ -4,18 +4,106 @@ import { LintError } from './errors';
 import { lint } from './lint';
 import { suggestionFix } from './suggestion';
 import { serializeNodes } from './utils';
+import kebabCase from 'just-kebab-case';
 
 function isSceneNode(node: BaseNode): node is SceneNode {
   return node.type !== 'PAGE' && node.type !== 'DOCUMENT';
 }
-
-figma.showUI(__html__, { width: 360, height: 580 });
 
 let borderRadiusArray = [0, 2, 4, 8, 16, 24, 32];
 let originalNodeTree: Array<SceneNode> = [];
 let lintVectors = false;
 
 figma.skipInvisibleInstanceChildren = true;
+
+const extractColorTokens = (node: SceneNode) => {
+  const colorStyles: Array<{ name: string; property: string }> = [];
+
+  if (isSceneNode(node)) {
+    if ('fillStyleId' in node && node.type === 'TEXT') {
+      const colorStyle = figma.getStyleById(node.fillStyleId as string);
+      if (colorStyle) {
+        colorStyles.push({
+          name: `${colorStyle.name.replace('/', '-')}`,
+          property: 'color',
+        });
+      }
+    }
+
+    if ('backgroundStyleId' in node) {
+      const bgStyle = figma.getStyleById(node.backgroundStyleId as string);
+      if (bgStyle) {
+        colorStyles.push({
+          name: bgStyle.name.replace('/', '-'),
+          property: 'background-color',
+        });
+      }
+    }
+  }
+
+  return colorStyles;
+};
+
+const extractTypographyTokens = (node: SceneNode) => {
+  const typographyStyles: Array<{ name: string; property: string }> = [];
+
+  if (isSceneNode(node) && node.type === 'TEXT') {
+    if ('textStyleId' in node) {
+      const textStyle = figma.getStyleById(node.textStyleId as string);
+      if (textStyle) {
+        typographyStyles.push({
+          name: textStyle.name
+            .replace(' / ', '-')
+            .replace('/', '-')
+            .replace(' ', ''),
+          property: 'font',
+        });
+      }
+    }
+  }
+
+  return typographyStyles;
+};
+
+// Make sure that we're in Dev Mode and running codegen
+if (figma.editorType === 'dev' && figma.mode === 'codegen') {
+  // Register a callback to the "generate" event
+  figma.codegen.on('generate', ({ node }) => {
+    const sections: CodegenResult[] = [];
+    const colorStyles = extractColorTokens(node);
+    const typographyStyles = extractTypographyTokens(node);
+
+    if (colorStyles.length) {
+      sections.push({
+        title: 'CDS - Color',
+        language: 'TYPESCRIPT',
+        code: `${colorStyles
+          .map(({ name, property }) => {
+            return `${property}: var(--cds-color-${kebabCase(name)});`;
+          })
+          .join('\n')}`,
+      });
+    }
+
+    if (typographyStyles.length) {
+      sections.push({
+        title: 'CDS - Typography',
+        language: 'TYPESCRIPT',
+        code: `${typographyStyles
+          .map(({ name, property }) => {
+            return `${property}: var(--cds-typography-${kebabCase(name)});`;
+          })
+          .join('\n')}`,
+      });
+    }
+
+    return sections;
+  });
+}
+
+if (figma.editorType === 'figma' && figma.mode === 'inspect') {
+  figma.showUI(__html__, { width: 360, height: 580 });
+}
 
 figma.ui.onmessage = async (msg) => {
   if (msg.type === 'close') {
@@ -132,21 +220,22 @@ figma.ui.onmessage = async (msg) => {
   }
 
   if (msg.type == MessageType.FETCH_SETTINGS) {
-    let settings = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+    let settingsJSON = await figma.clientStorage.getAsync(StorageKeys.SETTINGS);
+
+    if (settingsJSON) {
+      console.log('Settings JSON: ', JSON.parse(settingsJSON));
+    }
 
     // if no settings found save default setting to the storage
-    if (!settings) {
-      await figma.clientStorage.setAsync(
-        StorageKeys.SETTINGS,
-        JSON.stringify(defaultSettings)
-      );
+    if (!settingsJSON) {
+      settingsJSON = JSON.stringify(defaultSettings);
 
-      settings = defaultSettings;
+      await figma.clientStorage.setAsync(StorageKeys.SETTINGS, settingsJSON);
     }
 
     figma.ui.postMessage({
       type: MessageType.SAVED_SETTINGS,
-      storage: JSON.stringify(settings),
+      storage: settingsJSON,
     });
   }
 

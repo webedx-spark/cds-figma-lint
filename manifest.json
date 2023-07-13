@@ -4,5 +4,7 @@
   "api": "1.0.0",
   "main": "dist/plugin/controller.mjs",
   "ui": "dist/app/index.html",
-  "editorType": ["figma"]
+  "editorType": ["figma", "dev"],
+  "capabilities": ["inspect", "codegen"],
+  "codegenLanguages": [{ "label": "CSSVariables", "value": "cssVariables" }]
 }

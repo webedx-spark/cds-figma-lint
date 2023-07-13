@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@figma/plugin-typings': '*'
+  '@figma/plugin-typings': '1.70'
   '@types/node': ^18.8.4
   '@types/react': ^18.0.17
   '@types/react-dom': ^18.0.6
@@ -10,6 +10,7 @@ specifiers:
   concurrently: ^7.4.0
   framer-motion: ^6.3.0
   husky: ^8.0.1
+  just-kebab-case: ^4.2.0
   lint-staged: ^13.0.3
   prettier: ^2.7.1
   react: ^18.2.0
@@ -24,12 +25,13 @@ specifiers:
 dependencies:
   classnames: 2.3.2
   framer-motion: 6.5.1_biqbaboplfbrettd7655fr4n2y
+  just-kebab-case: 4.2.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-markdown: 8.0.7_iapumuv4e6jcjznwuxpf4tt22e
 
 devDependencies:
-  '@figma/plugin-typings': 1.53.0
+  '@figma/plugin-typings': 1.70.0
   '@types/node': 18.8.4
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
@@ -344,8 +346,8 @@ packages:
     dev: true
     optional: true
 
-  /@figma/plugin-typings/1.53.0:
-    resolution: {integrity: sha512-8XiX9iaguKE0YvcAon3hWv28rzJXe12OvKi6+ohPyLnF28f6msmyn/xVcoUuBCPAiMIDwOjlJHS+vwyzCiF9eA==}
+  /@figma/plugin-typings/1.70.0:
+    resolution: {integrity: sha512-dN/ehVt40WDSjuf6+vICw1Btq8yKNvKSo5xl1qk8jfRaOdaN88QOYgODEVUGp9gSzlyUEhUKng0YMKg/doBpEg==}
     dev: true
 
   /@jridgewell/gen-mapping/0.1.1:
@@ -1466,6 +1468,10 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
     dev: true
+
+  /just-kebab-case/4.2.0:
+    resolution: {integrity: sha512-p2BdO7o4BI+pMun3J+dhaOfYan5JsZrw9wjshRjkWY9+p+u+kKSMhNWYnot2yHDR9CSahZ9iT3dcqJ+V72qHMw==}
+    dev: false
 
   /kleur/4.1.5:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
