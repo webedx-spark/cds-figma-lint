@@ -14,6 +14,7 @@
     "classnames": "^2.2.6",
     "framer-motion": "^6.3.0",
     "just-kebab-case": "^4.2.0",
+    "just-safe-get": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7"

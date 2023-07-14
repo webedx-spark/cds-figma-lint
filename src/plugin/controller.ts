@@ -5,9 +5,25 @@ import { lint } from './lint';
 import { suggestionFix } from './suggestion';
 import { serializeNodes } from './utils';
 import kebabCase from 'just-kebab-case';
+import get from 'just-safe-get';
+
+// Manually import tokens until available in @couresera/cds-design-tokens
+import semanticTokens from './semantic-tokens.json';
+import globalTokens from './global-tokens.json';
+
+const spacingTokensByValue = Object.entries(globalTokens.spacing).reduce(
+  (acc, [key, value]) => {
+    acc[value.value] = key;
+    return acc;
+  }
+);
 
 function isSceneNode(node: BaseNode): node is SceneNode {
   return node.type !== 'PAGE' && node.type !== 'DOCUMENT';
+}
+
+function isAutoLayout(node: any): node is AutoLayoutMixin {
+  return 'layoutMode' in node;
 }
 
 let borderRadiusArray = [0, 2, 4, 8, 16, 24, 32];
@@ -17,7 +33,8 @@ let lintVectors = false;
 figma.skipInvisibleInstanceChildren = true;
 
 const extractColorTokens = (node: SceneNode) => {
-  const colorStyles: Array<{ name: string; property: string }> = [];
+  const colorStyles: Array<{ name: string; property: string; global: string }> =
+    [];
 
   if (isSceneNode(node)) {
     if ('fillStyleId' in node) {
@@ -40,8 +57,16 @@ const extractColorTokens = (node: SceneNode) => {
       }
 
       const colorStyle = figma.getStyleById(node.fillStyleId as string);
+
       if (colorStyle) {
+        const tokenPath = colorStyle.name.replaceAll('/', '.');
+        const token = get(semanticTokens, `color.${tokenPath}`);
+
         colorStyles.push({
+          global: `${token?.value
+            .replace('color.', '')
+            .replace(/[\{|\}|]/g, '')
+            .replace('.', '.[')}]`, // serialize global token
           name: `${colorStyle.name.replace('/', '-')}`,
           property: property,
         });
@@ -73,6 +98,35 @@ const extractTypographyTokens = (node: SceneNode) => {
   return typographyStyles;
 };
 
+const extractSpacingTokens = (node: SceneNode) => {
+  const spacingStyles: Array<{ value: number[]; property: string }> = [];
+
+  console.log(node, isAutoLayout(node));
+
+  if (isSceneNode(node) && isAutoLayout(node)) {
+    const {
+      paddingLeft,
+      paddingBottom,
+      paddingRight,
+      paddingTop,
+      itemSpacing,
+    } = node;
+    spacingStyles.push({
+      value: [paddingTop, paddingRight, paddingBottom, paddingLeft],
+      property: 'padding',
+    });
+
+    if (itemSpacing) {
+      spacingStyles.push({
+        value: [itemSpacing],
+        property: 'gap',
+      });
+    }
+  }
+
+  return spacingStyles;
+};
+
 // Make sure that we're in Dev Mode and running codegen
 if (figma.editorType === 'dev' && figma.mode === 'codegen') {
   // Register a callback to the "generate" event
@@ -80,28 +134,71 @@ if (figma.editorType === 'dev' && figma.mode === 'codegen') {
     const sections: CodegenResult[] = [];
     const colorStyles = extractColorTokens(node);
     const typographyStyles = extractTypographyTokens(node);
+    const spacing = extractSpacingTokens(node);
 
-    if (colorStyles.length) {
+    if (colorStyles.length || spacing.length) {
       sections.push({
-        title: 'CDS - Color',
+        title: 'CDS ThemeContext',
         language: 'TYPESCRIPT',
-        code: `${colorStyles
-          .map(({ name, property }) => {
-            return `${property}: var(--cds-color-${kebabCase(name)});`;
-          })
-          .join('\n')}`,
+        code: [
+          colorStyles.length > 0
+            ? colorStyles
+                .map(({ property, global }) => {
+                  return `${property}: \${theme.palette.${global}};`;
+                })
+                .join('\n')
+            : undefined,
+          spacing.length > 0
+            ? spacing
+                .map(
+                  ({ property, value }) =>
+                    `${property}: \${theme.spacing(${value.join(', ')})};`
+                )
+                .join('\n')
+            : undefined,
+        ]
+          .filter(Boolean)
+          .join('\n'),
       });
     }
 
-    if (typographyStyles.length) {
+    if (colorStyles.length || typographyStyles.length) {
       sections.push({
-        title: 'CDS - Typography',
+        title: 'CDS CSS Variables (Beta)',
         language: 'TYPESCRIPT',
-        code: `${typographyStyles
-          .map(({ name, property }) => {
-            return `${property}: var(--cds-typography-${kebabCase(name)});`;
-          })
-          .join('\n')}`,
+        code: [
+          // typographyStyles.length > 0
+          //   ? typographyStyles
+          //       .map(({ name, property }) => {
+          //         return `${property}: var(--cds-typography-${kebabCase(
+          //           name
+          //         )});`;
+          //       })
+          //       .join('\n')
+          //   : '',
+          colorStyles.length > 0
+            ? colorStyles
+                .map(({ name, property }) => {
+                  return `${property}: var(--cds-color-${kebabCase(name)});`;
+                })
+                .join('\n')
+            : undefined,
+          spacing.length > 0
+            ? spacing
+                .map(
+                  ({ property, value }) =>
+                    `${property}: ${value
+                      .map(
+                        (spacing) =>
+                          `var(--cds-spacing-${spacingTokensByValue[spacing]})`
+                      )
+                      .join(' ')};`
+                )
+                .join('\n')
+            : undefined,
+        ]
+          .filter(Boolean)
+          .join('\n'),
       });
     }
 

@@ -1,0 +1,722 @@
+{
+  "lineHeight": {
+    "display1": {
+      "lg": {
+        "value": "{lineHeight.1150}",
+        "type": "lineHeights"
+      },
+      "sm": {
+        "value": "{lineHeight.900}",
+        "type": "lineHeights"
+      },
+      "xs": {
+        "value": "{lineHeight.700}",
+        "type": "lineHeights"
+      }
+    },
+    "display2": {
+      "lg": {
+        "value": "{lineHeight.650}",
+        "type": "lineHeights"
+      },
+      "sm": {
+        "value": "{lineHeight.600}",
+        "type": "lineHeights"
+      },
+      "xs": {
+        "value": "{lineHeight.500}",
+        "type": "lineHeights"
+      }
+    },
+    "title1": {
+      "lg": {
+        "value": "{lineHeight.450}",
+        "type": "lineHeights"
+      },
+      "xs": {
+        "value": "{lineHeight.400}",
+        "type": "lineHeights"
+      }
+    },
+    "title2": {
+      "value": "{lineHeight.350}",
+      "type": "lineHeights"
+    },
+    "title3": {
+      "value": "{lineHeight.300}",
+      "type": "lineHeights"
+    },
+    "title4": {
+      "value": "{lineHeight.250}",
+      "type": "lineHeights"
+    },
+    "body1": {
+      "value": "{lineHeight.300}",
+      "type": "lineHeights"
+    },
+    "body2": {
+      "value": "{lineHeight.250}",
+      "type": "lineHeights"
+    }
+  },
+  "letterSpacing": {
+    "display1": {
+      "value": "{letterSpacing.250}",
+      "type": "letterSpacing"
+    },
+    "display2": {
+      "value": "{letterSpacing.125}",
+      "type": "letterSpacing"
+    },
+    "title1": {
+      "value": "{letterSpacing.125}",
+      "type": "letterSpacing"
+    },
+    "title2": {
+      "value": "{letterSpacing.125}",
+      "type": "letterSpacing"
+    },
+    "title3": {
+      "value": "{letterSpacing.125}",
+      "type": "letterSpacing"
+    },
+    "title4": {
+      "value": "{letterSpacing.125}",
+      "type": "letterSpacing"
+    },
+    "body1": {
+      "value": "{letterSpacing.0}",
+      "type": "letterSpacing"
+    },
+    "body2": {
+      "value": "{letterSpacing.0}",
+      "type": "letterSpacing"
+    }
+  },
+  "textDecoration": {
+    "link": {
+      "value": "underline",
+      "type": "textDecoration"
+    }
+  },
+  "typography": {
+    "display1": {
+      "lg": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.600}",
+          "lineHeight": "{lineHeight.display1.lg}",
+          "fontSize": "{fontSize.display1.lg}",
+          "letterSpacing": "{letterSpacing.display1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "lgWeak": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.400}",
+          "lineHeight": "{lineHeight.display1.lg}",
+          "fontSize": "{fontSize.display1.lg}",
+          "letterSpacing": "{letterSpacing.display1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "sm": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.600}",
+          "lineHeight": "{lineHeight.display1.sm}",
+          "fontSize": "{fontSize.display1.sm}",
+          "letterSpacing": "{letterSpacing.display1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "smWeak": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.400}",
+          "lineHeight": "{lineHeight.display1.sm}",
+          "fontSize": "{fontSize.display1.sm}",
+          "letterSpacing": "{letterSpacing.display1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "xs": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.600}",
+          "lineHeight": "{lineHeight.display1.xs}",
+          "fontSize": "{fontSize.display1.xs}",
+          "letterSpacing": "{letterSpacing.display1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "xsWeak": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.400}",
+          "lineHeight": "{lineHeight.display1.xs}",
+          "fontSize": "{fontSize.display1.xs}",
+          "letterSpacing": "{letterSpacing.display1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      }
+    },
+    "display2": {
+      "lg": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.600}",
+          "lineHeight": "{lineHeight.display2.lg}",
+          "fontSize": "{fontSize.display2.lg}",
+          "letterSpacing": "{letterSpacing.display2}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "lgWeak": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.400}",
+          "lineHeight": "{lineHeight.display2.lg}",
+          "fontSize": "{fontSize.display2.lg}",
+          "letterSpacing": "{letterSpacing.display2}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "sm": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.600}",
+          "lineHeight": "{lineHeight.display2.sm}",
+          "fontSize": "{fontSize.display2.sm}",
+          "letterSpacing": "{letterSpacing.display2}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "smWeak": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.400}",
+          "lineHeight": "{lineHeight.display2.sm}",
+          "fontSize": "{fontSize.display2.sm}",
+          "letterSpacing": "{letterSpacing.display2}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "xs": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.600}",
+          "lineHeight": "{lineHeight.display2.xs}",
+          "fontSize": "{fontSize.display2.xs}",
+          "letterSpacing": "{letterSpacing.display2}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "xsWeak": {
+        "value": {
+          "fontFamily": "{fontFamily.display}",
+          "fontWeight": "{fontWeight.400}",
+          "lineHeight": "{lineHeight.display2.xs}",
+          "fontSize": "{fontSize.display2.xs}",
+          "letterSpacing": "{letterSpacing.display2}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      }
+    },
+    "title1": {
+      "lg": {
+        "value": {
+          "fontFamily": "{fontFamily.title}",
+          "fontWeight": "{fontWeight.600}",
+          "lineHeight": "{lineHeight.title1.lg}",
+          "fontSize": "{fontSize.title1.lg}",
+          "letterSpacing": "{letterSpacing.title1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "lgWeak": {
+        "value": {
+          "fontFamily": "{fontFamily.title}",
+          "fontWeight": "{fontWeight.400}",
+          "lineHeight": "{lineHeight.title1.lg}",
+          "fontSize": "{fontSize.title1.lg}",
+          "letterSpacing": "{letterSpacing.title1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "xs": {
+        "value": {
+          "fontFamily": "{fontFamily.title}",
+          "fontWeight": "{fontWeight.600}",
+          "lineHeight": "{lineHeight.title1.xs}",
+          "fontSize": "{fontSize.title1.xs}",
+          "letterSpacing": "{letterSpacing.title1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      },
+      "xsWeak": {
+        "value": {
+          "fontFamily": "{fontFamily.title}",
+          "fontWeight": "{fontWeight.400}",
+          "lineHeight": "{lineHeight.title1.xs}",
+          "fontSize": "{fontSize.title1.xs}",
+          "letterSpacing": "{letterSpacing.title1}",
+          "paragraphSpacing": 0,
+          "textDecoration": "none",
+          "textCase": "none"
+        },
+        "type": "typography"
+      }
+    },
+    "title2": {
+      "value": {
+        "fontFamily": "{fontFamily.title}",
+        "fontWeight": "{fontWeight.600}",
+        "lineHeight": "{lineHeight.title2}",
+        "fontSize": "{fontSize.title2}",
+        "letterSpacing": "{letterSpacing.title2}",
+        "paragraphSpacing": 0,
+        "textDecoration": "none",
+        "textCase": "none"
+      },
+      "type": "typography"
+    },
+    "title2Weak": {
+      "value": {
+        "fontFamily": "{fontFamily.title}",
+        "fontWeight": "{fontWeight.400}",
+        "lineHeight": "{lineHeight.title2}",
+        "fontSize": "{fontSize.title2}",
+        "letterSpacing": "{letterSpacing.title2}",
+        "paragraphSpacing": 0,
+        "textDecoration": "none",
+        "textCase": "none"
+      },
+      "type": "typography"
+    },
+    "title3": {
+      "value": {
+        "fontFamily": "{fontFamily.title}",
+        "fontWeight": "{fontWeight.600}",
+        "lineHeight": "{lineHeight.title3}",
+        "fontSize": "{fontSize.title3}",
+        "letterSpacing": "{letterSpacing.title3}",
+        "paragraphSpacing": 0,
+        "textDecoration": "none",
+        "textCase": "none"
+      },
+      "type": "typography"
+    },
+    "title3Strong": {
+      "value": {
+        "fontFamily": "{fontFamily.title}",
+        "fontWeight": "{fontWeight.700}",
+        "lineHeight": "{lineHeight.title3}",
+        "fontSize": "{fontSize.title3}",
+        "letterSpacing": "{letterSpacing.title3}",
+        "paragraphSpacing": 0,
+        "textDecoration": "none",
+        "textCase": "none"
+      },
+      "type": "typography"
+    },
+    "title4": {
+      "value": {
+        "fontFamily": "{fontFamily.title}",
+        "fontWeight": "{fontWeight.700}",
+        "lineHeight": "{lineHeight.title4}",
+        "fontSize": "{fontSize.title4}",
+        "letterSpacing": "{letterSpacing.title4}",
+        "paragraphSpacing": 0,
+        "textDecoration": "none",
+        "textCase": "none"
+      },
+      "type": "typography"
+    },
+    "body1": {
+      "value": {
+        "fontFamily": "{fontFamily.body}",
+        "fontWeight": "{fontWeight.400}",
+        "lineHeight": "{lineHeight.body1}",
+        "fontSize": "{fontSize.body1}",
+        "letterSpacing": "{letterSpacing.body1}",
+        "paragraphSpacing": 0,
+        "textDecoration": "none",
+        "textCase": "none"
+      },
+      "type": "typography"
+    },
+    "body2": {
+      "value": {
+        "fontFamily": "{fontFamily.body}",
+        "fontWeight": "{fontWeight.400}",
+        "lineHeight": "{lineHeight.body2}",
+        "fontSize": "{fontSize.body2}",
+        "letterSpacing": "{letterSpacing.body2}",
+        "paragraphSpacing": 0,
+        "textDecoration": "none",
+        "textCase": "none"
+      },
+      "type": "typography"
+    }
+  },
+  "fontSize": {
+    "display1": {
+      "lg": {
+        "value": "{fontSize.1050}",
+        "type": "fontSizes"
+      },
+      "sm": {
+        "value": "{fontSize.800}",
+        "type": "fontSizes"
+      },
+      "xs": {
+        "value": "{fontSize.600}",
+        "type": "fontSizes"
+      }
+    },
+    "display2": {
+      "lg": {
+        "value": "{fontSize.550}",
+        "type": "fontSizes"
+      },
+      "sm": {
+        "value": "{fontSize.450}",
+        "type": "fontSizes"
+      },
+      "xs": {
+        "value": "{fontSize.400}",
+        "type": "fontSizes"
+      }
+    },
+    "title1": {
+      "lg": {
+        "value": "{fontSize.350}",
+        "type": "fontSizes"
+      },
+      "xs": {
+        "value": "{fontSize.300}",
+        "type": "fontSizes"
+      }
+    },
+    "title2": {
+      "value": "{fontSize.250}",
+      "type": "fontSizes"
+    },
+    "title3": {
+      "value": "{fontSize.200}",
+      "type": "fontSizes"
+    },
+    "title4": {
+      "value": 14,
+      "type": "fontSizes"
+    },
+    "body1": {
+      "value": "{fontSize.200}",
+      "type": "fontSizes"
+    },
+    "body2": {
+      "value": 14,
+      "type": "fontSizes"
+    }
+  },
+  "fontFamily": {
+    "display": {
+      "value": "{fontFamily.SourceSansPro}",
+      "type": "fontFamilies"
+    },
+    "title": {
+      "value": "{fontFamily.SourceSansPro}",
+      "type": "fontFamilies"
+    },
+    "body": {
+      "value": "{fontFamily.SourceSansPro}",
+      "type": "fontFamilies"
+    }
+  },
+  "color": {
+    "interactive": {
+      "primary": {
+        "type": "color",
+        "value": "{color.blue.600}",
+        "description": "Global: blue.600\nCSS Variable: var(--cds-color-interactive-primary)\n\nUsage: General-purpose swatch used for a variety or primary-level interactive elements, such as backgrounds, text colors, strokes, and more."
+      },
+      "primaryHover": {
+        "type": "color",
+        "value": "{color.blue.700}",
+        "description": "Global: blue.700\nCSS Variable: var(--cds-color-interactive-primary-hover)\n\nUsage: General-purpose swatch used to convey hover state on primary-level interactive elements."
+      },
+      "primaryPressed": {
+        "type": "color",
+        "value": "{color.purple.800}",
+        "description": "Global: purple.800\nCSS Variable: var(--cds-color-interactive-primary-pressed)\n\nUsage: General-purpose swatch used to convey pressed state on primary-level interactive elements."
+      },
+      "primarySelected": {
+        "type": "color",
+        "value": "{color.purple.800}",
+        "description": "Global: purple.800\nCSS Variable: var(--cds-color-interactive-primary-selected)\n\nUsage: General-purpose swatch used to convey selected state on primary-level interactive elements."
+      },
+      "stroke": {
+        "primaryFocus": {
+          "type": "color",
+          "value": "{color.purple.600}",
+          "description": "Global: purple.600\nCSS Variable: var(--cds-color-interactive-stroke-primary-focus)\n\nUsage: Used on the inner stroke of the focus ring on focused state for interactive elements."
+        },
+        "primaryFocusInvert": {
+          "type": "color",
+          "value": "{color.blue.50}",
+          "description": "Global: blue.50\nCSS Variable: var(--cds-color-interactive-stroke-primary-focus-invert)\n\nUsage: Used on the outer stroke of the focus ring on focused state for interactive elements."
+        }
+      },
+      "background": {
+        "primaryHoverWeak": {
+          "type": "color",
+          "value": "{color.blue.50}",
+          "description": "Global: blue.50\nCSS Variable: var(--cds-color-interactive-background-primary-hover-weak)\n\nUsage: Primary hover background for conveying interactivity on elements without backgrounds, such as Ghost Buttons."
+        },
+        "primaryPressedWeak": {
+          "type": "color",
+          "value": "{color.purple.50}",
+          "description": "Global: purple.50\nCSS Variable: var(--cds-color-interactive-background-primary-pressed-weak)\n\nUsage: Primary pressed background for conveying interactivity on elements without backgrounds, such as Ghost Buttons."
+        },
+        "primarySelectedWeak": {
+          "type": "color",
+          "value": "{color.purple.50}",
+          "description": "Global: purple.50\nCSS Variable: var(--cds-color-interactive-background-primary-selected-weak)\n\nUsage: Primary selected background for conveying interactivity on elements without backgrounds, such as Ghost Buttons."
+        }
+      }
+    },
+    "neutral": {
+      "primary": {
+        "type": "color",
+        "value": "{color.black.500}",
+        "description": "Global: black.500\nCSS Variable: var(--cds-color-neutral-primary)\n\nUsage: Used for primary-level content."
+      },
+      "primaryWeak": {
+        "type": "color",
+        "value": "{color.grey.700}",
+        "description": "Global: grey.700\nCSS Variable: var(--cds-color-neutral-primary-weak)\n\nUsage: Used for secondary-level or supporting content."
+      },
+      "primaryInvert": {
+        "type": "color",
+        "value": "{color.white.0}",
+        "description": "Global: white.0\nCSS Variable: var(--cds-color-neutral-primary-invert)\n\nUsage: Used for primary-level content on colored or darker backgrounds."
+      },
+      "disabled": {
+        "type": "color",
+        "value": "{color.grey.300}",
+        "description": "Global: grey.300\nCSS Variable: var(--cds-color-neutral-disabled)\n\nUsage: General-use disabled color used for disabled icons, elements, and more."
+      },
+      "disabledStrong": {
+        "type": "color",
+        "value": "{color.grey.400}",
+        "description": "Global: grey.400\nCSS Variable: var(--cds-color-neutral-disabled-strong)\n\nUsage: Disabled color used to help contrast more stand-out elements such as Primary Neutral content."
+      },
+      "disabledWeak": {
+        "type": "color",
+        "value": "{color.grey.100}",
+        "description": "Global: grey.100\nCSS Variable: var(--cds-color-neutral-disabled-weak)\n\nUsage: Disabled color mainly used to hint at a background or tertiary element."
+      },
+      "stroke": {
+        "primary": {
+          "type": "color",
+          "value": "{color.grey.500}",
+          "description": "Global: grey.500\nCSS Variable: var(--cds-color-neutral-stroke-primary)\n\nUsage: Used for primary-level dividers where clear separation is necessary between items."
+        },
+        "primaryWeak": {
+          "type": "color",
+          "value": "{color.grey.300}",
+          "description": "Global: grey.300\nCSS Variable: var(--cds-color-neutral-stroke-primary-weak)\n\nUsage: Used for secondary-level dividers where a separating element is helpful but not absolutely necessary."
+        },
+        "primaryInvert": {
+          "type": "color",
+          "value": "{color.white.0}",
+          "description": "Global: white.0\nCSS Variable: var(--cds-color-neutral-stroke-primary-invert)"
+        }
+      },
+      "background": {
+        "primaryWeak": {
+          "type": "color",
+          "value": "{color.grey.100}",
+          "description": "Global: grey.100\nCSS Variable: var(--cds-color-neutral-background-primary-weak)\n\nUsage: The offset page color to help break up sections of content."
+        },
+        "primary": {
+          "type": "color",
+          "value": "{color.white.0}",
+          "description": "Global: white.0\nCSS Variable: var(--cds-color-neutral-background-primary)\n\nUsage: The primary page color used across a majority of the marking and product experience."
+        }
+      }
+    },
+    "feedback": {
+      "error": {
+        "type": "color",
+        "value": "{color.red.700}",
+        "description": "Global: red.700\nCSS Variable: var(--cds-color-feedback-error)\n\nUsage: General-purpose error state used on a variety of elements such as text, icons, and more."
+      },
+      "errorHover": {
+        "type": "color",
+        "value": "{color.red.800}",
+        "description": "Global: red.800\nCSS Variable: var(--cds-color-feedback-error-hover)\n\nUsage: Hover-state used on interactive elements using the feedback error swatch."
+      },
+      "errorInvertWeak": {
+        "type": "color",
+        "value": "{color.red.100}",
+        "description": "Global: red.100\nCSS Variable: var(--cds-color-feedback-error-invert-weak)\n\nUsage: General inverted swatch for error backgrounds and strokes on colored or darker backgrounds."
+      },
+      "success": {
+        "type": "color",
+        "value": "{color.green.700}",
+        "description": "Global: green.700\nCSS Variable: var(--cds-color-feedback-success)\n\nUsage: General-purpose success state used on a variety of elements such as text, icons, and more."
+      },
+      "successHover": {
+        "type": "color",
+        "value": "{color.green.800}",
+        "description": "Global: green.800\nCSS Variable: var(--cds-color-feedback-success-hover)\n\nUsage: Hover-state used on interactive elements using the feedback success swatch."
+      },
+      "successInvertWeak": {
+        "type": "color",
+        "value": "{color.green.100}",
+        "description": "Global: green.100\nCSS Variable: var(--cds-color-feedback-success-invert-weak)\n\nUsage: General inverted swatch for success backgrounds and strokes on colored or darker backgrounds."
+      },
+      "informative": {
+        "type": "color",
+        "value": "{color.blue.600}",
+        "description": "Global: blue.600\nCSS Variable: var(--cds-color-feedback-informative)\n\nUsage: General-purpose informative state used on a variety of elements such as text, icons, and more."
+      },
+      "warning": {
+        "type": "color",
+        "value": "{color.yellow.800}",
+        "description": "Global: yellow.800\nCSS Variable: var(--cds-color-feedback-warning)\n\nUsage: General-purpose warning state used on a variety of elements such as text, icons, and more."
+      },
+      "background": {
+        "errorWeak": {
+          "type": "color",
+          "value": "{color.red.50}",
+          "description": "Global: red.50\nCSS Variable: var(--cds-color-feedback-background-error-weak)\n\nUsage: Background color to help callout an error card or element from the rest of the content on the page."
+        },
+        "successWeak": {
+          "type": "color",
+          "value": "{color.green.50}",
+          "description": "Global: green.50\nCSS Variable: var(--cds-color-feedback-background-success-weak)\n\nUsage: Background color to help callout an success card or element from the rest of the content on the page."
+        },
+        "informativeWeak": {
+          "type": "color",
+          "value": "{color.blue.50}",
+          "description": "Global: blue.50\nCSS Variable: var(--cds-color-feedback-background-informative-weak)\n\nUsage: Background color to help callout an informative card or element from the rest of the content on the page."
+        },
+        "warningWeak": {
+          "type": "color",
+          "value": "{color.yellow.50}",
+          "description": "Global: yellow.50\nCSS Variable: var(--cds-color-feedback-background-warning-weak)\n\nUsage: Background color to help callout an warning card or element from the rest of the content on the page."
+        }
+      }
+    },
+    "callouts": {
+      "secondary": {
+        "type": "color",
+        "value": "{color.purple.800}",
+        "description": "Global: purple.800\nCSS Variable: var(--cds-color-callouts-secondary)\n\nUsage: General-use accent used to highlight sections of content with backgrounds or used on text or icon elements."
+      },
+      "tertiary": {
+        "type": "color",
+        "value": "{color.blue.800}",
+        "description": "Global: blue.800\nCSS Variable: var(--cds-color-callouts-tertiary)\n\nUsage: General-use accent used to highlight sections of content with backgrounds or used on text or icon elements."
+      },
+      "secondaryInvert": {
+        "type": "color",
+        "value": "{color.yellow.500}",
+        "description": "Global: yellow.500\nCSS Variable: var(--cds-color-callouts-secondary-invert)\n\nUsage: General-use accent used to highlight sections of content with backgrounds or used on text or icon elements."
+      },
+      "tertiaryInvert": {
+        "type": "color",
+        "value": "{color.aqua.300}",
+        "description": "Global: aqua.300\nCSS Variable: var(--cds-color-callouts-tertiary-invert)\n\nUsage: Inverted general-use accent used to highlight text or icon elements on colored or darker backgrounds."
+      },
+      "background": {
+        "primaryWeak": {
+          "type": "color",
+          "value": "{color.blue.100}",
+          "description": "Global: blue.100\nCSS Variable: var(--cds-color-callouts-background-primary-weak)\n\nUsage: The primary light-colored accent background color, usually used to callout specific sections."
+        },
+        "secondaryWeak": {
+          "type": "color",
+          "value": "{color.purple.50}",
+          "description": "Global: purple.50\nCSS Variable: var(--cds-color-callouts-background-secondary-weak)\n\nUsage: The secondary light-colored accent background color, usually used to callout specific sections."
+        },
+        "tertiaryWeak": {
+          "type": "color",
+          "value": "{color.yellow.50}",
+          "description": "Global: yellow.50\nCSS Variable: var(--cds-color-callouts-background-tertiary-weak)\n\nUsage: The tertiary light-colored accent background color, usually used to callout specific sections. Used in very select use-cases."
+        },
+        "primary": {
+          "type": "color",
+          "value": "{color.blue.600}",
+          "description": "Global: blue.600\nCSS Variable: var(--cds-color-callouts-background-primary)\n\nUsage: Primary accent background color, used to callout a section of content on the page."
+        },
+        "primaryStrong": {
+          "type": "color",
+          "value": "{color.blue.900}",
+          "description": "Global: blue.900\nCSS Variable: var(--cds-color-callouts-background-primary-strong)\n\nUsage: An alternative primary accent background color, used to callout a section of content on the page."
+        }
+      }
+    },
+    "utility": {
+      "overlay": {
+        "value": "#63636380",
+        "type": "color",
+        "description": "Global: rgba(99, 99, 99, 0.5)\nCSS Variable: var(--cds-color-utility-overlay)\n\nUsage: Overlay style can only be used with experience components"
+      },
+      "warning": {
+        "value": "{color.yellow.500}",
+        "type": "color",
+        "description": "Global: yellow.500\nCSS Variable: var(--cds-color-utility-warning)\n\nUsage: Used internally by the CDS team for specific icons and scenarios involving warning state."
+      }
+    }
+  }
+}
