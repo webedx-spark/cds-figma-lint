@@ -15,7 +15,8 @@ const spacingTokensByValue = Object.entries(globalTokens.spacing).reduce(
   (acc, [key, value]) => {
     acc[value.value] = key;
     return acc;
-  }
+  },
+  {}
 );
 
 function isSceneNode(node: BaseNode): node is SceneNode {
@@ -101,8 +102,6 @@ const extractTypographyTokens = (node: SceneNode) => {
 const extractSpacingTokens = (node: SceneNode) => {
   const spacingStyles: Array<{ value: number[]; property: string }> = [];
 
-  console.log(node, isAutoLayout(node));
-
   if (isSceneNode(node) && isAutoLayout(node)) {
     const {
       paddingLeft,
@@ -117,10 +116,12 @@ const extractSpacingTokens = (node: SceneNode) => {
     });
 
     if (itemSpacing) {
-      spacingStyles.push({
-        value: [itemSpacing],
-        property: 'gap',
-      });
+      if (spacingTokensByValue[itemSpacing]) {
+        spacingStyles.push({
+          value: [itemSpacing],
+          property: 'gap',
+        });
+      }
     }
   }
 
@@ -143,9 +144,10 @@ if (figma.editorType === 'dev' && figma.mode === 'codegen') {
         code: [
           colorStyles.length > 0
             ? colorStyles
-                .map(({ property, global }) => {
-                  return `${property}: \${theme.palette.${global}};`;
-                })
+                .map(
+                  ({ property, global }) =>
+                    `${property}: \${theme.palette.${global}};`
+                )
                 .join('\n')
             : undefined,
           spacing.length > 0
@@ -162,7 +164,7 @@ if (figma.editorType === 'dev' && figma.mode === 'codegen') {
       });
     }
 
-    if (colorStyles.length || typographyStyles.length) {
+    if (colorStyles.length || spacing.length) {
       sections.push({
         title: 'CDS CSS Variables (Beta)',
         language: 'TYPESCRIPT',
@@ -178,9 +180,10 @@ if (figma.editorType === 'dev' && figma.mode === 'codegen') {
           //   : '',
           colorStyles.length > 0
             ? colorStyles
-                .map(({ name, property }) => {
-                  return `${property}: var(--cds-color-${kebabCase(name)});`;
-                })
+                .map(
+                  ({ name, property }) =>
+                    `${property}: var(--cds-color-${kebabCase(name)});`
+                )
                 .join('\n')
             : undefined,
           spacing.length > 0
@@ -188,9 +191,10 @@ if (figma.editorType === 'dev' && figma.mode === 'codegen') {
                 .map(
                   ({ property, value }) =>
                     `${property}: ${value
-                      .map(
-                        (spacing) =>
-                          `var(--cds-spacing-${spacingTokensByValue[spacing]})`
+                      .map((spacing) =>
+                        spacingTokensByValue[spacing]
+                          ? `var(--cds-spacing-${spacingTokensByValue[spacing]})`
+                          : spacing
                       )
                       .join(' ')};`
                 )
