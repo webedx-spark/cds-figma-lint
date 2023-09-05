@@ -38,7 +38,8 @@ const extractColorTokens = (node: SceneNode) => {
     [];
 
   if (isSceneNode(node)) {
-    if ('fillStyleId' in node) {
+    console.log(node);
+    if ('fillStyleId' in node && typeof node.fillStyleId === 'string') {
       let property = '';
 
       if (node.type === 'TEXT') {
@@ -63,14 +64,30 @@ const extractColorTokens = (node: SceneNode) => {
         const tokenPath = colorStyle.name.replaceAll('/', '.');
         const token = get(semanticTokens, `color.${tokenPath}`);
 
-        colorStyles.push({
-          global: `${token?.value
-            .replace('color.', '')
-            .replace(/[\{|\}|]/g, '')
-            .replace('.', '.[')}]`, // serialize global token
-          name: `${colorStyle.name.replace('/', '-')}`,
-          property: property,
-        });
+        if (token) {
+          colorStyles.push({
+            global: createGlobalToken(token), // serialize global token
+            name: `${colorStyle.name.replace('/', '-')}`,
+            property: property,
+          });
+        }
+      }
+    }
+
+    if ('strokeStyleId' in node && typeof node.strokeStyleId === 'string') {
+      const strokeStyle = figma.getStyleById(node.strokeStyleId as string);
+
+      if (strokeStyle) {
+        const tokenPath = strokeStyle.name.replaceAll('/', '.');
+        const token = get(semanticTokens, `color.${tokenPath}`);
+
+        if (token) {
+          colorStyles.push({
+            global: createGlobalToken(token), // serialize global token
+            name: `${strokeStyle.name.replace('/', '-')}`,
+            property: 'border-color',
+          });
+        }
       }
     }
   }
@@ -82,7 +99,7 @@ const extractTypographyTokens = (node: SceneNode) => {
   const typographyStyles: Array<{ name: string; property: string }> = [];
 
   if (isSceneNode(node) && node.type === 'TEXT') {
-    if ('textStyleId' in node) {
+    if ('textStyleId' in node && typeof node.textStyleId === 'string') {
       const textStyle = figma.getStyleById(node.textStyleId as string);
       if (textStyle) {
         typographyStyles.push({
@@ -478,3 +495,10 @@ figma.ui.onmessage = async (msg) => {
     }
   }
 };
+
+function createGlobalToken(token: any): string {
+  return `${token?.value
+    .replace('color.', '')
+    .replace(/[\{|\}|]/g, '')
+    .replace('.', '.[')}]`;
+}
