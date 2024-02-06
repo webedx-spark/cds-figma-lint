@@ -6,5 +6,6 @@
   "ui": "dist/app/index.html",
   "editorType": ["figma", "dev"],
   "capabilities": ["inspect", "codegen", "vscode"],
-  "codegenLanguages": [{ "label": "CSSVariables", "value": "cssVariables" }]
+  "codegenLanguages": [{ "label": "CSSVariables", "value": "cssVariables" }],
+  "networkAccess": { "allowedDomains": ["none"] }
 }
