@@ -82,3 +82,11 @@ export function determineFill(fills) {
 
   return fillValues[0];
 }
+
+export function isSceneNode(node: BaseNode): node is SceneNode {
+  return node.type !== 'PAGE' && node.type !== 'DOCUMENT';
+}
+
+export function isAutoLayout(node: any): node is AutoLayoutMixin {
+  return 'layoutMode' in node;
+}
