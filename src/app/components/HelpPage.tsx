@@ -2,18 +2,21 @@ import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 
 const aksAi = async (query: string) => {
-  return fetch(
-    'https://riuhfaprzoechxritfub.functions.supabase.co/cds-search',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization:
-          'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJpdWhmYXByem9lY2h4cml0ZnViIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM1NjQ0MjQsImV4cCI6MTk5OTE0MDQyNH0.981A7UGwLKvfowemqZJ6mDR5Iubt467ukOOopH4MBTk',
-      },
-      body: JSON.stringify({ query }),
-    }
-  ).then((res) => res.json());
+  return new Promise<{ data: any }>((resolve, reject) => {
+    setTimeout(() => {
+      resolve({
+        data: {
+          choices: [
+            {
+              message: {
+                content: `I'm sorry, I don't have an answer for that question. 😔`,
+              },
+            },
+          ],
+        },
+      });
+    }, 2000);
+  });
 };
 
 export default function HelpPage() {
