@@ -14,14 +14,16 @@ figma.skipInvisibleInstanceChildren = true;
 
 // Make sure that we're in Dev Mode and running codegen
 if (figma.editorType === 'dev' && figma.mode === 'codegen') {
+  figma.showUI(__html__, { visible: false });
+
   // Register a callback to the "generate" event
   figma.codegen.on('generate', ({ node }) => {
     return generateCode(node);
   });
-}
-
-if (figma.editorType === 'figma' && figma.mode === 'default') {
+} else if (figma.editorType === 'figma' && figma.mode === 'default') {
   figma.showUI(__html__, { width: 360, height: 580 });
+} else {
+  figma.closePlugin();
 }
 
 figma.ui.onmessage = async (msg) => {
